@@ -26,3 +26,22 @@ const observer = new IntersectionObserver(entries => {
   }
 }, { rootMargin: '-15% 0px -60% 0px' });
 document.querySelectorAll('main section[id]').forEach(section => observer.observe(section));
+
+const viewer = document.querySelector('#image-viewer');
+const viewerImage = document.querySelector('#viewer-image');
+document.querySelectorAll('[data-full-image]').forEach(button => {
+  button.addEventListener('click', () => {
+    viewerImage.src = button.dataset.fullImage;
+    viewerImage.alt = button.dataset.caption;
+    document.querySelector('#image-caption').textContent = button.dataset.caption;
+    viewer.showModal();
+    document.body.classList.add('image-viewer-open');
+  });
+});
+document.querySelector('#close-viewer').addEventListener('click', () => viewer.close());
+viewer.addEventListener('click', event => {
+  const bounds = viewer.getBoundingClientRect();
+  if (event.clientX < bounds.left || event.clientX > bounds.right ||
+      event.clientY < bounds.top || event.clientY > bounds.bottom) viewer.close();
+});
+viewer.addEventListener('close', () => document.body.classList.remove('image-viewer-open'));

@@ -8,6 +8,15 @@
 
 프로젝트 상세는 기본 HTML `details`로 펼칠 수 있습니다. 카드의 그래픽은 수치와 주제를 시각화한 것으로 실제 서비스 화면이 아닙니다.
 
+## 이미지 교체 및 추가
+
+취업 전 프로젝트 카드에는 PDF에서 추출한 아키텍처를 넣었습니다. 상세 안에서는 쿼리 분리, 배포 자동화, 방화벽과 프록시 변경 다이어그램도 볼 수 있습니다. 이미지를 누르면 확대 창이 열리며 닫기 버튼, Escape 또는 창 밖 클릭으로 닫을 수 있습니다.
+
+- 프로젝트 이미지: `dist/assets/projects/`. HTML의 `img src`와 버튼의 `data-full-image`를 같은 파일 경로로 설정합니다. `alt`, `data-caption`, 이미지 크기도 함께 수정합니다.
+- 회사 프로젝트에도 기존 `case-art` 영역 대신 다른 카드의 `project-cover` 버튼 구조를 복사해 이미지를 넣을 수 있습니다.
+- 스킬 이미지: `dist/assets/skills/`. 기술 카드는 `skill-card`의 이미지 경로와 이름, 활용 설명을 수정합니다.
+- PDF 이미지와 Java/Spring/MyBatis/Docker/MySQL/AWS/Jenkins 로고는 제공된 포트폴리오에서 추출했습니다. Oracle 로고는 Devicon의 `icons/oracle/oracle-original.svg`를 사용했습니다(https://github.com/devicons/devicon). 브랜드 로고의 권리는 각 소유자에게 있습니다.
+
 이메일, GitHub, 기술 블로그 링크를 연결했습니다. 외부 글꼴을 불러오지 못할 때는 시스템 산세리프 글꼴로 표시됩니다.
 
 내용 출처는 사용자가 제공한 `유재건_261031.pdf`와 `유재건_main_포트폴리오_ (2).pdf`입니다. 서로 다른 내용은 최신 이력서를 우선했습니다. Yesterday’s Trip의 응답 시간은 과거 프로젝트 자료의 당시 측정값으로 표시했습니다. PDF 원본은 게시 파일에 포함하지 않았습니다.
