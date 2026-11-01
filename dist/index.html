@@ -43,7 +43,7 @@
 <section id="featured" aria-labelledby="featured-title">
 <div class="section-heading"><div class="section-label"><span>01 / SELECTED WORK</span><h2 id="featured-title">먼저 살펴볼 세 가지 경험</h2></div><p class="muted">운영 문제 해결 · 학습의 실전 적용 · 현업과의 검증</p></div>
 <div class="featured-grid">
-<a class="featured-card" href="#case-approval"><span class="featured-kind">실무 · 동시성 / 트랜잭션</span><h3>중복 요청을<br>낙관적·비관적 동시성 제어로 해결했습니다.</h3><p>일괄결재는 결재상태 기반의 낙관적 제어로, 중복 입찰 제출은 DB 행 잠금을 이용한 비관적 제어로 개선했습니다.</p><strong>낙관적 동시성 제어 · 비관적 동시성 제어</strong><span class="featured-link">동시성 제어 사례 읽기 ↗</span></a>
+<a class="featured-card" href="#case-approval"><span class="featured-kind">실무 · 동시성 / 트랜잭션</span><h3>낙관적, 비관적 동시성 제어</h3><p>일괄결재는 결재상태 기반의 낙관적 제어로, 중복 입찰 제출은 DB 행 잠금을 이용한 비관적 제어로 개선했습니다.</p><strong>상태 기반 제어 · SELECT FOR UPDATE</strong><span class="featured-link">동시성 제어 사례 읽기 ↗</span></a>
 <a class="featured-card" href="#project-sqlp"><span class="featured-kind">개인 · 설계·개발·운영 / 멘토</span><h3>SQLP 학습을<br>실제 스터디 운영 시스템으로 만들었습니다.</h3><p>스터디원 2명의 SQL 실습을 위해 자동 채점과 학습 기록 공개를 구현하고, 실제 질문을 바탕으로 채점 기준을 개선했습니다.</p><strong>Buffers 기반 채점 · Hint Report</strong><span class="featured-link">SQLP 시스템과 운영 화면 보기 ↗</span></a>
 <a class="featured-card" href="#case-cost"><span class="featured-kind">실무 · 업무 분석 / 계산 정합성</span><h3>약 0.07%의 원가 차이를<br>현업과 계산 기준을 맞추며 해결했습니다.</h3><p>구매원가팀과 업무 배경·계산 과정을 확인하고 실제 데이터를 대조해, 개발 단계 간 원화 환율 차이의 누락을 찾아 계산 기준을 보완했습니다.</p><strong>요구사항 검증 · 원가요소 분석</strong><span class="featured-link">원가 정합성 사례 읽기 ↗</span></a>
 </div></section>
@@ -124,6 +124,7 @@
 <p>구매원가팀이 수작업으로 수행하던 개발 단계별 원가 계산과 변동 원인 분석을 시스템화했습니다. 환율·관리비·소요량·단가 등 여러 요인이 얽혀 있어, 현업의 계산 기준을 정확히 이해하고 시스템의 데이터 구조와 처리 로직으로 옮겨야 했습니다.</p>
 <h4>내가 한 일</h4>
 <p>회의록을 작성하며 결정사항뿐 아니라 업무 배경과 계산 과정을 정리했습니다. 이해가 불명확한 부분은 담당자에게 질문하고, 제가 이해한 내용을 다시 설명해 확인받았습니다. 현업은 계산 기준과 실제 사례를 설명하고, 저는 이를 시스템에서 처리할 수 있도록 구조화한 뒤 실제 데이터로 결과를 검증했습니다.</p>
+<p>시스템에 반영할 산식은 공유 Excel 시트에 정리해, 현업 담당자가 계산 과정과 결과를 쉽게 이해하고 함께 확인할 수 있도록 했습니다. 같은 시트를 보며 계산식을 대조하고 조율해, 현업의 업무 기준과 시스템에서 처리할 산식을 맞춰갔습니다.</p>
 <h4>원인 분석과 검증</h4>
 <p>현업이 제시한 계산식과 실제 결과 사이에 약 0.07% 차이가 발생했습니다. 파악한 업무 흐름을 바탕으로 개발 단계별 계산을 추적해, 이전 단계와 현재 단계 사이의 원화 환율 차이가 계산식에 반영되지 않은 점을 발견했습니다. 이를 담당자에게 공유하고 실제 사례를 함께 다시 검증해 계산 기준을 보완했습니다.</p>
 <h4>결과</h4>
