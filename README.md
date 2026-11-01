@@ -26,3 +26,9 @@
 구성 참고: https://min-hyuk.com/ 및 https://cdg-portfolio.com/ . 원본의 개인 정보나 프로젝트 내용은 사용하지 않았습니다.
 
 현재 프로젝트 상세는 모두 본문에 표시됩니다. 상단 ‘PDF로 저장 / 인쇄’ 버튼 또는 Ctrl+P로 전체 내용을 A4 PDF로 저장할 수 있습니다. 인쇄 시 한 열 구성과 밝은 색상을 적용하며, 각 이미지 아래의 설명도 포함합니다. 기본 출력 파일은 dist/portfolio.pdf입니다.
+
+## 현재 구성과 로고 출처
+
+화면 순서는 대표 경험 요약 → 경력 → 실무 사례 → 기술 → 팀 프로젝트 → 일하는 방식 → 학습 → 연락처입니다. `dist/refinement.css`에서 최신 화면·인쇄 조정을 관리합니다. `REVIEW.md`에 채용 관점 검토와 추가로 확인해야 할 근거를 정리했습니다.
+
+현재 기술 로고는 투명 SVG입니다. Java·Spring·Docker·MySQL·AWS·Jenkins·Oracle은 https://github.com/devicons/devicon , MyBatis는 https://github.com/mybatis/logo 에서 가져왔습니다. 기존 PDF 추출 PNG는 보존용이며 현재 페이지에서 사용하지 않습니다. 로고의 권리는 각 소유자에게 있습니다.

@@ -1,6 +1,9 @@
 const themeButton = document.querySelector('#theme');
 function setTheme(dark) {
   document.body.classList.toggle('dark', dark);
+  document.querySelectorAll('[data-dark-logo]').forEach(source => {
+    source.media = dark ? 'screen' : 'not all';
+  });
   themeButton.setAttribute('aria-label', dark ? '밝은 테마로 전환' : '어두운 테마로 전환');
   themeButton.setAttribute('aria-pressed', String(dark));
 }
