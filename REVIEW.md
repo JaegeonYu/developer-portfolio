@@ -29,7 +29,7 @@
 
 이 표는 제공된 이력서와 포트폴리오를 바탕으로 한 편집 판단이다. 특정 기업의 채용 기준이나 합격 가능성을 주장하지 않는다.
 
-## 다음 보강 우선순위 — 확인된 정보가 있어야 반영 가능
+## 다음 보강 우선순위 — 초기 검토 당시 항목 (추가 확인 결과는 아래 참고)
 
 1. **일괄결재: 제어가 작동한다는 근거.** 상태 전이, 처리권 획득 조건, 경합 시 처리 방식을 설명하면 좋다. 조건부 UPDATE·영향 행 수 확인 등 실제 사용한 방식과 동시 요청 재현 결과, 로그 분리의 구체적인 트랜잭션 경계를 확인한 뒤 코드나 간단한 흐름도로 추가한다. 특정 전파 옵션이나 테스트 수행 여부를 추정해 넣지 않는다.
 2. **대량 데이터: 규모와 결과를 분리.** 약 2억 건이 대상 건수인지 최종 삭제 건수인지 구분한다. 배치 크기, 총 소요 시간, 중간 실패 시 재개 방식, 관찰한 Undo·부하 지표와 정리 전후 용량이 있으면 추가한다. 현재는 대상 규모로 표현하며 처리량·절감률을 만들지 않았다.
@@ -47,3 +47,33 @@ SSE는 연결 교체·종료 경합, 재접속·중복 전달 정책을 코드�
 Chrome에서 데스크톱, 390px 모바일, 밝은·어두운 테마의 첫 화면과 기술 카드를 시각적으로 확인했다. 가로 넘침, 깨진 이미지, 이미지 확대 창 열기·닫기, 인쇄 시 밝은 AWS 로고 선택을 검사했다. PDF를 다시 생성하고 기술 기록·연락처 텍스트 포함 여부를 확인했다. PDF의 모든 페이지에 대한 개별 시각 검수는 수행하지 않았다.
 
 로컬 확인 이미지: `E:/2026study/portfolio-review-qa/`.
+
+
+## 사용자 추가 설명 반영 — 결재와 운영 로그 정리
+
+### 결재: 확인된 구현
+
+- AS-IS: 선택한 결재를 완료 상태로 먼저 갱신한 뒤 건별 전처리를 진행했고, 전체 작업의 트랜잭션 경계를 분리하지 않아 재요청 시 중복 처리로 정합성 오류가 발생했다.
+- TO-BE: 처리중·완료 상태는 제외하고 처리중으로 바꾸는 시작 트랜잭션과, 각 건의 전처리·조건부 완료 UPDATE를 수행하는 신규 트랜잭션(requirednew=true)을 분리했다.
+- 마지막 UPDATE 조건은 결재 ID와 현재 처리중 상태이다.
+- **사용자 확인: 완료 UPDATE가 0건인 경우 전처리를 되돌리는 별도 롤백 분기는 없었다.** 상태 조건만으로 전처리나 외부 부수효과의 중복까지 모두 방지했다고 표현하지 않았다.
+- 적용 내용과 추가 검증 과제(전처리·상태 변경의 원자성, 재시도 멱등성, 경합 재현)를 구분하여 본문에 반영했다. 전파 설정의 실제 구현체·어노테이션·프록시 구조는 확인하지 않았으므로 특정 Spring 선언 코드를 만들어 넣지 않았다.
+
+### 로그 정리: 확인된 구현
+
+- AS-IS: 보존기간을 지난 행 전체를 날짜 조건만으로 DELETE했다.
+- DELETE 작업이 발생시키는 Archive Log로 용량이 급증하는 점을 인지한 뒤 한 번의 삭제 분량을 더 작게 조정했다.
+- TO-BE: 커서에서 보존기간 조건에 맞는 ROWID를 조회하고, 일정 건수씩 FETCH → 해당 ROWID DELETE → 일정 건수마다 COMMIT하는 구조를 적용했다.
+- 본문의 FETCH LIMIT과 ROWID DELETE는 설명용 의사 코드다. 실제 배치 크기, FORALL 사용 여부, 처리 속도, 삭제 완료 건수 등 미제공 정보는 추가하지 않았다.
+- 배치 크기 제어와 전체 Redo·Archive Log 양 감소를 같은 효과로 쓰지 않았다. 분할 처리는 단위 작업의 크기를 제어하는 방식이며 누적 로그 공간 문제를 자동으로 해결하지 않는다.
+- 날짜 파티션과 DROP PARTITION은 조건이 맞을 때 검토할 대안으로 표시했다. 실제 적용 사례는 아니다. 기존 테이블 전환, 인덱스·제약 영향과 Oracle Partitioning 사용 권한을 함께 고려하도록 설명했다.
+
+기술 근거:
+
+- Oracle Redo 아카이브 관리: https://docs.oracle.com/en/database/oracle/oracle-database/19/admin/managing-archived-redo-log-files.html
+- Oracle FETCH와 LIMIT: https://docs.oracle.com/en/database/oracle/oracle-database/19/lnpls/FETCH-statement.html
+- Oracle 파티션 유지관리: https://docs.oracle.com/en/database/oracle/oracle-database/19/vldbg/maintenance-partition-tables-indexes.html
+- Oracle 19c 기능·옵션: https://docs.oracle.com/en/database/oracle/oracle-database/19/dblic/Licensing-Information.html
+- Spring 트랜잭션 전파 의미 참고: https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/tx-propagation.html
+
+우선 확인하면 좋은 후속 근거는 경합 상황 테스트, 실제 배치 크기·소요 시간·로그 증가량, 원가 검증 절차이다. 이번 확인으로 기존의 ‘시작 상태 제외 조건’과 ‘완료 UPDATE 0건 시 롤백 여부’에 대한 질문은 해소했다.
