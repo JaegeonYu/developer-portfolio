@@ -1,4 +1,4 @@
-/* Recruiter overview, experience-backed skills, and continuous technical detail. */
+﻿/* Recruiter overview, experience-backed skills, and continuous technical detail. */
 .introduction{padding-bottom:45px;border-bottom:1px solid var(--line)}
 .intro-identity{font-size:14px;color:var(--muted);margin:26px 0 0}
 .intro-identity strong{font-size:21px;color:var(--text);margin-right:7px}
@@ -128,3 +128,32 @@ body.dark .skill-icon img[src$="java.svg"]{filter:brightness(1.25)}
   .request-race{gap:5mm}.request-race>span{font-size:9pt}.request-race small{font-size:8pt}.detail-content h5{font-size:10pt;break-after:avoid}.example-heading{break-after:avoid}.detail-content .example-heading h4{font-size:13pt}.concurrency-comparison table{font-size:9pt}.concurrency-example{margin:4mm 0;padding-top:4mm}.concurrency-comparison tr{break-inside:avoid}
   .project-findings{font-size:10pt}
 }
+
+/* Shared experience template: problem, before/after, decision. */
+#projects .project-grid,#side-projects .project-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.compact-case{padding:28px!important;grid-column:1/-1;min-width:0}
+.compact-case h3{margin:8px 0;font-size:1.45rem}
+.compact-case .chips{margin:12px 0}
+.problem-unit{margin:20px 0 0;padding:0!important;border:0;scroll-margin-top:90px}
+.problem-unit h4{margin:0 0 8px;font-size:1.05rem}
+.problem-statement{margin:0 0 12px!important;line-height:1.75}
+.problem-statement strong,.decision strong{display:inline;margin-right:8px;color:var(--text)}
+.change-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.change-grid>div{padding:16px 18px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.change-grid .change-after{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 5%,var(--bg))}
+.change-grid h5{font-size:.77rem;letter-spacing:.12em;margin:0 0 8px}
+.change-after h5{color:var(--accent)}
+.change-grid p{margin:0!important;line-height:1.75;font-size:.93rem}
+.decision{margin:10px 0 0!important;font-size:.9rem;line-height:1.7;color:var(--muted)}
+.compact-links{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:18px}
+.compact-reference{font:inherit;font-size:.85rem;color:var(--accent);border:0;background:none;padding:0;cursor:pointer}
+.compact-links .repository-link{margin:0}
+.journey-company{display:flex;align-items:center;gap:12px;margin:10px 0}
+.journey-company img{width:56px;height:56px;object-fit:contain;border-radius:10px}
+.career-stages{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.career-stages>div{border-left:2px solid var(--accent);padding-left:12px}
+.career-stages span,.career-stages strong{display:block}.career-stages span{font-size:.78rem;color:var(--muted);margin-bottom:6px}
+.career-stages p{font-size:.85rem!important;margin:5px 0 0!important}
+@media(max-width:650px){.compact-case{padding:20px!important}.change-grid,.career-stages{grid-template-columns:1fr}.change-grid{gap:8px}.change-grid>div{padding:14px}.problem-unit{margin-top:22px}}
+@media print{.compact-case{padding:14px!important;break-inside:auto!important}.problem-unit{break-inside:avoid}.change-grid{grid-template-columns:1fr 1fr}.compact-links{display:none}}
+

@@ -3,7 +3,6 @@
     "about",
     "print-controls",
     "journey",
-    "experience",
     "professional",
     "skills",
     "side-projects",
@@ -13,7 +12,6 @@
     "about": "sections/about.html",
     "print-controls": "sections/print-controls.html",
     "journey": "sections/journey.html",
-    "experience": "sections/experience.html",
     "skills": "sections/skills.html",
     "contact": "sections/contact.html"
   },
@@ -26,7 +24,7 @@
         "cases/jira.html",
         "cases/cost.html"
       ],
-      "sort": "body-length-desc"
+      "sort": "manual"
     },
     "side-projects": {
       "header": "headers/side-projects.html",

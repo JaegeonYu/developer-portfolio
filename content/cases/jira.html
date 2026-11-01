@@ -1,32 +1,5 @@
-<article class="project professional-case" id="case-jira">
-<div class="case-art case-1" aria-hidden="true">
-<span class="case-index">PRODUCTION EXPERIENCE / 03</span>
-<strong>REQUEST ↔ ISSUE</strong>
-<span>문의 · 진행 이력 · 첨부파일 연동</span>
-</div>
-<div class="project-meta">
-<span>데이터 구조 개선 · API 개발</span>
-<span>2026.01 — 2026.05</span>
-</div>
-<h3>고객문의 구조 개선과 Jira 연동</h3>
-<p class="muted">emroCloud · 데이터 모델 / 외부 연동</p>
-<div class="chips">
-<span>Java</span>
-<span>Spring</span>
-<span>Oracle</span>
-<span>Jira REST API</span>
-<span>AWS S3</span>
-</div>
-<p class="project-takeaway">문의 모델과 외부 연동 방식을 함께 바꿔 대화형 이력을 관리하도록 개선했습니다.</p>
-<div class="case-study">
-<h4 class="case-study-title">문제 해결 과정</h4>
-<div class="detail-content">
-<h4>문제</h4>
-<p>기존의 1문의 1답변 구조로는 대화형 문의 이력을 관리하기 어려웠습니다. Jira 연동에서는 첨부파일과 콘텐츠 제약사항을 함께 처리해야 했습니다.</p>
-<h4>내가 한 일</h4>
-<p>요청과 진행 이력을 분리한 정규화 구조로 개선하고, 상태별 데이터 이관 기준을 설계했습니다. 문의·진행 내용·첨부파일을 Jira Issue와 Comment에 연결하는 REST API를 개발하고 Multipart 전송 및 파일명·댓글 링크 제약을 분석했습니다.</p>
-<h4>결과</h4>
-<p>기존 데이터를 대화형 구조로 이관했습니다. Base64 이미지로 인한 콘텐츠 제한 문제는 S3 기반 구조로 변경해 연동 안정성을 개선했습니다.</p>
-</div>
-</div>
-</article>
+<article class="project compact-case" id="case-jira"><div class="project-meta"><span>데이터 모델 개선 · REST API · S3</span></div><h3>고객문의 구조 개선과 Jira 연동</h3><p class="muted">emroCloud · 대화형 문의 이력</p><section class="problem-unit">
+<h4>문의 이력과 외부 연동</h4><p class="problem-statement"><strong>문제 상황</strong> 1문의 1답변 구조로는 대화형 진행 이력을 담기 어려웠고, Jira 콘텐츠·첨부파일 제약도 있었습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>문의와 답변이 고정된 구조였으며, Base64 이미지로 콘텐츠 제한 문제가 발생했습니다.</p></div>
+<div class="change-after"><h5>TO-BE</h5><p>요청과 진행 이력을 분리하고 상태별 이관 기준을 설계했습니다. Issue·Comment 연동 API를 개발하고 이미지는 S3 기반으로 변경했습니다.</p></div></div>
+<p class="decision"><strong>판단과 해결</strong> 실제 대화 흐름에 맞춰 데이터 구조를 나누고, 외부 API의 전송 제약까지 함께 해결했습니다.</p></section></article>

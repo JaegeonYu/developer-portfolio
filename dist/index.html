@@ -24,11 +24,10 @@
 </h1>
 <div class="introduction-grid">
 <div class="introduction-copy">
-<h2>요구사항부터 운영까지 맥락을 이어갑니다.</h2>
-<p>요청된 기능을 구현하기에 앞서, 현업이 어떤 업무를 수행하고 기존 방식에서 무엇이 불편했는지 파악하려고 합니다. 화면이나 기능 목록만 보는 대신, 사용자가 판단하는 기준과 그 판단에 필요한 데이터가 어디서 만들어지고 어떻게 이어지는지 함께 살핍니다.</p>
-<p>현대모비스 원가재료비 관리에서는 Excel로 관리하던 계산을 시스템으로 옮기며 구매원가팀과 환율·관리비·단가 등 업무 요건을 검증했습니다. 계산 결과가 다를 때도 시스템 오류로만 보지 않고, 현업 계산식과 반영된 원가 요소를 대조해 누락 원인을 확인했습니다.</p>
-<p>고객문의 개선에서는 기존의 1문의 1답변 구조가 실제 대화형 진행 이력을 담기 어렵다는 점에서 출발했습니다. 요청과 진행 이력을 나누고 Jira 연동의 첨부파일·콘텐츠 제약까지 함께 다루며, 업무 흐름에 맞는 데이터 구조와 처리 방식을 고민했습니다.</p>
-<p>운영 중 발생한 중복 결재와 입찰 제출 역시 재요청 자체보다, 요청이 도착한 시점의 처리 상태와 트랜잭션 완료 여부를 살펴 개선했습니다. 이렇게 실무에서 마주한 고민을 체계화하기 위해 데이터 모델링과 SQL 튜닝을 학습하며, 업무의 맥락과 데이터 정합성을 함께 이해하는 개발자로 성장하고자 합니다.</p>
+<h2>업무의 맥락을 이해하고, 데이터와 처리 방식으로 연결합니다.</h2>
+<p>B2B 서비스를 개발·운영하며 업무의 맥락을 데이터 구조와 처리 방식에 연결하는 것을 중요하게 생각합니다. 현업 담당자와 지속적으로 소통하며 요구사항의 배경과 업무 흐름을 파악하고, 기능 구현과 데이터 정합성을 함께 고려해 왔습니다.</p>
+<p>주어진 환경에서 더 효율적인 데이터 처리 방법을 찾고자 합니다. 온프레미스 레거시 환경에서도 데이터 접근 경로와 I/O를 살피며 쿼리와 처리 방식을 검토했습니다. 신규 테이블에는 선택도와 주요 조회·조인 패턴을 바탕으로 인덱스 설계를 제안하며, 설계 단계부터 효율적인 데이터 접근을 고민했습니다.</p>
+<p>이러한 실무의 고민을 체계화하기 위해 데이터 모델링과 SQL 튜닝을 꾸준히 학습하고 SQLP를 취득했습니다. 앞으로도 개발 경험을 바탕으로 업무와 데이터를 함께 이해하고, 현재 시스템에서 개선할 지점을 지속적으로 찾아가는 개발자가 되고자 합니다.</p>
 <div class="intro-focus">
 <span>Java · Spring</span>
 <span>Oracle · DB2 · SQL</span>
@@ -105,9 +104,9 @@
 <article class="journey-card">
 <span class="journey-kind">경력 <b class="current-marker">현재 재직 중</b>
 </span>
-<h3>엠로(emro) 입사</h3>
+<div class="journey-company"><img src="assets/emro.jpg" alt="엠로 emro 로고" width="64" height="64"><h3>엠로(emro) 입사</h3></div>
 <p class="journey-period">2024.09 — 현재 · 개발 사원</p>
-<p>Java·Spring 기반 B2B 서비스의 업무 로직, 데이터 구조와 운영 안정성을 개선하고 있습니다.</p>
+<div class="career-stages"><div><span>01 · 1년 6개월</span><strong>emroCloud 개발·운영</strong><p>SaaS 기반 구매 서비스의 기능 개발과 운영 개선</p></div><div><span>02 · 현재 6개월째</span><strong>프로젝트 고도화</strong><p>고객 업무에 맞춘 기능·데이터 처리 고도화</p></div></div>
 </article>
 <article class="journey-card certificate-event">
 <span class="journey-kind">데이터 자격</span>
@@ -132,532 +131,46 @@
 </ol>
 <p class="journey-note">시간순으로 배치했으며, 교육·경력의 기간은 각 항목에 함께 표시했습니다. 엠로 경력은 현재까지 이어지고 있습니다.</p>
 </section>
-<section id="experience" class="split">
-<div class="section-label">
-<span>02 / EXPERIENCE</span>
-<h2>제품을 만들고,<br>운영하며 배운 것</h2>
-<p class="muted">업무를 데이터 구조로 옮기고,<br>운영 중인 서비스의 안정성을 높였습니다.</p>
-</div>
-<div class="timeline">
-<article>
-<div class="company-brand">
-<img src="assets/emro.jpg" alt="엠로 emro 로고" width="447" height="447" loading="eager">
-</div>
-<div class="job-top">
-<h3>엠로 <span class="company-en">emro</span>
-</h3>
-<span class="tag">재직 중</span>
-</div>
-<p class="job-meta">개발 사원 · 정규직 <span>2024.09 — 현재</span>
-</p>
-<ul>
-<li>현대모비스 원가재료비 관리 프로젝트의 원가 산정 로직 개발</li>
-<li>emroCloud 고객문의 데이터 구조 개선 및 Jira 연동 API 개발</li>
-<li>일괄결재·입찰 제출의 동시성 제어와 대량 운영 데이터 정리</li>
-</ul>
-<div class="chips">
-<span>Java</span>
-<span>Spring Framework</span>
-<span>Oracle / DB2</span>
-<span>MyBatis</span>
-</div>
-</article>
-<div class="writing-tip">
-<span>↳</span>
-<p>분석과 공유도 개발의 일부로 생각합니다.<br>
-<small>Claude Code를 활용해 SaaS 구매 서비스를 분석하고, 온보딩 문서를 작성·공유했습니다.</small>
-</p>
-</div>
-</div>
-</section>
 <section id="projects">
 <div class="section-heading">
 <div class="section-label">
-<span>03 / PROFESSIONAL WORK</span>
+<span>02 / PROFESSIONAL WORK</span>
 <h2>실무에서 해결한 문제들</h2>
 </div>
 <span class="subheading">정합성 · 안정성 · 데이터 처리</span>
 </div>
 <p class="section-intro">현업 요구사항을 계산 로직과 데이터 구조로 옮기고, 운영 중 드러난 문제를 처리 방식의 개선으로 연결했습니다.</p>
 <div class="project-grid">
-<article class="project professional-case expanded-case" id="case-approval">
-<div class="case-art case-2" aria-hidden="true">
-<span class="case-index">PRODUCTION EXPERIENCE / 01</span>
-<strong>STATE CHECK · ROW LOCK</strong>
-<span>재요청과 중복 처리를 제어한 두 가지 접근</span>
-</div>
-<div class="project-meta">
-<span>상태 기반 제어 · 비관적 행 잠금</span>
-<span>일괄결재 · 입찰 제출</span>
-</div>
-<h3>동시성 제어로 중복 요청 처리 개선</h3>
-<p class="muted">일괄결재·공급사 입찰 제출 · 동시성 / 트랜잭션</p>
-<div class="chips">
-<span>Java</span>
-<span>Spring</span>
-<span>Oracle</span>
-<span>MyBatis</span>
-<span>상태 조건부 갱신</span>
-<span>SELECT FOR UPDATE</span>
-</div>
-<p class="project-takeaway">결재 상태를 기준으로 재실행 대상을 제한하고, DB 행 잠금으로 입찰 제출 흐름을 직렬화했습니다.</p>
-<div class="case-study">
-<h4 class="case-study-title">재요청 문제를 서로 다른 경합 지점에서 제어</h4>
-<div class="detail-content">
-<p class="case-lead">사용자의 재실행과 네트워크 지연에 따른 재요청이 업무 데이터를 중복 처리하지 않도록, 결재 상태와 DB 행 잠금을 각각 제어 기준으로 적용했습니다.</p>
-<div class="concurrency-example">
-<div class="example-heading">
-<span>01 / 낙관적 동시성 제어</span>
-<h4>일괄결재 처리 안정성 개선</h4>
-<p>2025.09 — 2025.11 · emroCloud · 상태 기반 대상 제외</p>
-</div>
-<p>개별 결재 처리 중 동일한 건이 재요청되는 상황에 상태 기반 제어를 적용했습니다. 처리중인 건의 재진입을 구분하고, 완료된 건도 재실행 대상에서 제외하도록 개선했습니다.</p>
-<div class="case-comparison">
-<div class="comparison-block">
-<h5>AS-IS · 개별 결재 처리 중 동일 건 재요청</h5>
-<p>일괄결재는 선택한 개별 결재 건마다 업무 모듈을 실행하는 방식이었습니다. 선행 트랜잭션이 아직 완료되지 않았는데 사용자가 같은 결재 건을 다시 요청하면, 후행 요청도 해당 건의 결재를 진행하면서 업무 모듈의 데이터 정합성이 맞지 않는 문제가 발생했습니다.</p>
-<div class="flowchart" role="group" aria-label="변경 전 · 선행 트랜잭션 종료 전 동일 결재 재요청">
-<p class="flowchart-title">변경 전 · 선행 트랜잭션 종료 전 동일 결재 재요청</p>
-<div class="flow-node ">
-<strong>사용자가 일괄결재 실행</strong>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node ">
-<strong>선택한 개별 결재의 업무 모듈 실행</strong>
-<span>선행 트랜잭션에서 결재 처리 진행</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node ">
-<strong>선행 트랜잭션이 완료되기 전 동일 건 재요청</strong>
-<span>후행 요청에서도 같은 결재의 업무 모듈 실행</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node flow-risk">
-<strong>동일 결재의 업무 처리가 중복 진행</strong>
-<span>업무 모듈의 데이터 정합성 오류 발생</span>
-</div>
-</div>
-</div>
-<div class="comparison-block">
-<h5>문제의 핵심 · 처리중인 동일 결재의 재진입</h5>
-<p>선행 트랜잭션이 끝나지 않은 동안 동일한 결재가 다시 실행될 수 있다는 점이 문제였습니다. 요청이 들어온 시점에 해당 결재가 처리중인지 구분하고, 이미 처리중이거나 완료된 건은 재실행 대상에서 제외할 필요가 있었습니다.</p>
-<p>낙관적 동시성 제어를 적용해 ‘결재상태’ 컬럼을 기준으로 처리 대상을 구분했습니다. 이미 일괄결재처리중이거나 완료된 건은 재실행 대상에서 제외하고, 실제 건별 처리는 별도 신규 트랜잭션으로 분리했습니다.</p>
-</div>
-</div>
-<h5>TO-BE · 시작 상태 기록 → 건별 처리 → 조건부 완료</h5>
-<ol class="processing-steps">
-<li>
-<strong>시작 상태를 기록하는 트랜잭션</strong>
-<p>일괄결재 시작 시 이미 ‘일괄결재처리중’이거나 ‘결재완료’인 건은 제외하고, 나머지 대상의 상태를 ‘일괄결재처리중’으로 변경합니다. 재요청이 처리중·완료 상태를 다시 덮어쓰지 않도록 했습니다.</p>
-<div class="flowchart" role="group" aria-label="트랜잭션 1 · 재실행 대상 구분">
-<p class="flowchart-title">트랜잭션 1 · 재실행 대상 구분</p>
-<div class="flow-node ">
-<strong>일괄결재 시작 · 결재 ID 목록 전달</strong>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node flow-decision">
-<strong>현재 결재상태 확인</strong>
-<span>처리중이거나 완료된 건인가?</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-branches">
-<div class="flow-path">
-<span class="flow-path-label">처리중 또는 완료</span>
-<div class="flow-node flow-muted">
-<strong>이번 처리 대상에서 제외</strong>
-<span>재요청으로 해당 상태를 덮어쓰지 않음</span>
-</div>
-</div>
-<div class="flow-path">
-<span class="flow-path-label">그 외 처리 대상</span>
-<div class="flow-node flow-success">
-<strong>일괄결재처리중으로 상태 변경</strong>
-<span>시작 상태를 기록하는 트랜잭션</span>
-</div>
-</div>
-</div>
-</div>
-</li>
-<li>
-<strong>결재 건마다 신규 트랜잭션으로 처리</strong>
-<p>건별 전처리 모듈을 실행한 후, 해당 결재 ID의 현재 상태가 ‘일괄결재처리중’인 경우에만 완료 상태로 갱신합니다. 시작 상태 변경과 개별 결재 처리의 트랜잭션 경계를 분리했습니다.</p>
-<div class="flowchart" role="group" aria-label="건별 신규 트랜잭션 · 처리와 완료 전환">
-<p class="flowchart-title">건별 신규 트랜잭션 · 처리와 완료 전환</p>
-<div class="flow-node ">
-<strong>결재 한 건의 신규 트랜잭션 시작</strong>
-<span>requirednew = true</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node ">
-<strong>해당 결재의 전처리 모듈 실행</strong>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node flow-decision">
-<strong>해당 ID의 상태가 일괄결재처리중인가?</strong>
-<span>완료 전환의 상태 조건 확인</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-branches">
-<div class="flow-path">
-<span class="flow-path-label">조건 일치</span>
-<div class="flow-node flow-success">
-<strong>결재완료로 갱신</strong>
-<span>처리중인 해당 결재만 완료 전환</span>
-</div>
-</div>
-<div class="flow-path">
-<span class="flow-path-label">조건 불일치</span>
-<div class="flow-node flow-muted">
-<strong>완료 상태를 갱신하지 않음</strong>
-<span>상태 조건에 맞는 행만 변경</span>
-</div>
-</div>
-</div>
-</div>
-</li>
-</ol>
-<p class="example-note">제공된 구현 흐름을 처리 단계와 상태 분기로 정리한 도식입니다.</p>
-<h5>개선한 점</h5>
-<p>처리중·완료 건을 재요청 대상에서 제외하고, 일괄결재의 시작과 완료를 서로 다른 상태로 표현했습니다. 실제 처리 단위는 건별 신규 트랜잭션으로 분리했습니다. 완료 갱신에는 현재 상태 조건을 추가해 의도한 단계의 결재만 완료로 전환하도록 했습니다.</p>
-</div>
-<div class="concurrency-example" id="case-bid">
-<div class="example-heading">
-<span>02 / 비관적 동시성 제어</span>
-<h4>중복 입찰 제출 방지</h4>
-<p>다중 애플리케이션 서버 · 단일 DB</p>
-</div>
-<h5>문제 · 검사는 있었지만 미커밋 제출을 감지하지 못함</h5>
-<p>공급사가 동일한 입찰에 제출한 뒤, 선행 트랜잭션이 끝나기 전에 네트워크 지연·오류로 요청을 다시 보냈습니다. 서비스에는 이미 제출 여부를 확인하는 로직이 있었지만, 후행 요청이 들어온 시점에는 선행 제출이 커밋되지 않아 기존 제출을 확인하지 못했고 두 번째 요청도 받아들여졌습니다.</p>
-<p>그 결과 동일 공급사의 입찰 제출 데이터가 중복 생성됐습니다. 입찰 마감 이후 구매담당자가 조회할 때 한 건을 기대한 조회에서 여러 건이 반환되면서 오류가 발생했습니다. 검증 로직의 유무보다 검증과 커밋 사이의 경합을 다뤄야 하는 문제였습니다.</p>
-<div class="request-race" aria-label="기존 중복 제출 발생 흐름">
-<span>첫 요청의 제출 여부 확인<small>제출 처리 중 · 아직 커밋 전</small>
-</span>
-<span>네트워크 지연으로 재요청<small>선행 제출을 확인하지 못함</small>
-</span>
-<span>두 요청 모두 제출 처리<small>중복 데이터로 조회 오류 발생</small>
-</span>
-</div>
-<h5>해결 · 기존 검증 앞에 입찰 행 잠금 추가</h5>
-<p>여러 서버가 하나의 DB를 공유하는 구조에 맞춰, 공급사 입찰 제출 로직의 시작점에서 SELECT … FOR UPDATE로 해당 입찰 행에 잠금을 걸었습니다. 서버가 달라도 같은 DB 행의 잠금을 기준으로 제출 흐름을 직렬화하는 비관적 동시성 제어를 적용했습니다.</p>
-<div class="flowchart" role="group" aria-label="입찰 제출 · 잠금 이후 기존 검증 실행">
-<p class="flowchart-title">입찰 제출 · 잠금 이후 기존 검증 실행</p>
-<div class="flow-node ">
-<strong>공급사의 입찰 제출 요청</strong>
-<span>여러 애플리케이션 서버 → 하나의 DB</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node flow-lock">
-<strong>해당 입찰 행의 잠금 획득</strong>
-<span>입찰 ID 기준 SELECT … FOR UPDATE</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node ">
-<strong>선행 트랜잭션이 있으면 잠금 대기</strong>
-<span>선행 커밋·롤백 후 잠금을 얻어 다음 단계 진행</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node flow-decision">
-<strong>기존 서비스의 제출 여부 확인</strong>
-<span>선행 제출 결과를 반영해 같은 공급사의 제출을 판단</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-branches">
-<div class="flow-path">
-<span class="flow-path-label">이미 제출됨</span>
-<div class="flow-node flow-muted">
-<strong>중복 저장 차단</strong>
-<span>기존 서비스의 검증 로직 활용</span>
-</div>
-</div>
-<div class="flow-path">
-<span class="flow-path-label">제출 가능</span>
-<div class="flow-node ">
-<strong>입찰 제출 데이터 저장</strong>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node flow-success">
-<strong>트랜잭션 커밋 · 잠금 해제</strong>
-<span>다음 요청이 잠금을 획득해 검증 시작</span>
-</div>
-</div>
-</div>
-</div>
-<h5>TO-BE · 잠금 획득 → 제출 여부 확인 → 저장</h5>
-<ol class="processing-steps">
-<li>
-<strong>입찰 행의 잠금을 먼저 획득</strong>
-<p>후행 요청은 선행 트랜잭션이 같은 입찰 행의 잠금을 유지하는 동안 제출 검증 단계로 넘어가지 못하고 대기합니다.</p>
-</li>
-<li>
-<strong>선행 트랜잭션 종료 후 기존 제출 여부 검사</strong>
-<p>선행 트랜잭션이 커밋 또는 롤백해 잠금을 해제하면, 후행 요청이 잠금을 획득한 뒤 기존 서비스의 제출 여부 검사를 수행합니다. 앞선 제출이 커밋됐다면 이미 제출된 것으로 판단해 중복 저장을 막습니다.</p>
-</li>
-<li>
-<strong>제출 가능한 경우에만 저장 후 트랜잭션 종료</strong>
-<p>검증과 제출 처리를 같은 트랜잭션 경계에 두고, 검증이 끝나기 전에 다른 제출 흐름이 끼어들지 않도록 순서를 제어했습니다.</p>
-</li>
-</ol>
-<h5>개선한 점 · 기존 검증이 유효하게 동작하도록 실행 순서 보장</h5>
-<p>새로운 중복 검사만 추가한 것이 아니라, 검사와 저장이 동시에 진행되던 경로를 직렬화했습니다. 선행 제출 결과를 반영한 상태에서 후행 요청을 판단하도록 만들어 기존 서비스의 제출 여부 검사가 의도한 역할을 하도록 개선했습니다.</p>
-<p class="example-note">잠금 기준은 공급사별 행이 아닌 ‘입찰 ID의 행’입니다. 같은 입찰에 대한 여러 공급사의 제출도 이 잠금 지점에서 대기할 수 있으며, 모든 일반 조회를 막는 방식은 아닙니다.</p>
-</div>
-<div class="concurrency-comparison">
-<h4>두 사례에서 제어 지점을 나눈 기준</h4>
-<table>
-<thead>
-<tr>
-<th scope="col">사례</th>
-<th scope="col">제어 기준</th>
-<th scope="col">적용 방식</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row">일괄결재</th>
-<td>현재 결재상태</td>
-<td>처리중·완료 건을 대상에서 제외하고 상태 조건을 붙여 완료 갱신</td>
-</tr>
-<tr>
-<th scope="row">입찰 제출</th>
-<td>동일한 입찰의 DB 행</td>
-<td>FOR UPDATE로 실행 순서를 정한 뒤 기존 제출 여부 검사와 저장 수행</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</article>
-<article class="project professional-case expanded-case" id="case-data">
-<div class="case-art case-3" aria-hidden="true">
-<span class="case-index">PRODUCTION EXPERIENCE / 02</span>
-<strong>약 2억 건</strong>
-<span>운영 부하를 고려한 데이터 정리 대상</span>
-</div>
-<div class="project-meta">
-<span>데이터 분석 · Batch Delete</span>
-<span>2025.07 — 2025.10</span>
-</div>
-<h3>대규모 운영 데이터 정리</h3>
-<p class="muted">emroCloud · 로그 / 메일 발송 이력</p>
-<div class="chips">
-<span>Oracle Standard Edition</span>
-<span>SQL</span>
-<span>ROWID</span>
-<span>Batch Delete</span>
-</div>
-<p class="project-takeaway">Archive Log 증가를 확인하고, ROWID 기반 삭제의 배치 건수를 더 작게 제한했습니다.</p>
-<div class="case-study">
-<h4 class="case-study-title">문제 해결 과정</h4>
-<div class="detail-content">
-<p class="case-lead">보존기간 조건만으로 대량 DELETE를 실행하던 방식에서, Archive Log 증가를 확인하고 삭제 건수와 트랜잭션 크기를 명시적으로 제한하는 방식으로 바꿨습니다.</p>
-<div class="case-comparison">
-<div class="comparison-block">
-<h4>AS-IS · 기간 조건에 해당하는 데이터를 일괄 삭제</h4>
-<p>로그와 메일 발송 이력 등 보존기간이 지난 데이터를 정리하는 작업이었습니다. 약 2억 건 규모의 정리 대상을 분석했으며, 날짜 조건만 있는 DELETE는 한 번의 작업이 처리할 건수를 명확히 제한하지 못했습니다.</p>
-<div class="flowchart" role="group" aria-label="변경 전 · 날짜 조건만으로 전체 삭제">
-<p class="flowchart-title">변경 전 · 날짜 조건만으로 전체 삭제</p>
-<div class="flow-node ">
-<strong>보존기간이 지난 로그 조회 대상</strong>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node ">
-<strong>해당 데이터를 한 번에 DELETE</strong>
-<span>한 번의 작업에서 삭제할 건수 제한 없음</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node flow-risk">
-<strong>변경에 따른 Redo 발생 · Archive Log 누적</strong>
-<span>삭제 작업 중 로그 공간의 급격한 증가 인지</span>
-</div>
-</div>
-</div>
-<div class="comparison-block">
-<h4>운영 중 확인한 문제 · 삭제에도 로그 공간이 필요</h4>
-<p>데이터를 삭제하는 작업에서도 변경 내용에 대한 Redo가 발생하고, Archive Log가 쌓여 용량이 급증하는 점을 확인했습니다. 삭제 대상의 용량뿐 아니라 작업이 새로 발생시키는 로그 공간도 고려해야 했습니다.</p>
-<p>한 번의 처리 분량을 더 작게 조정하고, 스크립트에서 처리 건수를 명확히 제한하는 방향으로 변경했습니다.</p>
-</div>
-</div>
-<h4>TO-BE · ROWID 커서와 건수 제한으로 작업 분할</h4>
-<ol class="processing-steps">
-<li>
-<strong>보존기간을 지난 대상의 ROWID 조회</strong>
-<p>날짜 조건은 유지하고, 커서가 삭제할 행의 ROWID를 가져오도록 구성했습니다.</p>
-</li>
-<li>
-<strong>일정 건수만 FETCH하고 해당 ROWID 삭제</strong>
-<p>한 번에 가져오는 건수를 제한하고, 이번 묶음의 ROWID만 DELETE 대상으로 사용했습니다. 전체 대상 건수와 한 번의 처리 건수를 구분했습니다.</p>
-</li>
-<li>
-<strong>일정 건수마다 COMMIT 후 다음 묶음 처리</strong>
-<p>대상 전체를 하나의 큰 트랜잭션으로 처리하지 않고 작업을 나눴습니다. Archive Log 증가를 확인한 뒤 배치 분량을 더 타이트하게 줄여 처리 단위를 조정했습니다.</p>
-</li>
-</ol>
-<div class="flowchart" role="group" aria-label="실제 적용 · ROWID 기준 제한된 건수씩 반복 삭제">
-<p class="flowchart-title">실제 적용 · ROWID 기준 제한된 건수씩 반복 삭제</p>
-<div class="flow-node ">
-<strong>커서로 대상 ROWID 조회</strong>
-<span>생성일이 보존기간을 지난 행</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node ">
-<strong>이번 묶음을 건수 제한하여 FETCH</strong>
-<span>한 번에 가져올 최대 건수를 명시</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node flow-decision">
-<strong>가져온 ROWID가 있는가?</strong>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-branches">
-<div class="flow-path">
-<span class="flow-path-label">없음</span>
-<div class="flow-node flow-muted">
-<strong>삭제 작업 종료</strong>
-<span>더 이상 처리할 묶음이 없음</span>
-</div>
-</div>
-<div class="flow-path">
-<span class="flow-path-label">있음</span>
-<div class="flow-node ">
-<strong>이번 ROWID 묶음만 DELETE</strong>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node flow-success">
-<strong>일정 건수마다 COMMIT</strong>
-<span>큰 트랜잭션 대신 작업 단위를 분할</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node flow-loop">
-<strong>다음 묶음 FETCH로 반복 ↺</strong>
-<span>Archive Log 증가를 확인해 배치 분량을 더 작게 조정</span>
-</div>
-</div>
-</div>
-</div>
-<p class="example-note">커서·FETCH·DELETE·COMMIT의 반복 구조를 보여주는 도식입니다. 실제 배치 크기는 생략했습니다.</p>
-<h4>개선의 의미와 한계</h4>
-<p>배치별 삭제 건수와 트랜잭션 크기를 제어할 수 있도록 바꿨습니다. 작은 배치와 COMMIT이 같은 데이터를 삭제할 때 발생하는 전체 Redo·Archive Log 양을 없애거나 자동으로 줄여 주는 것은 아닙니다. 작업 단위를 줄이는 것과 누적 로그 공간을 확보하는 것은 함께 고려해야 할 문제입니다.</p>
-<div class="design-alternative">
-<h4>SQLP 학습으로 넓힌 관점 · Enterprise Edition이라면?</h4>
-<p>실제 운영 DB는 Oracle Standard Edition이었기 때문에, 이번 정리에는 ROWID 기반 분할 DELETE를 적용했습니다. 이후 SQLP를 공부하며 배운 파티셔닝을 바탕으로 “Enterprise Edition 환경이라면 어떻게 접근할 수 있을까?”라는 대안도 고려했습니다.</p>
-<p>날짜 기준 파티션을 구성할 수 있고 보존기간 경계와 파티션 경계가 맞는다면, 행별 DELETE를 반복하는 대신 오래된 파티션을 DROP하는 방식으로 보존기간 관리를 바꿀 수 있습니다. 파티션 방식은 실제 운영에 적용한 결과가 아니라 학습 내용을 실무 문제에 연결해 검토한 접근입니다.</p>
-<div class="flowchart" role="group" aria-label="SQLP 학습에서 검토한 대안 · 실제 적용과 구분">
-<p class="flowchart-title">SQLP 학습에서 검토한 대안 · 실제 적용과 구분</p>
-<div class="flow-node ">
-<strong>보존기간이 지난 운영 로그를 어떻게 정리할까?</strong>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-branches">
-<div class="flow-path">
-<span class="flow-path-label">실제 환경 · Standard Edition</span>
-<div class="flow-node ">
-<strong>기존 테이블 구조에서 작업</strong>
-<span>이번 정리의 실제 운영 환경</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node flow-success">
-<strong>ROWID 기반 분할 DELETE</strong>
-<span>건수 제한 FETCH → DELETE → COMMIT</span>
-</div>
-</div>
-<div class="flow-path">
-<span class="flow-path-label">검토한 가정 · Enterprise Edition</span>
-<div class="flow-node ">
-<strong>Partitioning 기능과 사용 권한 확인</strong>
-<span>EE라는 이유만으로 자동 사용 가능한 것은 아님</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node ">
-<strong>날짜 기준 파티션 구성 전제</strong>
-<span>보존기간 경계와 파티션 경계가 맞는 경우</span>
-</div>
-<div class="flow-arrow" aria-hidden="true">↓</div>
-<div class="flow-node flow-alternative">
-<strong>오래된 파티션 단위로 제거</strong>
-<span>예: P_2021 파티션 DROP · 실제 적용하지 않은 대안</span>
-</div>
-</div>
-</div>
-</div>
-<p>실제 적용에는 기존 테이블 전환과 인덱스·참조 제약의 영향을 검토해야 합니다. Oracle 19c의 일반적인 온프레미스 EE 구성에서는 Oracle Partitioning이 별도 옵션이므로, ‘Enterprise Edition이면 바로 사용 가능’으로 단정하지 않고 기능과 사용 권한을 함께 확인해야 합니다.</p>
-<div class="technical-references">
-<a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/vldbg/maintenance-partition-tables-indexes.html" target="_blank" rel="noopener noreferrer">Oracle 파티션 유지관리 문서 ↗</a>
-<a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/dblic/Licensing-Information.html" target="_blank" rel="noopener noreferrer">Oracle 19c 기능·옵션 안내 ↗</a>
-</div>
-</div>
-</div>
-</div>
-</article>
-<article class="project professional-case" id="case-jira">
-<div class="case-art case-1" aria-hidden="true">
-<span class="case-index">PRODUCTION EXPERIENCE / 03</span>
-<strong>REQUEST ↔ ISSUE</strong>
-<span>문의 · 진행 이력 · 첨부파일 연동</span>
-</div>
-<div class="project-meta">
-<span>데이터 구조 개선 · API 개발</span>
-<span>2026.01 — 2026.05</span>
-</div>
-<h3>고객문의 구조 개선과 Jira 연동</h3>
-<p class="muted">emroCloud · 데이터 모델 / 외부 연동</p>
-<div class="chips">
-<span>Java</span>
-<span>Spring</span>
-<span>Oracle</span>
-<span>Jira REST API</span>
-<span>AWS S3</span>
-</div>
-<p class="project-takeaway">문의 모델과 외부 연동 방식을 함께 바꿔 대화형 이력을 관리하도록 개선했습니다.</p>
-<div class="case-study">
-<h4 class="case-study-title">문제 해결 과정</h4>
-<div class="detail-content">
-<h4>문제</h4>
-<p>기존의 1문의 1답변 구조로는 대화형 문의 이력을 관리하기 어려웠습니다. Jira 연동에서는 첨부파일과 콘텐츠 제약사항을 함께 처리해야 했습니다.</p>
-<h4>내가 한 일</h4>
-<p>요청과 진행 이력을 분리한 정규화 구조로 개선하고, 상태별 데이터 이관 기준을 설계했습니다. 문의·진행 내용·첨부파일을 Jira Issue와 Comment에 연결하는 REST API를 개발하고 Multipart 전송 및 파일명·댓글 링크 제약을 분석했습니다.</p>
-<h4>결과</h4>
-<p>기존 데이터를 대화형 구조로 이관했습니다. Base64 이미지로 인한 콘텐츠 제한 문제는 S3 기반 구조로 변경해 연동 안정성을 개선했습니다.</p>
-</div>
-</div>
-</article>
-<article class="project professional-case" id="case-cost">
-<div class="case-art case-0" aria-hidden="true">
-<span class="case-index">PRODUCTION EXPERIENCE / 04</span>
-<strong>0.07%</strong>
-<span>최종 단가 차이의 원인 분석</span>
-</div>
-<div class="project-meta">
-<span>원가 로직 개발</span>
-<span>2026.05 — 2026.09</span>
-</div>
-<h3>원가 산정의 정합성 확보</h3>
-<p class="muted">현대모비스 원가재료비 관리</p>
-<div class="chips">
-<span>Java</span>
-<span>DB2</span>
-<span>MyBatis</span>
-<span>Rhino JavaScript</span>
-</div>
-<p class="project-takeaway">계산 결과의 작은 차이도 업무 요건과 대조해 원인을 확인했습니다.</p>
-<div class="case-study">
-<h4 class="case-study-title">문제 해결 과정</h4>
-<div class="detail-content">
-<h4>문제</h4>
-<p>Excel로 수작업 관리하던 원가 산정 업무를 시스템으로 옮기면서, 개발 단계·품목·원가요소 간 관계와 다양한 계산 조건을 반영해야 했습니다.</p>
-<h4>내가 한 일</h4>
-<p>구매원가팀과 요구사항을 검증하며 환율·관리비·LDC율·단가에 따른 원가 차이 산정 로직을 설계했습니다. 현업 계산식과 시스템 결과를 비교하고, 환차액 누락으로 최종 단가에 0.07% 차이가 발생하는 원인을 분석했습니다.</p>
-<h4>결과</h4>
-<p>누락된 계산 요인을 확인해 결과의 정합성을 확보했습니다. 반복 계산을 시스템화하고, 원가 차액을 원인별로 살펴볼 수 있도록 결과를 제공했습니다.</p>
-</div>
-</div>
-</article>
+<article class="project compact-case" id="case-approval"><div class="project-meta"><span>Java · Spring · Oracle · MyBatis</span></div><h3>중복 요청의 경합 지점 제어</h3><p class="muted">일괄결재 · 입찰 제출</p><section class="problem-unit">
+<h4>일괄결재 재요청</h4><p class="problem-statement"><strong>문제 상황</strong> 선행 트랜잭션이 끝나기 전에 같은 결재가 재요청되어 업무 데이터의 정합성이 어긋났습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>처리 중인 결재를 구분하지 못해 동일 건의 업무 모듈이 중복 실행됐습니다.</p></div>
+<div class="change-after"><h5>TO-BE</h5><p>시작 시 처리중·완료 건을 제외하고 처리중 상태를 기록했습니다. 건별 신규 트랜잭션에서 전처리 후, 처리중인 건만 완료로 갱신했습니다.</p></div></div>
+<p class="decision"><strong>판단과 해결</strong> 요청 시점의 결재 상태를 제어 기준으로 삼고, 시작 상태 기록과 건별 처리의 트랜잭션을 분리했습니다.</p></section><section class="problem-unit" id="case-bid">
+<h4>입찰 중복 제출</h4><p class="problem-statement"><strong>문제 상황</strong> 제출 여부 검사 후에도 미커밋 상태의 재요청으로 중복 데이터가 생성돼 조회 오류가 발생했습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>여러 서버에서 검사와 저장이 동시에 진행되어 선행 제출을 확인하지 못했습니다.</p></div>
+<div class="change-after"><h5>TO-BE</h5><p>입찰 ID 행을 SELECT … FOR UPDATE로 잠근 뒤 기존 제출 여부 검사와 저장을 수행했습니다.</p></div></div>
+<p class="decision"><strong>판단과 해결</strong> 여러 서버가 공유하는 DB를 제어 지점으로 선택했습니다. 같은 입찰의 제출은 잠금 뒤 순서대로 검증하도록 했습니다.</p></section></article>
+<article class="project compact-case" id="case-data"><div class="project-meta"><span>2025.07 — 2025.10 · Oracle · ROWID</span></div><h3>대규모 운영 데이터 정리</h3><p class="muted">emroCloud · 로그 / 메일 발송 이력</p><section class="problem-unit">
+<h4>삭제 작업의 처리 단위 조정</h4><p class="problem-statement"><strong>문제 상황</strong> 약 2억 건 규모의 정리 대상을 분석하던 중, 대량 DELETE에 따른 Archive Log 용량 급증을 확인했습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>보존기간 조건만으로 삭제하여 한 번의 작업 건수와 트랜잭션 크기를 제한하지 못했습니다.</p></div>
+<div class="change-after"><h5>TO-BE</h5><p>대상 ROWID를 커서로 조회하고 건수를 제한해 FETCH → DELETE → COMMIT을 반복했습니다. 로그 증가를 확인하며 배치 분량을 줄였습니다.</p></div></div>
+<p class="decision"><strong>판단과 해결</strong> 삭제도 로그 공간을 사용한다는 점을 고려해 작업 단위를 제어했습니다. 분할 처리가 전체 Redo·Archive Log 양 자체를 줄이는 것은 아닙니다.</p></section></article>
+<article class="project compact-case" id="case-jira"><div class="project-meta"><span>데이터 모델 개선 · REST API · S3</span></div><h3>고객문의 구조 개선과 Jira 연동</h3><p class="muted">emroCloud · 대화형 문의 이력</p><section class="problem-unit">
+<h4>문의 이력과 외부 연동</h4><p class="problem-statement"><strong>문제 상황</strong> 1문의 1답변 구조로는 대화형 진행 이력을 담기 어려웠고, Jira 콘텐츠·첨부파일 제약도 있었습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>문의와 답변이 고정된 구조였으며, Base64 이미지로 콘텐츠 제한 문제가 발생했습니다.</p></div>
+<div class="change-after"><h5>TO-BE</h5><p>요청과 진행 이력을 분리하고 상태별 이관 기준을 설계했습니다. Issue·Comment 연동 API를 개발하고 이미지는 S3 기반으로 변경했습니다.</p></div></div>
+<p class="decision"><strong>판단과 해결</strong> 실제 대화 흐름에 맞춰 데이터 구조를 나누고, 외부 API의 전송 제약까지 함께 해결했습니다.</p></section></article>
+<article class="project compact-case" id="case-cost"><div class="project-meta"><span>2026.05 — 2026.09 · Java · DB2 · MyBatis</span></div><h3>원가 산정의 정합성 확보</h3><p class="muted">현대모비스 원가재료비 관리</p><section class="problem-unit">
+<h4>현업 계산과 시스템 결과의 차이</h4><p class="problem-statement"><strong>문제 상황</strong> Excel 원가 산정을 시스템으로 옮기는 과정에서 최종 단가에 0.07% 차이가 발생했습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>개발 단계·품목·원가요소와 계산 조건이 복잡해 결과 차이의 원인을 확인해야 했습니다.</p></div>
+<div class="change-after"><h5>TO-BE</h5><p>구매원가팀과 환율·관리비·LDC율·단가 요건을 대조해 환차액 누락을 확인하고 계산 로직에 반영했습니다.</p></div></div>
+<p class="decision"><strong>판단과 해결</strong> 작은 차이도 업무 계산식과 원가요소를 기준으로 추적했습니다. 반복 계산을 시스템화하고 원인별 원가 차액을 제공했습니다.</p></section></article>
 </div>
 </section>
 <section id="skills">
 <div class="section-heading">
 <div class="section-label">
-<span>04 / SKILLS</span>
+<span>03 / SKILLS</span>
 <h2>직접 사용하며 익힌 기술</h2>
 </div>
 <span class="subheading">기술 이름과 실제 사용 경험을 함께 확인하세요</span>
@@ -769,21 +282,14 @@
 <section id="side-projects">
 <div class="section-heading">
 <div class="section-label">
-<span>05 / PROJECTS</span>
+<span>04 / PROJECTS</span>
 <h2>팀, 개인 프로젝트</h2>
 <p class="muted">직접 수행한 프로젝트에서 맡은 역할과 주요 설계·개선 경험을 정리했습니다.</p>
 </div>
 </div>
 <div class="project-grid">
-<article class="project" id="project-trip">
-<figure class="explained-image">
-<button class="image-open project-cover" type="button" data-full-image="assets/projects/trip-architecture.webp" data-caption="Yesterday’s Trip 서비스 아키텍처" aria-label="Yesterday’s Trip 서비스 아키텍처 크게 보기">
-<img src="assets/projects/trip-architecture.webp" alt="Yesterday’s Trip 서비스 아키텍처" width="574" height="413" loading="eager">
-<span>아키텍처 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>EC2의 Docker 환경에서 Spring·MySQL·Redis와 외부 서비스를 연결한 구성입니다. 원본 그림의 ReactJs 표기는 개요 자료의 Vue.js와 차이가 있어 원본을 유지했습니다.</figcaption>
-</figure>
+<article class="project compact-case" id="project-trip">
+
 <div class="project-meta">
 <span>백엔드 · 인프라 · 협업 설계</span>
 <span>2023.11 · 2주 / 2인</span>
@@ -797,115 +303,21 @@
 <span>SSE</span>
 <span>EC2</span>
 </div>
-<div class="case-study">
-<h4 class="case-study-title">문제 해결 과정</h4>
-<div class="detail-content">
-<h4>담당 범위</h4>
-<p>Open API 데이터 적재, 관광지·유저·리뷰·지역 API, JWT 인증·인가, SSE 알림과 배포 환경을 담당했습니다.</p>
-<div class="case-topic">
-<h4>이메일 인증 응답 개선</h4>
-<p>SMTP 통신으로 지연되던 이메일 인증 요청을 멀티스레드 기반 비동기 처리로 변경했습니다. 당시 프로젝트 측정에서 요청 응답이 3초 이상에서 0.5초 미만으로 줄었습니다. 이메일 도착 시간을 측정한 수치는 아닙니다.</p>
-</div>
-<div class="case-topic">
-<h4>요청 순서를 시각화해 협업</h4>
-<p>API 명세서만으로 맞추기 어려웠던 처리 순서를 지역 팔로우·회원가입·로그인 시퀀스 다이어그램으로 정리해 GitHub에 공유했습니다. 프론트엔드 팀원과 구현 방향을 확인하고 피드백을 주고받는 기준으로 사용했습니다.</p>
-</div>
-<div class="case-topic">
-<h4>SSE 알림 흐름과 연결 관리</h4>
-<p>서버에서 클라이언트로 보내는 단방향 알림이 필요해, 주기적으로 확인하는 Polling 대신 Spring의 SseEmitter로 연결을 유지하는 SSE를 선택했습니다.</p>
-<ol class="logic-steps">
-<li>사용자가 관심 지역을 팔로우합니다.</li>
-<li>관리자가 해당 지역에 콘텐츠를 추가하면 팔로워의 알림을 DB에 저장합니다.</li>
-<li>접속자에게는 SSE로 알림 ID를 보내고 클라이언트가 상세 내용을 조회합니다.</li>
-<li>미접속자의 알림은 로그인 후 SSE 연결 시 미읽음 알림으로 전달합니다.</li>
-</ol>
-<p>사용자별 연결은 ConcurrentHashMap에 보관하고 종료·시간 초과 콜백에서 정리했습니다. 연결 저장소가 단일 서버 메모리에 있으므로 다중 서버 확장 시에는 별도 메시지 전달 계층이 필요합니다. Redis Pub/Sub·Kafka 연계는 당시 구현에 포함되지 않은 확장 과제입니다.</p>
-</div>
-<div class="case-topic">
-<h4>SQL 호출과 조회 범위 개선</h4>
-<ul class="project-findings">
-<li>알림 생성은 팔로워 조회 후 건별 INSERT하던 1+N회 호출을 INSERT INTO … SELECT 한 문장으로 합쳤습니다. 선택한 알림의 읽음 처리는 foreach와 IN 조건으로 묶었습니다.</li>
-<li>사용자와 여러 권한의 관계를 MyBatis 결과 매핑으로 표현했습니다.</li>
-<li>관광지 추천은 전체 결과를 애플리케이션에서 자르는 대신, 리뷰 수를 구하는 상관 서브쿼리와 평점 정렬·LIMIT을 SQL 안에서 처리했습니다.</li>
-</ul>
-</div>
-<div class="project-gallery">
-<h4>GitHub에 공유한 시퀀스와 로직</h4>
-<div class="diagram-grid">
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-follow_sequence.png" data-caption="지역 팔로우 시퀀스" aria-label="지역 팔로우 시퀀스 크게 보기">
-<img src="assets/projects/trip-follow_sequence.png" alt="지역 팔로우 시퀀스" width="666" height="441" loading="eager">
-<span>지역 팔로우 시퀀스<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>팔로우 요청부터 관심 지역 저장까지 클라이언트·서버·DB의 책임과 응답 순서를 맞춘 그림입니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-noti.png" data-caption="실시간 알림 시퀀스" aria-label="실시간 알림 시퀀스 크게 보기">
-<img src="assets/projects/trip-noti.png" alt="실시간 알림 시퀀스" width="666" height="755" loading="eager">
-<span>실시간 알림 시퀀스<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>콘텐츠 등록 이후 알림 저장과 SSE 이벤트가 발생하는 시점, 클라이언트의 상세 조회 순서를 공유한 그림입니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-before_signup.png" data-caption="회원가입 전 이메일 인증 흐름" aria-label="회원가입 전 이메일 인증 흐름 크게 보기">
-<img src="assets/projects/trip-before_signup.png" alt="회원가입 전 이메일 인증 흐름" width="748" height="1158" loading="eager">
-<span>회원가입 전 이메일 인증 흐름<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>이메일·닉네임 중복 확인 후 인증 요청을 받으면 입력값을 검증하고, 유효기간이 있는 인증 코드를 Redis에 저장해 이메일로 보냅니다. 클라이언트가 이메일과 코드를 보내면 저장된 코드와 비교합니다. 그림의 화살표는 이 요청과 검증 결과의 반환 순서를 뜻합니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-after_signup.png" data-caption="회원가입 처리 흐름" aria-label="회원가입 처리 흐름 크게 보기">
-<img src="assets/projects/trip-after_signup.png" alt="회원가입 처리 흐름" width="655" height="848" loading="eager">
-<span>회원가입 처리 흐름<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>회원가입 요청의 필수값·이메일 형식·중복 여부를 검증한 뒤 비밀번호를 인코딩하고 계정과 권한을 저장합니다. 성공과 실패의 응답 흐름을 함께 표시해 프론트엔드가 어떤 결과를 처리해야 하는지 공유했습니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-login_sequence.png" data-caption="로그인 시퀀스" aria-label="로그인 시퀀스 크게 보기">
-<img src="assets/projects/trip-login_sequence.png" alt="로그인 시퀀스" width="619" height="1084" loading="eager">
-<span>로그인 시퀀스<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>로그인 입력값을 확인하고 계정·권한을 조회해 인증한 뒤 Access Token과 Refresh Token을 반환하는 흐름입니다. 그림에는 기존 Refresh Token 정리와 새 토큰 저장, 로그인 이후 SSE 연결까지 표시해 인증 이후의 화면 처리 순서도 함께 맞췄습니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-sse.jpg" data-caption="SSE 알림 저장과 전달 로직" aria-label="SSE 알림 저장과 전달 로직 크게 보기">
-<img src="assets/projects/trip-sse.jpg" alt="SSE 알림 저장과 전달 로직" width="1037" height="675" loading="eager">
-<span>SSE 알림 저장과 전달 로직<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>DB에 남기는 알림과 메모리에서 관리하는 접속 연결의 역할을 구분해 보여줍니다.</figcaption>
-</figure>
-</div>
-</div>
-<div class="case-sources">
-<h4>본문에 반영한 기술 기록 · 원문</h4>
-<a href="https://anythingis.tistory.com/167" target="_blank" rel="noopener noreferrer">
-<span>MyBatis 쿼리 개선</span>
-<small>다중행 삽입 · 동적 SQL · 연관 데이터 매핑 ↗</small>
-</a>
-<a href="https://anythingis.tistory.com/168" target="_blank" rel="noopener noreferrer">
-<span>SSE 실시간 알림</span>
-<small>기술 선택 · 연결 관리 · 구현의 한계 ↗</small>
-</a>
-</div>
-<a class="repository-link" href="https://github.com/JaegeonYu/yesterday-s-Trip" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a>
-</div>
-</div>
-</article>
-<article class="project" id="project-honeypot">
-<figure class="explained-image">
-<button class="image-open project-cover" type="button" data-full-image="assets/projects/honeypot-architecture.webp" data-caption="여의도꿀통 서비스 아키텍처" aria-label="여의도꿀통 서비스 아키텍처 크게 보기">
-<img src="assets/projects/honeypot-architecture.webp" alt="여의도꿀통 서비스 아키텍처" width="951" height="690" loading="eager">
-<span>아키텍처 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>Nginx에서 Next.js·Spring으로 이어지는 사용자 요청 경로와 Spring·FastAPI·MySQL, 외부 API·S3의 연결을 보여줍니다. 하단은 GitLab 머지에서 Jenkins를 거쳐 배포되는 경로입니다.</figcaption>
-</figure>
+<section class="problem-unit">
+<h4>이메일 인증 응답 지연</h4><p class="problem-statement"><strong>문제 상황</strong> SMTP 통신을 기다리며 인증 요청 응답이 지연됐습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>메일 전송이 요청 처리 흐름을 지연시켜 응답에 3초 이상이 걸렸습니다.</p></div>
+<div class="change-after"><h5>TO-BE</h5><p>멀티스레드 기반 비동기 처리로 변경해 당시 측정한 요청 응답을 0.5초 미만으로 줄였습니다.</p></div></div>
+<p class="decision"><strong>판단과 해결</strong> 메일 발송과 요청 응답을 분리했습니다. 수치는 이메일 도착 시간이 아닌 요청 응답 시간입니다.</p></section><section class="problem-unit">
+<h4>알림 전달과 SQL 호출</h4><p class="problem-statement"><strong>문제 상황</strong> 관심 지역의 새 콘텐츠를 전달하고, 팔로워별 알림을 효율적으로 저장해야 했습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>팔로워 조회 후 건별 INSERT로 1+N회 SQL을 호출했습니다. 알림 전달에는 서버→클라이언트 단방향 통신이 필요했습니다.</p></div>
+<div class="change-after"><h5>TO-BE</h5><p>INSERT INTO … SELECT로 알림을 일괄 저장하고 SSE로 접속자에게 알림 ID를 전달했습니다. 미접속자의 알림은 DB에 남겨 재접속 시 전달했습니다.</p></div></div>
+<p class="decision"><strong>판단과 해결</strong> 단방향 알림에 SSE를 선택하고, 저장과 전달을 구분했습니다. 연결은 단일 서버 메모리에서 관리했습니다.</p></section><section class="problem-unit">
+<h4>협업 시 요청 순서 공유</h4><p class="problem-statement"><strong>문제 상황</strong> API 명세만으로 인증·알림 처리 순서를 맞추기 어려웠습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>클라이언트·서버·DB가 처리할 시점과 응답 순서를 추가로 조율해야 했습니다.</p></div>
+<div class="change-after"><h5>TO-BE</h5><p>팔로우·회원가입·로그인 시퀀스를 작성해 GitHub에 공유했습니다.</p></div></div>
+<p class="decision"><strong>판단과 해결</strong> 역할과 요청 순서를 그림으로 맞추고 구현 피드백의 기준으로 사용했습니다.</p></section><div class="compact-links"><button type="button" class="image-open compact-reference" data-full-image="assets/projects/trip-architecture.webp" data-caption="서비스 아키텍처">서비스 아키텍처 확대 ↗</button><a class="repository-link" href="https://github.com/JaegeonYu/yesterday-s-Trip" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a></div></article>
+<article class="project compact-case" id="project-honeypot">
+
 <div class="project-meta">
 <span>팀장 · 백엔드 · 인프라</span>
 <span>2024.03 — 2024.04 · 6주 / 6인</span>
@@ -919,63 +331,17 @@
 <span>Docker</span>
 <span>Jenkins</span>
 </div>
-<div class="case-study">
-<h4 class="case-study-title">문제 해결 과정</h4>
-<div class="detail-content">
-<h4>담당 범위</h4>
-<p>팀장으로 뉴스 API, EC2·Docker 운영 환경과 Jenkins CI/CD를 담당했습니다.</p>
-<h4>핵심 개선</h4>
-<p>뉴스와 키워드의 1:N 조회에서 발생한 메모리 페이징 경고는 페이지 대상 ID 조회와 연관 데이터 Fetch Join을 분리해 다뤘습니다. 운영 환경에서는 Docker와 UFW의 필터 적용 순서를 점검했습니다. 아래에 각 변경 전후를 정리했습니다.</p>
-<div class="project-gallery">
-<h4>설계와 개선 과정</h4>
-<div class="diagram-grid">
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-query-before.webp" data-caption="페이지네이션 문제 상황" aria-label="페이지네이션 문제 상황 크게 보기">
-<img src="assets/projects/honeypot-query-before.webp" alt="페이지네이션 문제 상황" width="448" height="431" loading="eager">
-<span>페이지네이션 문제 상황 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>뉴스 한 건에 여러 키워드가 연결되는 조인 구조입니다. 컬렉션 Fetch Join과 페이지 제한을 동시에 적용할 때 메모리 페이징 경고가 발생했습니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-query-after.webp" data-caption="ID 조회와 연관 데이터 조회 분리" aria-label="ID 조회와 연관 데이터 조회 분리 크게 보기">
-<img src="assets/projects/honeypot-query-after.webp" alt="ID 조회와 연관 데이터 조회 분리" width="840" height="576" loading="eager">
-<span>ID 조회와 연관 데이터 조회 분리 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>① 정렬·페이지 조건에 맞는 뉴스 ID 조회 → ② 해당 ID의 뉴스와 키워드 Fetch Join. 두 조회가 담당하는 범위를 나눴습니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-firewall-before.webp" data-caption="방화벽 필터 변경 전" aria-label="방화벽 필터 변경 전 크게 보기">
-<img src="assets/projects/honeypot-firewall-before.webp" alt="방화벽 필터 변경 전" width="776" height="492" loading="eager">
-<span>방화벽 필터 변경 전 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>컨테이너 공개 포트로 향하는 트래픽 경로를 점검한 변경 전 구성입니다. UFW 설정만으로 의도한 접근 제한이 적용되지 않았습니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-firewall-after.webp" data-caption="방화벽 필터 변경 후" aria-label="방화벽 필터 변경 후 크게 보기">
-<img src="assets/projects/honeypot-firewall-after.webp" alt="방화벽 필터 변경 후" width="794" height="504" loading="eager">
-<span>방화벽 필터 변경 후 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>Docker와 UFW의 필터 적용 순서를 확인하고 컨테이너 진입 경로에도 방화벽 정책이 적용되도록 변경한 구성입니다.</figcaption>
-</figure>
-</div>
-</div>
-<a class="repository-link" href="https://github.com/JaegeonYu/HoneyPot" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a>
-</div>
-</div>
-</article>
-<article class="project" id="project-perspectiview">
-<figure class="explained-image">
-<button class="image-open project-cover" type="button" data-full-image="assets/projects/perspectiview-architecture.webp" data-caption="시작 서비스 아키텍처" aria-label="시작 서비스 아키텍처 크게 보기">
-<img src="assets/projects/perspectiview-architecture.webp" alt="시작 서비스 아키텍처" width="2048" height="1152" loading="eager">
-<span>아키텍처 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>외부 프록시와 내부 Nginx를 거쳐 React·Spring으로 이어지는 서비스 경로입니다. MySQL·Redis와 S3 리소스 경로, GitLab→Jenkins→SSH 배포 경로를 함께 표시했습니다.</figcaption>
-</figure>
+<section class="problem-unit">
+<h4>컬렉션 조회의 메모리 페이징</h4><p class="problem-statement"><strong>문제 상황</strong> 뉴스와 키워드의 1:N 조회에서 메모리 페이징 경고가 발생했습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>컬렉션 Fetch Join과 페이지 제한을 한 번에 적용했습니다.</p></div>
+<div class="change-after"><h5>TO-BE</h5><p>페이지 조건에 맞는 뉴스 ID를 먼저 조회하고 해당 ID의 뉴스·키워드를 Fetch Join했습니다.</p></div></div>
+<p class="decision"><strong>판단과 해결</strong> 페이지 대상 선정과 연관 데이터 조회의 책임을 나눴습니다.</p></section><section class="problem-unit">
+<h4>컨테이너 공개 포트 접근 제어</h4><p class="problem-statement"><strong>문제 상황</strong> UFW 설정만으로 의도한 컨테이너 접근 제한이 적용되지 않았습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>Docker 공개 포트로 향하는 트래픽에 방화벽 정책이 기대대로 적용되지 않았습니다.</p></div>
+<div class="change-after"><h5>TO-BE</h5><p>Docker와 UFW의 필터 적용 순서를 확인하고 컨테이너 진입 경로에도 정책을 적용했습니다.</p></div></div>
+<p class="decision"><strong>판단과 해결</strong> 설정값에 그치지 않고 실제 트래픽 경로를 기준으로 점검했습니다.</p></section><div class="compact-links"><button type="button" class="image-open compact-reference" data-full-image="assets/projects/honeypot-architecture.webp" data-caption="서비스 아키텍처">서비스 아키텍처 확대 ↗</button><a class="repository-link" href="https://github.com/JaegeonYu/HoneyPot" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a></div></article>
+<article class="project compact-case" id="project-perspectiview">
+
 <div class="project-meta">
 <span>팀장 · 백엔드 · 인프라</span>
 <span>2024.01 — 2024.02 · 7주 / 6인</span>
@@ -989,54 +355,11 @@
 <span>Docker</span>
 <span>Jenkins</span>
 </div>
-<div class="case-study">
-<h4 class="case-study-title">문제 해결 과정</h4>
-<div class="detail-content">
-<h4>담당 범위</h4>
-<p>팀·유저 API, Spring Security Voter 기반 팀 단위 인가와 JUnit 5 테스트를 구현했습니다. Jenkins 배포 파이프라인과 리버스 프록시도 담당했습니다.</p>
-<h4>핵심 개선</h4>
-<p>담당자의 수작업에 의존하던 배포를 브랜치 머지 기반 파이프라인으로 바꾸고 외부 진입점을 프록시로 모았습니다. CORS 오류는 요청 Origin과 OPTIONS 사전 요청 처리를 나누어 점검했습니다.</p>
-<div class="project-gallery">
-<h4>설계와 개선 과정</h4>
-<div class="diagram-grid">
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/deployment-before.webp" data-caption="수동 배포 과정" aria-label="수동 배포 과정 크게 보기">
-<img src="assets/projects/deployment-before.webp" alt="수동 배포 과정" width="659" height="513" loading="eager">
-<span>수동 배포 과정 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>담당자가 직접 빌드하고 서버에 반영하던 수동 배포 단계입니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/deployment-after.webp" data-caption="Jenkins 자동 배포 과정" aria-label="Jenkins 자동 배포 과정 크게 보기">
-<img src="assets/projects/deployment-after.webp" alt="Jenkins 자동 배포 과정" width="582" height="505" loading="eager">
-<span>Jenkins 자동 배포 과정 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>브랜치 머지가 Jenkins 실행으로 이어지는 자동 배포 경로입니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/proxy-before.webp" data-caption="리버스 프록시 적용 전" aria-label="리버스 프록시 적용 전 크게 보기">
-<img src="assets/projects/proxy-before.webp" alt="리버스 프록시 적용 전" width="1247" height="717" loading="eager">
-<span>리버스 프록시 적용 전 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>리버스 프록시를 적용하기 전 프론트엔드·백엔드의 외부 접근 경로입니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/proxy-after.webp" data-caption="리버스 프록시 적용 후" aria-label="리버스 프록시 적용 후 크게 보기">
-<img src="assets/projects/proxy-after.webp" alt="리버스 프록시 적용 후" width="1151" height="595" loading="eager">
-<span>리버스 프록시 적용 후 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>외부 요청을 리버스 프록시로 모으고 SSL 처리를 프록시가 맡도록 바꾼 구성입니다.</figcaption>
-</figure>
-</div>
-</div>
-<a class="repository-link" href="https://github.com/JaegeonYu/PerspectiView" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a>
-</div>
-</div>
-</article>
+<section class="problem-unit">
+<h4>수동 배포와 서비스 진입 경로</h4><p class="problem-statement"><strong>문제 상황</strong> 담당자의 수작업에 의존하던 배포와 서비스별 외부 접근 경로를 정리해야 했습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>직접 빌드·서버 반영을 수행하고 프론트엔드·백엔드 접근 경로를 개별 관리했습니다.</p></div>
+<div class="change-after"><h5>TO-BE</h5><p>브랜치 머지 기반 Jenkins 배포 파이프라인을 구성하고 리버스 프록시로 외부 요청과 SSL 처리를 모았습니다.</p></div></div>
+<p class="decision"><strong>판단과 해결</strong> 반복 배포를 자동화하고 진입점을 정리했습니다. CORS 오류는 Origin과 OPTIONS 사전 요청 처리를 나누어 점검했습니다.</p></section><div class="compact-links"><button type="button" class="image-open compact-reference" data-full-image="assets/projects/perspectiview-architecture.webp" data-caption="서비스 아키텍처">서비스 아키텍처 확대 ↗</button><a class="repository-link" href="https://github.com/JaegeonYu/PerspectiView" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a></div></article>
 </div>
 </section>
 <section id="contact" class="contact">

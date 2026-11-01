@@ -1,12 +1,5 @@
-<article class="project" id="project-trip">
-<figure class="explained-image">
-<button class="image-open project-cover" type="button" data-full-image="assets/projects/trip-architecture.webp" data-caption="Yesterday’s Trip 서비스 아키텍처" aria-label="Yesterday’s Trip 서비스 아키텍처 크게 보기">
-<img src="assets/projects/trip-architecture.webp" alt="Yesterday’s Trip 서비스 아키텍처" width="574" height="413" loading="eager">
-<span>아키텍처 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>EC2의 Docker 환경에서 Spring·MySQL·Redis와 외부 서비스를 연결한 구성입니다. 원본 그림의 ReactJs 표기는 개요 자료의 Vue.js와 차이가 있어 원본을 유지했습니다.</figcaption>
-</figure>
+<article class="project compact-case" id="project-trip">
+
 <div class="project-meta">
 <span>백엔드 · 인프라 · 협업 설계</span>
 <span>2023.11 · 2주 / 2인</span>
@@ -20,103 +13,16 @@
 <span>SSE</span>
 <span>EC2</span>
 </div>
-<div class="case-study">
-<h4 class="case-study-title">문제 해결 과정</h4>
-<div class="detail-content">
-<h4>담당 범위</h4>
-<p>Open API 데이터 적재, 관광지·유저·리뷰·지역 API, JWT 인증·인가, SSE 알림과 배포 환경을 담당했습니다.</p>
-<div class="case-topic">
-<h4>이메일 인증 응답 개선</h4>
-<p>SMTP 통신으로 지연되던 이메일 인증 요청을 멀티스레드 기반 비동기 처리로 변경했습니다. 당시 프로젝트 측정에서 요청 응답이 3초 이상에서 0.5초 미만으로 줄었습니다. 이메일 도착 시간을 측정한 수치는 아닙니다.</p>
-</div>
-<div class="case-topic">
-<h4>요청 순서를 시각화해 협업</h4>
-<p>API 명세서만으로 맞추기 어려웠던 처리 순서를 지역 팔로우·회원가입·로그인 시퀀스 다이어그램으로 정리해 GitHub에 공유했습니다. 프론트엔드 팀원과 구현 방향을 확인하고 피드백을 주고받는 기준으로 사용했습니다.</p>
-</div>
-<div class="case-topic">
-<h4>SSE 알림 흐름과 연결 관리</h4>
-<p>서버에서 클라이언트로 보내는 단방향 알림이 필요해, 주기적으로 확인하는 Polling 대신 Spring의 SseEmitter로 연결을 유지하는 SSE를 선택했습니다.</p>
-<ol class="logic-steps">
-<li>사용자가 관심 지역을 팔로우합니다.</li>
-<li>관리자가 해당 지역에 콘텐츠를 추가하면 팔로워의 알림을 DB에 저장합니다.</li>
-<li>접속자에게는 SSE로 알림 ID를 보내고 클라이언트가 상세 내용을 조회합니다.</li>
-<li>미접속자의 알림은 로그인 후 SSE 연결 시 미읽음 알림으로 전달합니다.</li>
-</ol>
-<p>사용자별 연결은 ConcurrentHashMap에 보관하고 종료·시간 초과 콜백에서 정리했습니다. 연결 저장소가 단일 서버 메모리에 있으므로 다중 서버 확장 시에는 별도 메시지 전달 계층이 필요합니다. Redis Pub/Sub·Kafka 연계는 당시 구현에 포함되지 않은 확장 과제입니다.</p>
-</div>
-<div class="case-topic">
-<h4>SQL 호출과 조회 범위 개선</h4>
-<ul class="project-findings">
-<li>알림 생성은 팔로워 조회 후 건별 INSERT하던 1+N회 호출을 INSERT INTO … SELECT 한 문장으로 합쳤습니다. 선택한 알림의 읽음 처리는 foreach와 IN 조건으로 묶었습니다.</li>
-<li>사용자와 여러 권한의 관계를 MyBatis 결과 매핑으로 표현했습니다.</li>
-<li>관광지 추천은 전체 결과를 애플리케이션에서 자르는 대신, 리뷰 수를 구하는 상관 서브쿼리와 평점 정렬·LIMIT을 SQL 안에서 처리했습니다.</li>
-</ul>
-</div>
-<div class="project-gallery">
-<h4>GitHub에 공유한 시퀀스와 로직</h4>
-<div class="diagram-grid">
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-follow_sequence.png" data-caption="지역 팔로우 시퀀스" aria-label="지역 팔로우 시퀀스 크게 보기">
-<img src="assets/projects/trip-follow_sequence.png" alt="지역 팔로우 시퀀스" width="666" height="441" loading="eager">
-<span>지역 팔로우 시퀀스<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>팔로우 요청부터 관심 지역 저장까지 클라이언트·서버·DB의 책임과 응답 순서를 맞춘 그림입니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-noti.png" data-caption="실시간 알림 시퀀스" aria-label="실시간 알림 시퀀스 크게 보기">
-<img src="assets/projects/trip-noti.png" alt="실시간 알림 시퀀스" width="666" height="755" loading="eager">
-<span>실시간 알림 시퀀스<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>콘텐츠 등록 이후 알림 저장과 SSE 이벤트가 발생하는 시점, 클라이언트의 상세 조회 순서를 공유한 그림입니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-before_signup.png" data-caption="회원가입 전 이메일 인증 흐름" aria-label="회원가입 전 이메일 인증 흐름 크게 보기">
-<img src="assets/projects/trip-before_signup.png" alt="회원가입 전 이메일 인증 흐름" width="748" height="1158" loading="eager">
-<span>회원가입 전 이메일 인증 흐름<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>이메일·닉네임 중복 확인 후 인증 요청을 받으면 입력값을 검증하고, 유효기간이 있는 인증 코드를 Redis에 저장해 이메일로 보냅니다. 클라이언트가 이메일과 코드를 보내면 저장된 코드와 비교합니다. 그림의 화살표는 이 요청과 검증 결과의 반환 순서를 뜻합니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-after_signup.png" data-caption="회원가입 처리 흐름" aria-label="회원가입 처리 흐름 크게 보기">
-<img src="assets/projects/trip-after_signup.png" alt="회원가입 처리 흐름" width="655" height="848" loading="eager">
-<span>회원가입 처리 흐름<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>회원가입 요청의 필수값·이메일 형식·중복 여부를 검증한 뒤 비밀번호를 인코딩하고 계정과 권한을 저장합니다. 성공과 실패의 응답 흐름을 함께 표시해 프론트엔드가 어떤 결과를 처리해야 하는지 공유했습니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-login_sequence.png" data-caption="로그인 시퀀스" aria-label="로그인 시퀀스 크게 보기">
-<img src="assets/projects/trip-login_sequence.png" alt="로그인 시퀀스" width="619" height="1084" loading="eager">
-<span>로그인 시퀀스<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>로그인 입력값을 확인하고 계정·권한을 조회해 인증한 뒤 Access Token과 Refresh Token을 반환하는 흐름입니다. 그림에는 기존 Refresh Token 정리와 새 토큰 저장, 로그인 이후 SSE 연결까지 표시해 인증 이후의 화면 처리 순서도 함께 맞췄습니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-sse.jpg" data-caption="SSE 알림 저장과 전달 로직" aria-label="SSE 알림 저장과 전달 로직 크게 보기">
-<img src="assets/projects/trip-sse.jpg" alt="SSE 알림 저장과 전달 로직" width="1037" height="675" loading="eager">
-<span>SSE 알림 저장과 전달 로직<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>DB에 남기는 알림과 메모리에서 관리하는 접속 연결의 역할을 구분해 보여줍니다.</figcaption>
-</figure>
-</div>
-</div>
-<div class="case-sources">
-<h4>본문에 반영한 기술 기록 · 원문</h4>
-<a href="https://anythingis.tistory.com/167" target="_blank" rel="noopener noreferrer">
-<span>MyBatis 쿼리 개선</span>
-<small>다중행 삽입 · 동적 SQL · 연관 데이터 매핑 ↗</small>
-</a>
-<a href="https://anythingis.tistory.com/168" target="_blank" rel="noopener noreferrer">
-<span>SSE 실시간 알림</span>
-<small>기술 선택 · 연결 관리 · 구현의 한계 ↗</small>
-</a>
-</div>
-<a class="repository-link" href="https://github.com/JaegeonYu/yesterday-s-Trip" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a>
-</div>
-</div>
-</article>
+<section class="problem-unit">
+<h4>이메일 인증 응답 지연</h4><p class="problem-statement"><strong>문제 상황</strong> SMTP 통신을 기다리며 인증 요청 응답이 지연됐습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>메일 전송이 요청 처리 흐름을 지연시켜 응답에 3초 이상이 걸렸습니다.</p></div>
+<div class="change-after"><h5>TO-BE</h5><p>멀티스레드 기반 비동기 처리로 변경해 당시 측정한 요청 응답을 0.5초 미만으로 줄였습니다.</p></div></div>
+<p class="decision"><strong>판단과 해결</strong> 메일 발송과 요청 응답을 분리했습니다. 수치는 이메일 도착 시간이 아닌 요청 응답 시간입니다.</p></section><section class="problem-unit">
+<h4>알림 전달과 SQL 호출</h4><p class="problem-statement"><strong>문제 상황</strong> 관심 지역의 새 콘텐츠를 전달하고, 팔로워별 알림을 효율적으로 저장해야 했습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>팔로워 조회 후 건별 INSERT로 1+N회 SQL을 호출했습니다. 알림 전달에는 서버→클라이언트 단방향 통신이 필요했습니다.</p></div>
+<div class="change-after"><h5>TO-BE</h5><p>INSERT INTO … SELECT로 알림을 일괄 저장하고 SSE로 접속자에게 알림 ID를 전달했습니다. 미접속자의 알림은 DB에 남겨 재접속 시 전달했습니다.</p></div></div>
+<p class="decision"><strong>판단과 해결</strong> 단방향 알림에 SSE를 선택하고, 저장과 전달을 구분했습니다. 연결은 단일 서버 메모리에서 관리했습니다.</p></section><section class="problem-unit">
+<h4>협업 시 요청 순서 공유</h4><p class="problem-statement"><strong>문제 상황</strong> API 명세만으로 인증·알림 처리 순서를 맞추기 어려웠습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>클라이언트·서버·DB가 처리할 시점과 응답 순서를 추가로 조율해야 했습니다.</p></div>
+<div class="change-after"><h5>TO-BE</h5><p>팔로우·회원가입·로그인 시퀀스를 작성해 GitHub에 공유했습니다.</p></div></div>
+<p class="decision"><strong>판단과 해결</strong> 역할과 요청 순서를 그림으로 맞추고 구현 피드백의 기준으로 사용했습니다.</p></section><div class="compact-links"><button type="button" class="image-open compact-reference" data-full-image="assets/projects/trip-architecture.webp" data-caption="서비스 아키텍처">서비스 아키텍처 확대 ↗</button><a class="repository-link" href="https://github.com/JaegeonYu/yesterday-s-Trip" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a></div></article>
