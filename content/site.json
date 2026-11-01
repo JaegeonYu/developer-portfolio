@@ -1,11 +1,12 @@
 {
   "layout": [
     "about",
+    "featured",
     "print-controls",
-    "journey",
     "professional",
-    "skills",
     "side-projects",
+    "skills",
+    "journey",
     "contact"
   ],
   "sections": {
@@ -13,7 +14,8 @@
     "print-controls": "sections/print-controls.html",
     "journey": "sections/journey.html",
     "skills": "sections/skills.html",
-    "contact": "sections/contact.html"
+    "contact": "sections/contact.html",
+    "featured": "sections/featured.html"
   },
   "collections": {
     "professional": {

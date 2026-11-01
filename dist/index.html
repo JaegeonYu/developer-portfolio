@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="업무와 데이터를 함께 이해하는 백엔드 개발자 유재건. 엠로의 B2B 서비스 개발·운영 경험과 프로젝트를 소개합니다.">
+  <meta name="description" content="B2B 구매 서비스의 데이터 정합성과 운영 문제를 해결하는 백엔드 개발자 유재건. 동시성 제어, SQLP 스터디 시스템, 원가 정합성 사례를 소개합니다.">
   <title>유재건 — Backend Developer</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="refinement.css">
@@ -10,7 +10,7 @@
 </head>
 <body>
 <a class="skip" href="#main">본문으로 이동</a>
-<header><a class="logo" href="#">jaegeon<span>.</span>dev <small>개발자의 기록</small></a><nav aria-label="주 메뉴"><a href="#about">소개</a><a href="#journey">이력</a><a href="#projects">실무 사례</a><a href="#skills">기술</a><a href="#side-projects">프로젝트</a><a href="#contact">연락 ↗</a></nav><button id="theme" aria-label="어두운 테마로 전환">◐</button></header>
+<header><a class="logo" href="#">jaegeon<span>.</span>dev <small>개발자의 기록</small></a><nav aria-label="주 메뉴"><a href="#about">소개</a><a href="#featured">대표 경험</a><a href="#projects">실무 사례</a><a href="#side-projects">프로젝트</a><a href="#journey">이력</a><a href="#contact">연락 ↗</a></nav><button id="theme" aria-label="어두운 테마로 전환">◐</button></header>
 <main id="main">
 <section id="about" class="hero introduction" aria-labelledby="hero-title">
 <div class="eyebrow">
@@ -20,11 +20,14 @@
 <p class="intro-identity">
 <strong>유재건</strong> · 백엔드 개발자 <span>엠로(emro) · 2024.09 — 현재</span>
 </p>
-<h1 id="hero-title">요구사항의 배경을 묻고,<br>데이터의 흐름을 살핍니다<span class="accent">.</span>
+<h1 id="hero-title">B2B 서비스의 데이터 정합성과<br>운영 문제를 해결합니다<span class="accent">.</span>
 </h1>
 <div class="introduction-grid">
 <div class="introduction-copy">
-<h2>업무의 맥락을 이해하고, 데이터와 처리 방식으로 연결합니다.</h2>
+<p class="hero-summary">엠로에서 Java·Spring 기반 구매 서비스를 개발·운영하는 백엔드 개발자입니다. 업무 흐름을 이해하고, 중복 요청과 데이터 처리 문제를 시스템의 개선으로 연결합니다.</p>
+<div class="hero-credentials"><span>Java · Spring · Oracle / DB2</span><a href="#journey">SQLP 취득 · 2026.09 ↗</a></div>
+<p class="hero-career">2024.09 ~ 2026.01 · 엠로 클라우드 개발·운영<br>2026.02 ~ 현재 · 고도화 프로젝트 파트</p>
+<h2>업무를 이해하고, 데이터로 풀어갑니다.</h2>
 <p>B2B 서비스를 개발·운영하며 업무의 맥락을 데이터 구조와 처리 방식에 연결하는 것을 중요하게 생각합니다. 현업 담당자와 지속적으로 소통하며 요구사항의 배경과 업무 흐름을 파악하고, 기능 구현과 데이터 정합성을 함께 고려해 왔습니다.</p>
 <p>주어진 환경에서 더 효율적인 데이터 처리 방법을 찾고자 합니다. 온프레미스 레거시 환경에서도 데이터 접근 경로와 I/O를 살피며 쿼리와 처리 방식을 검토했습니다. 신규 테이블에는 선택도와 주요 조회·조인 패턴을 바탕으로 인덱스 설계를 제안하며, 설계 단계부터 효율적인 데이터 접근을 고민했습니다.</p>
 <p>이러한 실무의 고민을 체계화하기 위해 데이터 모델링과 SQL 튜닝을 꾸준히 학습하고 SQLP를 취득했습니다. 앞으로도 개발 경험을 바탕으로 업무와 데이터를 함께 이해하고, 현재 시스템에서 개선할 지점을 지속적으로 찾아가는 개발자가 되고자 합니다.</p>
@@ -37,101 +40,18 @@
 <figure class="intro-profile"><img src="assets/profile.webp" alt="유재건 프로필 사진" width="256" height="342" loading="eager"></figure>
 </div>
 </section>
+<section id="featured" aria-labelledby="featured-title">
+<div class="section-heading"><div class="section-label"><span>01 / SELECTED WORK</span><h2 id="featured-title">먼저 살펴볼 세 가지 경험</h2></div><p class="muted">운영 문제 해결 · 학습의 실전 적용 · 현업과의 검증</p></div>
+<div class="featured-grid">
+<a class="featured-card" href="#case-approval"><span class="featured-kind">실무 · 동시성 / 트랜잭션</span><h3>중복 요청의 원인을<br>처리 상태와 실행 순서에서 찾았습니다.</h3><p>결재상태로 재실행 대상을 구분하고, 다중 서버의 입찰 제출은 DB 잠금 뒤 기존 검증을 수행하도록 개선했습니다.</p><strong>상태 기반 제어 · SELECT FOR UPDATE</strong><span class="featured-link">동시성 제어 사례 읽기 ↗</span></a>
+<a class="featured-card" href="#project-sqlp"><span class="featured-kind">개인 · 설계·개발·운영 / 멘토</span><h3>SQLP 학습을<br>실제 스터디 운영 시스템으로 만들었습니다.</h3><p>스터디원 2명의 SQL 실습을 위해 자동 채점과 학습 기록 공개를 구현하고, 실제 질문을 바탕으로 채점 기준을 개선했습니다.</p><strong>Buffers 기반 채점 · Hint Report</strong><span class="featured-link">SQLP 시스템과 운영 화면 보기 ↗</span></a>
+<a class="featured-card" href="#case-cost"><span class="featured-kind">실무 · 업무 분석 / 계산 정합성</span><h3>최종 단가 0.07% 차이를<br>현업 계산식과 대조해 추적했습니다.</h3><p>원가 산정을 시스템으로 옮기는 과정에서 구매원가팀과 계산 요건을 검증하고, 환차액 누락을 확인해 로직에 반영했습니다.</p><strong>요구사항 검증 · 원가요소 분석</strong><span class="featured-link">원가 정합성 사례 읽기 ↗</span></a>
+</div></section>
 <div class="document-tools">
 <p>프로젝트의 설계와 문제 해결 과정을 한 문서에 담았습니다.</p>
 <button id="print-portfolio" type="button">PDF로 저장 / 인쇄</button>
 <small id="print-status" role="status">인쇄 창에서 ‘PDF로 저장’을 선택하세요. 모든 설명과 이미지가 포함됩니다.</small>
 </div>
-<section id="journey" aria-labelledby="journey-title">
-<div class="section-heading">
-<div class="section-label">
-<span>01 / JOURNEY</span>
-<h2 id="journey-title">배움에서 실무로 이어진 이력</h2>
-</div>
-<p class="journey-caption">시간순으로 보는 교육 · 자격 · 경력</p>
-</div>
-<div class="journey-legend" aria-label="이력 종류">
-<span class="education-key">교육</span>
-<span class="career-key">경력</span>
-<span class="certificate-key">자격</span>
-</div>
-<ol class="journey-timeline">
-<li class="journey-event education-event">
-<div class="journey-date">
-<time datetime="2017-03">2017.03</time>
-<span>— 2023.02</span>
-</div>
-<div class="journey-node" aria-hidden="true">
-</div>
-<article class="journey-card">
-<span class="journey-kind">대학교 · 학사 졸업</span>
-<h3>한밭대학교 컴퓨터공학과</h3>
-<p>자료구조, 운영체제, 데이터베이스, 네트워크를 학습했습니다. 졸업작품으로 지문 기반 본인인증 앱의 백엔드 개발을 담당했습니다.</p>
-</article>
-</li>
-<li class="journey-event certificate-event">
-<div class="journey-date">
-<time datetime="2023-06">2023.06</time>
-</div>
-<div class="journey-node" aria-hidden="true">
-</div>
-<article class="journey-card">
-<span class="journey-kind">국가기술자격</span>
-<h3>정보처리기사 취득</h3>
-<p>소프트웨어 개발의 기본기를 쌓았습니다.</p>
-</article>
-</li>
-<li class="journey-event education-event">
-<div class="journey-date">
-<time datetime="2023-07">2023.07</time>
-<span>시작 · 1년 수료</span>
-</div>
-<div class="journey-node" aria-hidden="true">
-</div>
-<article class="journey-card">
-<span class="journey-kind">개발 교육 · 팀 프로젝트</span>
-<h3>삼성청년SW아카데미 10기</h3>
-<p>Java 기반 백엔드 교육과 팀 프로젝트를 수행했습니다. SSAFY 프로젝트 경진대회 우수상·최우수상을 수상했습니다.</p>
-</article>
-</li>
-<li class="journey-event career-event">
-<div class="journey-date">
-<time datetime="2024-09">2024.09</time>
-<span>같은 달의 경력 · 자격</span>
-</div>
-<div class="journey-node" aria-hidden="true">
-</div>
-<div class="journey-pair">
-<article class="journey-card">
-<span class="journey-kind">경력 <b class="current-marker">현재 재직 중</b>
-</span>
-<div class="journey-company"><img src="assets/emro.jpg" alt="엠로 emro 로고" width="64" height="64"><h3>엠로(emro) 입사</h3></div>
-<p class="journey-period">2024.09 — 현재 · 개발 사원</p>
-<p class="career-lines">2024.09 ~ 2026.01 · 엠로 클라우드 개발·운영<br>2026.02 ~ 현재 · 고도화 프로젝트 파트</p>
-</article>
-<article class="journey-card certificate-event">
-<span class="journey-kind">데이터 자격</span>
-<h3>SQLD 취득</h3>
-<p>데이터와 SQL 활용의 기본기를 다졌습니다.</p>
-</article>
-</div>
-</li>
-<li class="journey-event certificate-event sqlp-event">
-<div class="journey-date">
-<time datetime="2026-09">2026.09</time>
-</div>
-<div class="journey-node" aria-hidden="true">
-</div>
-<article class="journey-card">
-<span class="journey-kind">실무와 학습의 연결</span>
-<h3>SQLP 취득 <span class="sqlp-tag">SQL 전문 역량</span>
-</h3>
-<p>데이터 모델링과 SQL 튜닝을 학습하며 실무에서 마주한 고민을 체계화했습니다.</p>
-</article>
-</li>
-</ol>
-<p class="journey-note">시간순으로 배치했으며, 교육·경력의 기간은 각 항목에 함께 표시했습니다. 엠로 경력은 현재까지 이어지고 있습니다.</p>
-</section>
 <section id="projects">
 <div class="section-heading">
 <div class="section-label">
@@ -173,7 +93,7 @@
 <p>기존의 1문의 1답변 구조로는 대화형 문의 이력을 관리하기 어려웠습니다. Jira 연동에서는 첨부파일과 콘텐츠 제약사항을 함께 처리해야 했습니다.</p>
 <h4>내가 한 일</h4>
 <p>요청과 진행 이력을 분리한 정규화 구조로 개선하고, 상태별 데이터 이관 기준을 설계했습니다. 문의·진행 내용·첨부파일을 Jira Issue와 Comment에 연결하는 REST API를 개발하고 Multipart 전송 및 파일명·댓글 링크 제약을 분석했습니다.</p>
-<h4>결과</h4>
+<h4>적용 결과</h4>
 <p>기존 데이터를 대화형 구조로 이관했습니다. Base64 이미지로 인한 콘텐츠 제한 문제는 S3 기반 구조로 변경해 연동 안정성을 개선했습니다.</p>
 </div>
 </div>
@@ -196,7 +116,7 @@
 <span>MyBatis</span>
 <span>Rhino JavaScript</span>
 </div>
-<p class="project-takeaway">계산 결과의 작은 차이도 업무 요건과 대조해 원인을 확인했습니다.</p>
+<p class="project-takeaway">0.07%는 최종 단가의 차이입니다. 현업 계산식과 원가요소를 대조해 환차액 누락을 확인했습니다.</p>
 <div class="case-study">
 <h4 class="case-study-title">문제 해결 과정</h4>
 <div class="detail-content">
@@ -204,8 +124,287 @@
 <p>Excel로 수작업 관리하던 원가 산정 업무를 시스템으로 옮기면서, 개발 단계·품목·원가요소 간 관계와 다양한 계산 조건을 반영해야 했습니다.</p>
 <h4>내가 한 일</h4>
 <p>구매원가팀과 요구사항을 검증하며 환율·관리비·LDC율·단가에 따른 원가 차이 산정 로직을 설계했습니다. 현업 계산식과 시스템 결과를 비교하고, 환차액 누락으로 최종 단가에 0.07% 차이가 발생하는 원인을 분석했습니다.</p>
-<h4>결과</h4>
-<p>누락된 계산 요인을 확인해 결과의 정합성을 확보했습니다. 반복 계산을 시스템화하고, 원가 차액을 원인별로 살펴볼 수 있도록 결과를 제공했습니다.</p>
+<h4>대조와 결과</h4>
+<p>현업 계산식과 시스템 결과를 대조해 0.07% 단가 차이의 원인이 환차액 누락임을 확인하고 계산 로직에 반영했습니다. 반복 계산을 시스템화하고 원가 차액을 원인별로 살펴볼 수 있도록 결과를 제공했습니다.</p>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section id="side-projects">
+<div class="section-heading">
+<div class="section-label">
+<span>03 / PROJECTS</span>
+<h2>팀, 개인 프로젝트</h2>
+<p class="muted">직접 수행한 프로젝트에서 맡은 역할과 주요 설계·개선 경험을 정리했습니다.</p>
+</div>
+</div>
+<div class="project-grid">
+<article class="project detailed-project" id="project-sqlp"><div class="project-meta"><span>개인 프로젝트 · 설계·개발·운영 · 멘토</span><span>2026.10 — 현재</span></div><h3>SQLP 스터디 운영 시스템</h3><p class="muted">문제 공개 · SQL 채점 · 진행률 집계 · 포스팅 배포 자동화</p><div class="chips"><span>Python</span><span>GitHub Actions</span><span>Oracle Autonomous DB</span><span>MkDocs</span></div><p class="project-takeaway">스터디원 2명이 사용하는 SQL 튜닝 실습·자동 채점 시스템을 설계하고 운영했습니다. 결과 일치·Buffers 채점과 Hint Report 피드백으로 학습 의도와 실제 실행을 함께 확인합니다.</p>
+<figure class="explained-image sqlp-evidence"><button class="image-open project-cover" type="button" data-full-image="assets/projects/sqlp-live-overview.png" data-caption="SQLP 스터디 공개 운영 화면 · 2026.11.01" aria-label="SQLP 스터디 실제 운영 화면 확대"><img src="assets/projects/sqlp-live-overview.png" alt="SQLP 스터디 사이트에서 스터디원 2명의 진행률과 주차별 달성률을 보여주는 실제 화면" width="1280" height="900" loading="eager"><span>실제 공개 운영 화면 <b>확대 ↗</b></span></button><figcaption>2026.11.01 공개 사이트에서 캡처한 화면입니다. 스터디원별 진행률과 주차별 달성률을 표시합니다. 화면의 진행률은 캡처 시점의 값이며 성능 개선율이 아닙니다. <a href="https://sqlp-study-2026.github.io/sqlp-archive/" target="_blank" rel="noopener noreferrer">현재 운영 화면 보기 ↗</a></figcaption></figure>
+<div class="detail-content"><h4>배경과 설계 조건</h4><p>SQLP 취득 후 스터디원 두 명과 튜닝 스터디를 시작하며 멘토를 맡았습니다. 매주 문제를 공개하고 풀이를 확인하는 반복 작업을 줄이기 위해 운영 시스템을 만들었습니다. 브라우저만으로 참여할 수 있고, 운영비 0원을 목표로 하며, 제출 SQL·정답은 비공개로 유지하는 것을 조건으로 정했습니다.</p><h4>운영 구조</h4><div class="flowchart" role="group" aria-label="비공개 채점과 공개 학습 기록의 분리"><p class="flowchart-title">비공개 채점과 공개 학습 기록의 분리</p><div class="flow-node "><strong>스터디원: Issue Forms로 SQL 제출</strong><span>설치 없이 브라우저로 참여</span></div><div class="flow-arrow" aria-hidden="true">↓</div><div class="flow-node "><strong>비공개 sqlp-judge: Actions → Oracle DB 채점</strong><span>결과 일치·Buffers 검사 → 이슈 댓글 피드백</span></div><div class="flow-arrow" aria-hidden="true">↓</div><div class="flow-node "><strong>허용한 공개 데이터만 sqlp-archive로 전달</strong><span>제출 SQL·정답 제외</span></div><div class="flow-arrow" aria-hidden="true">↓</div><div class="flow-node flow-success"><strong>리뷰·머지된 글과 진행률 → MkDocs → GitHub Pages</strong><span>공개 학습 기록으로 배포</span></div></div><p>주차 시작 시 문제, 개인별 할 일 목록과 포스팅 초안 PR을 자동 생성합니다. 멘토가 글을 리뷰·머지하면 사이트를 갱신하고 진행률을 다시 계산합니다. 공개 저장소는 별도 GitHub App으로 비공개 저장소에 재계산을 요청합니다.</p><p>DB는 데이터 소유 STUDY, 제출 SQL을 실행하는 읽기 전용 GRADER_RUN, 실행 통계를 조회하는 GRADER_STATS로 권한을 분리했습니다. 공개 데이터는 닉네임으로 표시하고, 배포 전 공개 금지 항목이 포함되면 빌드를 멈추도록 했습니다.</p><h4>채점 기준: 실행 시간보다 데이터 접근량</h4><p>같은 SQL도 캐시와 DB 부하에 따라 실행 시간이 달라져, 결과 일치와 읽은 블록 수(Buffers)를 기준으로 변경했습니다. 실행 시간은 장시간 SQL을 중단하는 제한으로만 남겼습니다.</p><p>로컬 Docker Oracle에서 10블록이던 SQL이 클라우드에서는 19블록으로 측정돼 목표값을 실제 채점 DB에서 다시 잡았습니다. 권한·네트워크·동시 제출도 클라우드에서 확인한 뒤 운영을 시작했습니다.</p><h4>Hint Report로 의도와 실제 실행계획 확인</h4><p>잘못 작성한 FULL 힌트가 무시됐는데도 다른 실행계획으로 목표를 만족해 통과한 사례가 있었습니다. 학습자가 의도한 방식과 실제 실행이 다른 문제를 드러내기 위해 Hint Report를 확인하고, 무시된 힌트를 댓글로 안내하며 해당 제출을 반려하도록 바꿨습니다.</p><pre class="case-code">Hint Report: E - FULL(e employees_dept_ix) ← Syntax error</pre><h4>배운 점</h4><p>판정 기준은 반복 측정과 실제 운영 환경에서 확인해야 했습니다. 오류 없이 무시되는 힌트처럼 사용자가 놓치기 쉬운 문제도 시스템이 피드백하도록 개선하고 있습니다.</p><div class="compact-links"><a href="https://sqlp-study-2026.github.io/sqlp-archive/" target="_blank" rel="noopener noreferrer">스터디 사이트 ↗</a><a href="https://github.com/sqlp-study-2026/sqlp-archive" target="_blank" rel="noopener noreferrer">공개 저장소 ↗</a><a href="https://jaegeonyu.github.io/portfolio/sqlp-study.html" target="_blank" rel="noopener noreferrer">상세 구조도 ↗</a></div></div></article>
+<article class="project detailed-project" id="project-trip">
+
+<div class="project-meta">
+<span>백엔드 · 인프라 · 협업 설계</span>
+<span>2023.11 · 2주 / 2인</span>
+</div>
+<h3>Yesterday’s Trip</h3>
+<p class="muted">관광지 리뷰 · 관심지역 실시간 알림</p>
+<div class="chips">
+<span>Spring Boot</span>
+<span>MyBatis</span>
+<span>JWT</span>
+<span>SSE</span>
+<span>EC2</span>
+</div>
+<figure class="explained-image">
+<button class="image-open project-cover" type="button" data-full-image="assets/projects/trip-architecture.webp" data-caption="Yesterday’s Trip 서비스 아키텍처" aria-label="Yesterday’s Trip 서비스 아키텍처 크게 보기">
+<img src="assets/projects/trip-architecture.webp" alt="Yesterday’s Trip 서비스 아키텍처" width="574" height="413" loading="eager">
+<span>아키텍처 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>EC2의 Docker 환경에서 Spring·MySQL·Redis와 외부 서비스를 연결한 구성입니다. 원본 그림의 ReactJs 표기는 개요 자료의 Vue.js와 차이가 있어 원본을 유지했습니다.</figcaption>
+</figure>
+<div class="case-study">
+<h4 class="case-study-title">문제 해결 과정</h4>
+<div class="detail-content">
+<h4>담당 범위</h4>
+<p>Open API 데이터 적재, 관광지·유저·리뷰·지역 API, JWT 인증·인가, SSE 알림과 배포 환경을 담당했습니다.</p>
+<div class="case-topic">
+<h4>이메일 인증 응답 개선</h4>
+<p>SMTP 통신으로 지연되던 이메일 인증 요청을 멀티스레드 기반 비동기 처리로 변경했습니다. 당시 프로젝트 측정에서 요청 응답이 3초 이상에서 0.5초 미만으로 줄었습니다. 이메일 도착 시간을 측정한 수치는 아닙니다.</p>
+</div>
+<div class="case-topic">
+<h4>요청 순서를 시각화해 협업</h4>
+<p>API 명세서만으로 맞추기 어려웠던 처리 순서를 지역 팔로우·회원가입·로그인 시퀀스 다이어그램으로 정리해 GitHub에 공유했습니다. 프론트엔드 팀원과 구현 방향을 확인하고 피드백을 주고받는 기준으로 사용했습니다.</p>
+</div>
+<div class="case-topic">
+<h4>SSE 알림 흐름과 연결 관리</h4>
+<p>서버에서 클라이언트로 보내는 단방향 알림이 필요해, 주기적으로 확인하는 Polling 대신 Spring의 SseEmitter로 연결을 유지하는 SSE를 선택했습니다.</p>
+<ol class="logic-steps">
+<li>사용자가 관심 지역을 팔로우합니다.</li>
+<li>관리자가 해당 지역에 콘텐츠를 추가하면 팔로워의 알림을 DB에 저장합니다.</li>
+<li>접속자에게는 SSE로 알림 ID를 보내고 클라이언트가 상세 내용을 조회합니다.</li>
+<li>미접속자의 알림은 로그인 후 SSE 연결 시 미읽음 알림으로 전달합니다.</li>
+</ol>
+<p>사용자별 연결은 ConcurrentHashMap에 보관하고 종료·시간 초과 콜백에서 정리했습니다. 연결 저장소가 단일 서버 메모리에 있으므로 다중 서버 확장 시에는 별도 메시지 전달 계층이 필요합니다. Redis Pub/Sub·Kafka 연계는 당시 구현에 포함되지 않은 확장 과제입니다.</p>
+</div>
+<div class="case-topic">
+<h4>SQL 호출과 조회 범위 개선</h4>
+<ul class="project-findings">
+<li>알림 생성은 팔로워 조회 후 건별 INSERT하던 1+N회 호출을 INSERT INTO … SELECT 한 문장으로 합쳤습니다. 선택한 알림의 읽음 처리는 foreach와 IN 조건으로 묶었습니다.</li>
+<li>사용자와 여러 권한의 관계를 MyBatis 결과 매핑으로 표현했습니다.</li>
+<li>관광지 추천은 전체 결과를 애플리케이션에서 자르는 대신, 리뷰 수를 구하는 상관 서브쿼리와 평점 정렬·LIMIT을 SQL 안에서 처리했습니다.</li>
+</ul>
+</div>
+<div class="project-gallery">
+<h4>GitHub에 공유한 시퀀스와 로직</h4>
+<div class="diagram-grid">
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-follow_sequence.png" data-caption="지역 팔로우 시퀀스" aria-label="지역 팔로우 시퀀스 크게 보기">
+<img src="assets/projects/trip-follow_sequence.png" alt="지역 팔로우 시퀀스" width="666" height="441" loading="eager">
+<span>지역 팔로우 시퀀스<b>확대 ↗</b>
+</span>
+</button>
+<figcaption>팔로우 요청부터 관심 지역 저장까지 클라이언트·서버·DB의 책임과 응답 순서를 맞춘 그림입니다.</figcaption>
+</figure>
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-noti.png" data-caption="실시간 알림 시퀀스" aria-label="실시간 알림 시퀀스 크게 보기">
+<img src="assets/projects/trip-noti.png" alt="실시간 알림 시퀀스" width="666" height="755" loading="eager">
+<span>실시간 알림 시퀀스<b>확대 ↗</b>
+</span>
+</button>
+<figcaption>콘텐츠 등록 이후 알림 저장과 SSE 이벤트가 발생하는 시점, 클라이언트의 상세 조회 순서를 공유한 그림입니다.</figcaption>
+</figure>
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-before_signup.png" data-caption="회원가입 전 이메일 인증 흐름" aria-label="회원가입 전 이메일 인증 흐름 크게 보기">
+<img src="assets/projects/trip-before_signup.png" alt="회원가입 전 이메일 인증 흐름" width="748" height="1158" loading="eager">
+<span>회원가입 전 이메일 인증 흐름<b>확대 ↗</b>
+</span>
+</button>
+<figcaption>이메일·닉네임 중복 확인 후 인증 요청을 받으면 입력값을 검증하고, 유효기간이 있는 인증 코드를 Redis에 저장해 이메일로 보냅니다. 클라이언트가 이메일과 코드를 보내면 저장된 코드와 비교합니다. 그림의 화살표는 이 요청과 검증 결과의 반환 순서를 뜻합니다.</figcaption>
+</figure>
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-after_signup.png" data-caption="회원가입 처리 흐름" aria-label="회원가입 처리 흐름 크게 보기">
+<img src="assets/projects/trip-after_signup.png" alt="회원가입 처리 흐름" width="655" height="848" loading="eager">
+<span>회원가입 처리 흐름<b>확대 ↗</b>
+</span>
+</button>
+<figcaption>회원가입 요청의 필수값·이메일 형식·중복 여부를 검증한 뒤 비밀번호를 인코딩하고 계정과 권한을 저장합니다. 성공과 실패의 응답 흐름을 함께 표시해 프론트엔드가 어떤 결과를 처리해야 하는지 공유했습니다.</figcaption>
+</figure>
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-login_sequence.png" data-caption="로그인 시퀀스" aria-label="로그인 시퀀스 크게 보기">
+<img src="assets/projects/trip-login_sequence.png" alt="로그인 시퀀스" width="619" height="1084" loading="eager">
+<span>로그인 시퀀스<b>확대 ↗</b>
+</span>
+</button>
+<figcaption>로그인 입력값을 확인하고 계정·권한을 조회해 인증한 뒤 Access Token과 Refresh Token을 반환하는 흐름입니다. 그림에는 기존 Refresh Token 정리와 새 토큰 저장, 로그인 이후 SSE 연결까지 표시해 인증 이후의 화면 처리 순서도 함께 맞췄습니다.</figcaption>
+</figure>
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-sse.jpg" data-caption="SSE 알림 저장과 전달 로직" aria-label="SSE 알림 저장과 전달 로직 크게 보기">
+<img src="assets/projects/trip-sse.jpg" alt="SSE 알림 저장과 전달 로직" width="1037" height="675" loading="eager">
+<span>SSE 알림 저장과 전달 로직<b>확대 ↗</b>
+</span>
+</button>
+<figcaption>DB에 남기는 알림과 메모리에서 관리하는 접속 연결의 역할을 구분해 보여줍니다.</figcaption>
+</figure>
+</div>
+</div>
+<div class="case-sources">
+<h4>본문에 반영한 기술 기록 · 원문</h4>
+<a href="https://anythingis.tistory.com/167" target="_blank" rel="noopener noreferrer">
+<span>MyBatis 쿼리 개선</span>
+<small>다중행 삽입 · 동적 SQL · 연관 데이터 매핑 ↗</small>
+</a>
+<a href="https://anythingis.tistory.com/168" target="_blank" rel="noopener noreferrer">
+<span>SSE 실시간 알림</span>
+<small>기술 선택 · 연결 관리 · 구현의 한계 ↗</small>
+</a>
+</div>
+<a class="repository-link" href="https://github.com/JaegeonYu/yesterday-s-Trip" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a>
+</div>
+</div>
+</article>
+<article class="project detailed-project" id="project-honeypot">
+
+<div class="project-meta">
+<span>팀장 · 백엔드 · 인프라</span>
+<span>2024.03 — 2024.04 · 6주 / 6인</span>
+</div>
+<h3>여의도꿀통</h3>
+<p class="muted">국회의원 활동현황 · 정치뉴스 서비스</p>
+<div class="chips">
+<span>Spring Boot</span>
+<span>Querydsl</span>
+<span>EC2</span>
+<span>Docker</span>
+<span>Jenkins</span>
+</div>
+<figure class="explained-image">
+<button class="image-open project-cover" type="button" data-full-image="assets/projects/honeypot-architecture.webp" data-caption="여의도꿀통 서비스 아키텍처" aria-label="여의도꿀통 서비스 아키텍처 크게 보기">
+<img src="assets/projects/honeypot-architecture.webp" alt="여의도꿀통 서비스 아키텍처" width="951" height="690" loading="eager">
+<span>아키텍처 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>Nginx에서 Next.js·Spring으로 이어지는 사용자 요청 경로와 Spring·FastAPI·MySQL, 외부 API·S3의 연결을 보여줍니다. 하단은 GitLab 머지에서 Jenkins를 거쳐 배포되는 경로입니다.</figcaption>
+</figure>
+<div class="case-study">
+<h4 class="case-study-title">문제 해결 과정</h4>
+<div class="detail-content">
+<h4>담당 범위</h4>
+<p>팀장으로 뉴스 API, EC2·Docker 운영 환경과 Jenkins CI/CD를 담당했습니다.</p>
+<h4>핵심 개선</h4>
+<p>뉴스와 키워드의 1:N 조회에서 발생한 메모리 페이징 경고는 페이지 대상 ID 조회와 연관 데이터 Fetch Join을 분리해 다뤘습니다. 운영 환경에서는 Docker와 UFW의 필터 적용 순서를 점검했습니다. 아래에 각 변경 전후를 정리했습니다.</p>
+<div class="project-gallery">
+<h4>설계와 개선 과정</h4>
+<div class="diagram-grid">
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-query-before.webp" data-caption="페이지네이션 문제 상황" aria-label="페이지네이션 문제 상황 크게 보기">
+<img src="assets/projects/honeypot-query-before.webp" alt="페이지네이션 문제 상황" width="448" height="431" loading="eager">
+<span>페이지네이션 문제 상황 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>뉴스 한 건에 여러 키워드가 연결되는 조인 구조입니다. 컬렉션 Fetch Join과 페이지 제한을 동시에 적용할 때 메모리 페이징 경고가 발생했습니다.</figcaption>
+</figure>
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-query-after.webp" data-caption="ID 조회와 연관 데이터 조회 분리" aria-label="ID 조회와 연관 데이터 조회 분리 크게 보기">
+<img src="assets/projects/honeypot-query-after.webp" alt="ID 조회와 연관 데이터 조회 분리" width="840" height="576" loading="eager">
+<span>ID 조회와 연관 데이터 조회 분리 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>① 정렬·페이지 조건에 맞는 뉴스 ID 조회 → ② 해당 ID의 뉴스와 키워드 Fetch Join. 두 조회가 담당하는 범위를 나눴습니다.</figcaption>
+</figure>
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-firewall-before.webp" data-caption="방화벽 필터 변경 전" aria-label="방화벽 필터 변경 전 크게 보기">
+<img src="assets/projects/honeypot-firewall-before.webp" alt="방화벽 필터 변경 전" width="776" height="492" loading="eager">
+<span>방화벽 필터 변경 전 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>컨테이너 공개 포트로 향하는 트래픽 경로를 점검한 변경 전 구성입니다. UFW 설정만으로 의도한 접근 제한이 적용되지 않았습니다.</figcaption>
+</figure>
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-firewall-after.webp" data-caption="방화벽 필터 변경 후" aria-label="방화벽 필터 변경 후 크게 보기">
+<img src="assets/projects/honeypot-firewall-after.webp" alt="방화벽 필터 변경 후" width="794" height="504" loading="eager">
+<span>방화벽 필터 변경 후 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>Docker와 UFW의 필터 적용 순서를 확인하고 컨테이너 진입 경로에도 방화벽 정책이 적용되도록 변경한 구성입니다.</figcaption>
+</figure>
+</div>
+</div>
+<a class="repository-link" href="https://github.com/JaegeonYu/HoneyPot" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a>
+</div>
+</div>
+</article>
+<article class="project detailed-project" id="project-perspectiview">
+
+<div class="project-meta">
+<span>팀장 · 백엔드 · 인프라</span>
+<span>2024.01 — 2024.02 · 7주 / 6인</span>
+</div>
+<h3>시작</h3>
+<p class="muted">스토리 작가를 위한 작품 설정 시각화</p>
+<div class="chips">
+<span>Spring Boot</span>
+<span>Spring Security</span>
+<span>JUnit 5</span>
+<span>Docker</span>
+<span>Jenkins</span>
+</div>
+<figure class="explained-image">
+<button class="image-open project-cover" type="button" data-full-image="assets/projects/perspectiview-architecture.webp" data-caption="시작 서비스 아키텍처" aria-label="시작 서비스 아키텍처 크게 보기">
+<img src="assets/projects/perspectiview-architecture.webp" alt="시작 서비스 아키텍처" width="2048" height="1152" loading="eager">
+<span>아키텍처 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>외부 프록시와 내부 Nginx를 거쳐 React·Spring으로 이어지는 서비스 경로입니다. MySQL·Redis와 S3 리소스 경로, GitLab→Jenkins→SSH 배포 경로를 함께 표시했습니다.</figcaption>
+</figure>
+<div class="case-study">
+<h4 class="case-study-title">문제 해결 과정</h4>
+<div class="detail-content">
+<h4>담당 범위</h4>
+<p>팀·유저 API, Spring Security Voter 기반 팀 단위 인가와 JUnit 5 테스트를 구현했습니다. Jenkins 배포 파이프라인과 리버스 프록시도 담당했습니다.</p>
+<h4>핵심 개선</h4>
+<p>담당자의 수작업에 의존하던 배포를 브랜치 머지 기반 파이프라인으로 바꾸고 외부 진입점을 프록시로 모았습니다. CORS 오류는 요청 Origin과 OPTIONS 사전 요청 처리를 나누어 점검했습니다.</p>
+<div class="project-gallery">
+<h4>설계와 개선 과정</h4>
+<div class="diagram-grid">
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/deployment-before.webp" data-caption="수동 배포 과정" aria-label="수동 배포 과정 크게 보기">
+<img src="assets/projects/deployment-before.webp" alt="수동 배포 과정" width="659" height="513" loading="eager">
+<span>수동 배포 과정 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>담당자가 직접 빌드하고 서버에 반영하던 수동 배포 단계입니다.</figcaption>
+</figure>
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/deployment-after.webp" data-caption="Jenkins 자동 배포 과정" aria-label="Jenkins 자동 배포 과정 크게 보기">
+<img src="assets/projects/deployment-after.webp" alt="Jenkins 자동 배포 과정" width="582" height="505" loading="eager">
+<span>Jenkins 자동 배포 과정 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>브랜치 머지가 Jenkins 실행으로 이어지는 자동 배포 경로입니다.</figcaption>
+</figure>
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/proxy-before.webp" data-caption="리버스 프록시 적용 전" aria-label="리버스 프록시 적용 전 크게 보기">
+<img src="assets/projects/proxy-before.webp" alt="리버스 프록시 적용 전" width="1247" height="717" loading="eager">
+<span>리버스 프록시 적용 전 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>리버스 프록시를 적용하기 전 프론트엔드·백엔드의 외부 접근 경로입니다.</figcaption>
+</figure>
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/proxy-after.webp" data-caption="리버스 프록시 적용 후" aria-label="리버스 프록시 적용 후 크게 보기">
+<img src="assets/projects/proxy-after.webp" alt="리버스 프록시 적용 후" width="1151" height="595" loading="eager">
+<span>리버스 프록시 적용 후 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>외부 요청을 리버스 프록시로 모으고 SSL 처리를 프록시가 맡도록 바꾼 구성입니다.</figcaption>
+</figure>
+</div>
+</div>
+<a class="repository-link" href="https://github.com/JaegeonYu/PerspectiView" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a>
 </div>
 </div>
 </article>
@@ -214,7 +413,7 @@
 <section id="skills">
 <div class="section-heading">
 <div class="section-label">
-<span>03 / SKILLS</span>
+<span>04 / SKILLS</span>
 <h2>직접 사용하며 익힌 기술</h2>
 </div>
 <span class="subheading">기술 이름과 실제 사용 경험을 함께 확인하세요</span>
@@ -323,279 +522,95 @@
 <p class="muted additional-skills">함께 사용한 기술 <span>DB2 · JPA · Querydsl · Git · Jira</span>
 </p>
 </section>
-<section id="side-projects">
+<section id="journey" aria-labelledby="journey-title">
 <div class="section-heading">
 <div class="section-label">
-<span>04 / PROJECTS</span>
-<h2>팀, 개인 프로젝트</h2>
-<p class="muted">직접 수행한 프로젝트에서 맡은 역할과 주요 설계·개선 경험을 정리했습니다.</p>
+<span>05 / JOURNEY</span>
+<h2 id="journey-title">배움에서 실무로 이어진 이력</h2>
 </div>
+<p class="journey-caption">시간순으로 보는 교육 · 자격 · 경력</p>
 </div>
-<div class="project-grid">
-<article class="project detailed-project" id="project-sqlp"><div class="project-meta"><span>개인 프로젝트 · 설계·개발·운영 · 멘토</span><span>2026.10 — 현재</span></div><h3>SQLP 스터디 운영 시스템</h3><p class="muted">문제 공개 · SQL 채점 · 진행률 집계 · 포스팅 배포 자동화</p><div class="chips"><span>Python</span><span>GitHub Actions</span><span>Oracle Autonomous DB</span><span>MkDocs</span></div><div class="detail-content"><h4>배경과 설계 조건</h4><p>SQLP 취득 후 스터디원 두 명과 튜닝 스터디를 시작하며 멘토를 맡았습니다. 매주 문제를 공개하고 풀이를 확인하는 반복 작업을 줄이기 위해 운영 시스템을 만들었습니다. 브라우저만으로 참여할 수 있고, 운영비 0원을 목표로 하며, 제출 SQL·정답은 비공개로 유지하는 것을 조건으로 정했습니다.</p><h4>운영 구조</h4><div class="flowchart" role="group" aria-label="비공개 채점과 공개 학습 기록의 분리"><p class="flowchart-title">비공개 채점과 공개 학습 기록의 분리</p><div class="flow-node "><strong>스터디원: Issue Forms로 SQL 제출</strong><span>설치 없이 브라우저로 참여</span></div><div class="flow-arrow" aria-hidden="true">↓</div><div class="flow-node "><strong>비공개 sqlp-judge: Actions → Oracle DB 채점</strong><span>결과 일치·Buffers 검사 → 이슈 댓글 피드백</span></div><div class="flow-arrow" aria-hidden="true">↓</div><div class="flow-node "><strong>허용한 공개 데이터만 sqlp-archive로 전달</strong><span>제출 SQL·정답 제외</span></div><div class="flow-arrow" aria-hidden="true">↓</div><div class="flow-node flow-success"><strong>리뷰·머지된 글과 진행률 → MkDocs → GitHub Pages</strong><span>공개 학습 기록으로 배포</span></div></div><p>주차 시작 시 문제, 개인별 할 일 목록과 포스팅 초안 PR을 자동 생성합니다. 멘토가 글을 리뷰·머지하면 사이트를 갱신하고 진행률을 다시 계산합니다. 공개 저장소는 별도 GitHub App으로 비공개 저장소에 재계산을 요청합니다.</p><p>DB는 데이터 소유 STUDY, 제출 SQL을 실행하는 읽기 전용 GRADER_RUN, 실행 통계를 조회하는 GRADER_STATS로 권한을 분리했습니다. 공개 데이터는 닉네임으로 표시하고, 배포 전 공개 금지 항목이 포함되면 빌드를 멈추도록 했습니다.</p><h4>채점 기준: 실행 시간보다 데이터 접근량</h4><p>같은 SQL도 캐시와 DB 부하에 따라 실행 시간이 달라져, 결과 일치와 읽은 블록 수(Buffers)를 기준으로 변경했습니다. 실행 시간은 장시간 SQL을 중단하는 제한으로만 남겼습니다.</p><p>로컬 Docker Oracle에서 10블록이던 SQL이 클라우드에서는 19블록으로 측정돼 목표값을 실제 채점 DB에서 다시 잡았습니다. 권한·네트워크·동시 제출도 클라우드에서 확인한 뒤 운영을 시작했습니다.</p><h4>Hint Report로 의도와 실제 실행계획 확인</h4><p>잘못 작성한 FULL 힌트가 무시됐는데도 다른 실행계획으로 목표를 만족해 통과한 사례가 있었습니다. 학습자가 의도한 방식과 실제 실행이 다른 문제를 드러내기 위해 Hint Report를 확인하고, 무시된 힌트를 댓글로 안내하며 해당 제출을 반려하도록 바꿨습니다.</p><pre class="case-code">Hint Report: E - FULL(e employees_dept_ix) ← Syntax error</pre><h4>배운 점</h4><p>판정 기준은 반복 측정과 실제 운영 환경에서 확인해야 했습니다. 오류 없이 무시되는 힌트처럼 사용자가 놓치기 쉬운 문제도 시스템이 피드백하도록 개선하고 있습니다.</p><div class="compact-links"><a href="https://sqlp-study-2026.github.io/sqlp-archive/" target="_blank" rel="noopener noreferrer">스터디 사이트 ↗</a><a href="https://github.com/sqlp-study-2026/sqlp-archive" target="_blank" rel="noopener noreferrer">공개 저장소 ↗</a><a href="https://jaegeonyu.github.io/portfolio/sqlp-study.html" target="_blank" rel="noopener noreferrer">상세 구조도 ↗</a></div></div></article>
-<article class="project detailed-project" id="project-trip">
-<figure class="explained-image">
-<button class="image-open project-cover" type="button" data-full-image="assets/projects/trip-architecture.webp" data-caption="Yesterday’s Trip 서비스 아키텍처" aria-label="Yesterday’s Trip 서비스 아키텍처 크게 보기">
-<img src="assets/projects/trip-architecture.webp" alt="Yesterday’s Trip 서비스 아키텍처" width="574" height="413" loading="eager">
-<span>아키텍처 <b>확대 ↗</b>
+<div class="journey-legend" aria-label="이력 종류">
+<span class="education-key">교육</span>
+<span class="career-key">경력</span>
+<span class="certificate-key">자격</span>
+</div>
+<ol class="journey-timeline">
+<li class="journey-event education-event">
+<div class="journey-date">
+<time datetime="2017-03">2017.03</time>
+<span>— 2023.02</span>
+</div>
+<div class="journey-node" aria-hidden="true">
+</div>
+<article class="journey-card">
+<span class="journey-kind">대학교 · 학사 졸업</span>
+<h3>한밭대학교 컴퓨터공학과</h3>
+<p>자료구조, 운영체제, 데이터베이스, 네트워크를 학습했습니다. 졸업작품으로 지문 기반 본인인증 앱의 백엔드 개발을 담당했습니다.</p>
+</article>
+</li>
+<li class="journey-event certificate-event">
+<div class="journey-date">
+<time datetime="2023-06">2023.06</time>
+</div>
+<div class="journey-node" aria-hidden="true">
+</div>
+<article class="journey-card">
+<span class="journey-kind">국가기술자격</span>
+<h3>정보처리기사 취득</h3>
+<p>소프트웨어 개발의 기본기를 쌓았습니다.</p>
+</article>
+</li>
+<li class="journey-event education-event">
+<div class="journey-date">
+<time datetime="2023-07">2023.07</time>
+<span>시작 · 1년 수료</span>
+</div>
+<div class="journey-node" aria-hidden="true">
+</div>
+<article class="journey-card">
+<span class="journey-kind">개발 교육 · 팀 프로젝트</span>
+<h3>삼성청년SW아카데미 10기</h3>
+<p>Java 기반 백엔드 교육과 팀 프로젝트를 수행했습니다. SSAFY 프로젝트 경진대회 우수상·최우수상을 수상했습니다.</p>
+</article>
+</li>
+<li class="journey-event career-event">
+<div class="journey-date">
+<time datetime="2024-09">2024.09</time>
+<span>같은 달의 경력 · 자격</span>
+</div>
+<div class="journey-node" aria-hidden="true">
+</div>
+<div class="journey-pair">
+<article class="journey-card">
+<span class="journey-kind">경력 <b class="current-marker">현재 재직 중</b>
 </span>
-</button>
-<figcaption>EC2의 Docker 환경에서 Spring·MySQL·Redis와 외부 서비스를 연결한 구성입니다. 원본 그림의 ReactJs 표기는 개요 자료의 Vue.js와 차이가 있어 원본을 유지했습니다.</figcaption>
-</figure>
-<div class="project-meta">
-<span>백엔드 · 인프라 · 협업 설계</span>
-<span>2023.11 · 2주 / 2인</span>
+<div class="journey-company"><img src="assets/emro.jpg" alt="엠로 emro 로고" width="64" height="64"><h3>엠로(emro) 입사</h3></div>
+<p class="journey-period">2024.09 — 현재 · 개발 사원</p>
+<p class="career-lines">2024.09 ~ 2026.01 · 엠로 클라우드 개발·운영<br>2026.02 ~ 현재 · 고도화 프로젝트 파트</p>
+</article>
+<article class="journey-card certificate-event">
+<span class="journey-kind">데이터 자격</span>
+<h3>SQLD 취득</h3>
+<p>데이터와 SQL 활용의 기본기를 다졌습니다.</p>
+</article>
 </div>
-<h3>Yesterday’s Trip</h3>
-<p class="muted">관광지 리뷰 · 관심지역 실시간 알림</p>
-<div class="chips">
-<span>Spring Boot</span>
-<span>MyBatis</span>
-<span>JWT</span>
-<span>SSE</span>
-<span>EC2</span>
+</li>
+<li class="journey-event certificate-event sqlp-event">
+<div class="journey-date">
+<time datetime="2026-09">2026.09</time>
 </div>
-<div class="case-study">
-<h4 class="case-study-title">문제 해결 과정</h4>
-<div class="detail-content">
-<h4>담당 범위</h4>
-<p>Open API 데이터 적재, 관광지·유저·리뷰·지역 API, JWT 인증·인가, SSE 알림과 배포 환경을 담당했습니다.</p>
-<div class="case-topic">
-<h4>이메일 인증 응답 개선</h4>
-<p>SMTP 통신으로 지연되던 이메일 인증 요청을 멀티스레드 기반 비동기 처리로 변경했습니다. 당시 프로젝트 측정에서 요청 응답이 3초 이상에서 0.5초 미만으로 줄었습니다. 이메일 도착 시간을 측정한 수치는 아닙니다.</p>
+<div class="journey-node" aria-hidden="true">
 </div>
-<div class="case-topic">
-<h4>요청 순서를 시각화해 협업</h4>
-<p>API 명세서만으로 맞추기 어려웠던 처리 순서를 지역 팔로우·회원가입·로그인 시퀀스 다이어그램으로 정리해 GitHub에 공유했습니다. 프론트엔드 팀원과 구현 방향을 확인하고 피드백을 주고받는 기준으로 사용했습니다.</p>
-</div>
-<div class="case-topic">
-<h4>SSE 알림 흐름과 연결 관리</h4>
-<p>서버에서 클라이언트로 보내는 단방향 알림이 필요해, 주기적으로 확인하는 Polling 대신 Spring의 SseEmitter로 연결을 유지하는 SSE를 선택했습니다.</p>
-<ol class="logic-steps">
-<li>사용자가 관심 지역을 팔로우합니다.</li>
-<li>관리자가 해당 지역에 콘텐츠를 추가하면 팔로워의 알림을 DB에 저장합니다.</li>
-<li>접속자에게는 SSE로 알림 ID를 보내고 클라이언트가 상세 내용을 조회합니다.</li>
-<li>미접속자의 알림은 로그인 후 SSE 연결 시 미읽음 알림으로 전달합니다.</li>
+<article class="journey-card">
+<span class="journey-kind">실무와 학습의 연결</span>
+<h3>SQLP 취득 <span class="sqlp-tag">SQL 전문 역량</span>
+</h3>
+<p>데이터 모델링과 SQL 튜닝을 학습하며 실무에서 마주한 고민을 체계화했습니다.</p>
+</article>
+</li>
 </ol>
-<p>사용자별 연결은 ConcurrentHashMap에 보관하고 종료·시간 초과 콜백에서 정리했습니다. 연결 저장소가 단일 서버 메모리에 있으므로 다중 서버 확장 시에는 별도 메시지 전달 계층이 필요합니다. Redis Pub/Sub·Kafka 연계는 당시 구현에 포함되지 않은 확장 과제입니다.</p>
-</div>
-<div class="case-topic">
-<h4>SQL 호출과 조회 범위 개선</h4>
-<ul class="project-findings">
-<li>알림 생성은 팔로워 조회 후 건별 INSERT하던 1+N회 호출을 INSERT INTO … SELECT 한 문장으로 합쳤습니다. 선택한 알림의 읽음 처리는 foreach와 IN 조건으로 묶었습니다.</li>
-<li>사용자와 여러 권한의 관계를 MyBatis 결과 매핑으로 표현했습니다.</li>
-<li>관광지 추천은 전체 결과를 애플리케이션에서 자르는 대신, 리뷰 수를 구하는 상관 서브쿼리와 평점 정렬·LIMIT을 SQL 안에서 처리했습니다.</li>
-</ul>
-</div>
-<div class="project-gallery">
-<h4>GitHub에 공유한 시퀀스와 로직</h4>
-<div class="diagram-grid">
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-follow_sequence.png" data-caption="지역 팔로우 시퀀스" aria-label="지역 팔로우 시퀀스 크게 보기">
-<img src="assets/projects/trip-follow_sequence.png" alt="지역 팔로우 시퀀스" width="666" height="441" loading="eager">
-<span>지역 팔로우 시퀀스<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>팔로우 요청부터 관심 지역 저장까지 클라이언트·서버·DB의 책임과 응답 순서를 맞춘 그림입니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-noti.png" data-caption="실시간 알림 시퀀스" aria-label="실시간 알림 시퀀스 크게 보기">
-<img src="assets/projects/trip-noti.png" alt="실시간 알림 시퀀스" width="666" height="755" loading="eager">
-<span>실시간 알림 시퀀스<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>콘텐츠 등록 이후 알림 저장과 SSE 이벤트가 발생하는 시점, 클라이언트의 상세 조회 순서를 공유한 그림입니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-before_signup.png" data-caption="회원가입 전 이메일 인증 흐름" aria-label="회원가입 전 이메일 인증 흐름 크게 보기">
-<img src="assets/projects/trip-before_signup.png" alt="회원가입 전 이메일 인증 흐름" width="748" height="1158" loading="eager">
-<span>회원가입 전 이메일 인증 흐름<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>이메일·닉네임 중복 확인 후 인증 요청을 받으면 입력값을 검증하고, 유효기간이 있는 인증 코드를 Redis에 저장해 이메일로 보냅니다. 클라이언트가 이메일과 코드를 보내면 저장된 코드와 비교합니다. 그림의 화살표는 이 요청과 검증 결과의 반환 순서를 뜻합니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-after_signup.png" data-caption="회원가입 처리 흐름" aria-label="회원가입 처리 흐름 크게 보기">
-<img src="assets/projects/trip-after_signup.png" alt="회원가입 처리 흐름" width="655" height="848" loading="eager">
-<span>회원가입 처리 흐름<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>회원가입 요청의 필수값·이메일 형식·중복 여부를 검증한 뒤 비밀번호를 인코딩하고 계정과 권한을 저장합니다. 성공과 실패의 응답 흐름을 함께 표시해 프론트엔드가 어떤 결과를 처리해야 하는지 공유했습니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-login_sequence.png" data-caption="로그인 시퀀스" aria-label="로그인 시퀀스 크게 보기">
-<img src="assets/projects/trip-login_sequence.png" alt="로그인 시퀀스" width="619" height="1084" loading="eager">
-<span>로그인 시퀀스<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>로그인 입력값을 확인하고 계정·권한을 조회해 인증한 뒤 Access Token과 Refresh Token을 반환하는 흐름입니다. 그림에는 기존 Refresh Token 정리와 새 토큰 저장, 로그인 이후 SSE 연결까지 표시해 인증 이후의 화면 처리 순서도 함께 맞췄습니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/trip-sse.jpg" data-caption="SSE 알림 저장과 전달 로직" aria-label="SSE 알림 저장과 전달 로직 크게 보기">
-<img src="assets/projects/trip-sse.jpg" alt="SSE 알림 저장과 전달 로직" width="1037" height="675" loading="eager">
-<span>SSE 알림 저장과 전달 로직<b>확대 ↗</b>
-</span>
-</button>
-<figcaption>DB에 남기는 알림과 메모리에서 관리하는 접속 연결의 역할을 구분해 보여줍니다.</figcaption>
-</figure>
-</div>
-</div>
-<div class="case-sources">
-<h4>본문에 반영한 기술 기록 · 원문</h4>
-<a href="https://anythingis.tistory.com/167" target="_blank" rel="noopener noreferrer">
-<span>MyBatis 쿼리 개선</span>
-<small>다중행 삽입 · 동적 SQL · 연관 데이터 매핑 ↗</small>
-</a>
-<a href="https://anythingis.tistory.com/168" target="_blank" rel="noopener noreferrer">
-<span>SSE 실시간 알림</span>
-<small>기술 선택 · 연결 관리 · 구현의 한계 ↗</small>
-</a>
-</div>
-<a class="repository-link" href="https://github.com/JaegeonYu/yesterday-s-Trip" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a>
-</div>
-</div>
-</article>
-<article class="project detailed-project" id="project-honeypot">
-<figure class="explained-image">
-<button class="image-open project-cover" type="button" data-full-image="assets/projects/honeypot-architecture.webp" data-caption="여의도꿀통 서비스 아키텍처" aria-label="여의도꿀통 서비스 아키텍처 크게 보기">
-<img src="assets/projects/honeypot-architecture.webp" alt="여의도꿀통 서비스 아키텍처" width="951" height="690" loading="eager">
-<span>아키텍처 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>Nginx에서 Next.js·Spring으로 이어지는 사용자 요청 경로와 Spring·FastAPI·MySQL, 외부 API·S3의 연결을 보여줍니다. 하단은 GitLab 머지에서 Jenkins를 거쳐 배포되는 경로입니다.</figcaption>
-</figure>
-<div class="project-meta">
-<span>팀장 · 백엔드 · 인프라</span>
-<span>2024.03 — 2024.04 · 6주 / 6인</span>
-</div>
-<h3>여의도꿀통</h3>
-<p class="muted">국회의원 활동현황 · 정치뉴스 서비스</p>
-<div class="chips">
-<span>Spring Boot</span>
-<span>Querydsl</span>
-<span>EC2</span>
-<span>Docker</span>
-<span>Jenkins</span>
-</div>
-<div class="case-study">
-<h4 class="case-study-title">문제 해결 과정</h4>
-<div class="detail-content">
-<h4>담당 범위</h4>
-<p>팀장으로 뉴스 API, EC2·Docker 운영 환경과 Jenkins CI/CD를 담당했습니다.</p>
-<h4>핵심 개선</h4>
-<p>뉴스와 키워드의 1:N 조회에서 발생한 메모리 페이징 경고는 페이지 대상 ID 조회와 연관 데이터 Fetch Join을 분리해 다뤘습니다. 운영 환경에서는 Docker와 UFW의 필터 적용 순서를 점검했습니다. 아래에 각 변경 전후를 정리했습니다.</p>
-<div class="project-gallery">
-<h4>설계와 개선 과정</h4>
-<div class="diagram-grid">
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-query-before.webp" data-caption="페이지네이션 문제 상황" aria-label="페이지네이션 문제 상황 크게 보기">
-<img src="assets/projects/honeypot-query-before.webp" alt="페이지네이션 문제 상황" width="448" height="431" loading="eager">
-<span>페이지네이션 문제 상황 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>뉴스 한 건에 여러 키워드가 연결되는 조인 구조입니다. 컬렉션 Fetch Join과 페이지 제한을 동시에 적용할 때 메모리 페이징 경고가 발생했습니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-query-after.webp" data-caption="ID 조회와 연관 데이터 조회 분리" aria-label="ID 조회와 연관 데이터 조회 분리 크게 보기">
-<img src="assets/projects/honeypot-query-after.webp" alt="ID 조회와 연관 데이터 조회 분리" width="840" height="576" loading="eager">
-<span>ID 조회와 연관 데이터 조회 분리 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>① 정렬·페이지 조건에 맞는 뉴스 ID 조회 → ② 해당 ID의 뉴스와 키워드 Fetch Join. 두 조회가 담당하는 범위를 나눴습니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-firewall-before.webp" data-caption="방화벽 필터 변경 전" aria-label="방화벽 필터 변경 전 크게 보기">
-<img src="assets/projects/honeypot-firewall-before.webp" alt="방화벽 필터 변경 전" width="776" height="492" loading="eager">
-<span>방화벽 필터 변경 전 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>컨테이너 공개 포트로 향하는 트래픽 경로를 점검한 변경 전 구성입니다. UFW 설정만으로 의도한 접근 제한이 적용되지 않았습니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-firewall-after.webp" data-caption="방화벽 필터 변경 후" aria-label="방화벽 필터 변경 후 크게 보기">
-<img src="assets/projects/honeypot-firewall-after.webp" alt="방화벽 필터 변경 후" width="794" height="504" loading="eager">
-<span>방화벽 필터 변경 후 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>Docker와 UFW의 필터 적용 순서를 확인하고 컨테이너 진입 경로에도 방화벽 정책이 적용되도록 변경한 구성입니다.</figcaption>
-</figure>
-</div>
-</div>
-<a class="repository-link" href="https://github.com/JaegeonYu/HoneyPot" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a>
-</div>
-</div>
-</article>
-<article class="project detailed-project" id="project-perspectiview">
-<figure class="explained-image">
-<button class="image-open project-cover" type="button" data-full-image="assets/projects/perspectiview-architecture.webp" data-caption="시작 서비스 아키텍처" aria-label="시작 서비스 아키텍처 크게 보기">
-<img src="assets/projects/perspectiview-architecture.webp" alt="시작 서비스 아키텍처" width="2048" height="1152" loading="eager">
-<span>아키텍처 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>외부 프록시와 내부 Nginx를 거쳐 React·Spring으로 이어지는 서비스 경로입니다. MySQL·Redis와 S3 리소스 경로, GitLab→Jenkins→SSH 배포 경로를 함께 표시했습니다.</figcaption>
-</figure>
-<div class="project-meta">
-<span>팀장 · 백엔드 · 인프라</span>
-<span>2024.01 — 2024.02 · 7주 / 6인</span>
-</div>
-<h3>시작</h3>
-<p class="muted">스토리 작가를 위한 작품 설정 시각화</p>
-<div class="chips">
-<span>Spring Boot</span>
-<span>Spring Security</span>
-<span>JUnit 5</span>
-<span>Docker</span>
-<span>Jenkins</span>
-</div>
-<div class="case-study">
-<h4 class="case-study-title">문제 해결 과정</h4>
-<div class="detail-content">
-<h4>담당 범위</h4>
-<p>팀·유저 API, Spring Security Voter 기반 팀 단위 인가와 JUnit 5 테스트를 구현했습니다. Jenkins 배포 파이프라인과 리버스 프록시도 담당했습니다.</p>
-<h4>핵심 개선</h4>
-<p>담당자의 수작업에 의존하던 배포를 브랜치 머지 기반 파이프라인으로 바꾸고 외부 진입점을 프록시로 모았습니다. CORS 오류는 요청 Origin과 OPTIONS 사전 요청 처리를 나누어 점검했습니다.</p>
-<div class="project-gallery">
-<h4>설계와 개선 과정</h4>
-<div class="diagram-grid">
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/deployment-before.webp" data-caption="수동 배포 과정" aria-label="수동 배포 과정 크게 보기">
-<img src="assets/projects/deployment-before.webp" alt="수동 배포 과정" width="659" height="513" loading="eager">
-<span>수동 배포 과정 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>담당자가 직접 빌드하고 서버에 반영하던 수동 배포 단계입니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/deployment-after.webp" data-caption="Jenkins 자동 배포 과정" aria-label="Jenkins 자동 배포 과정 크게 보기">
-<img src="assets/projects/deployment-after.webp" alt="Jenkins 자동 배포 과정" width="582" height="505" loading="eager">
-<span>Jenkins 자동 배포 과정 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>브랜치 머지가 Jenkins 실행으로 이어지는 자동 배포 경로입니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/proxy-before.webp" data-caption="리버스 프록시 적용 전" aria-label="리버스 프록시 적용 전 크게 보기">
-<img src="assets/projects/proxy-before.webp" alt="리버스 프록시 적용 전" width="1247" height="717" loading="eager">
-<span>리버스 프록시 적용 전 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>리버스 프록시를 적용하기 전 프론트엔드·백엔드의 외부 접근 경로입니다.</figcaption>
-</figure>
-<figure class="explained-image">
-<button class="image-open diagram-button" type="button" data-full-image="assets/projects/proxy-after.webp" data-caption="리버스 프록시 적용 후" aria-label="리버스 프록시 적용 후 크게 보기">
-<img src="assets/projects/proxy-after.webp" alt="리버스 프록시 적용 후" width="1151" height="595" loading="eager">
-<span>리버스 프록시 적용 후 <b>확대 ↗</b>
-</span>
-</button>
-<figcaption>외부 요청을 리버스 프록시로 모으고 SSL 처리를 프록시가 맡도록 바꾼 구성입니다.</figcaption>
-</figure>
-</div>
-</div>
-<a class="repository-link" href="https://github.com/JaegeonYu/PerspectiView" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a>
-</div>
-</div>
-</article>
-</div>
+<p class="journey-note">시간순으로 배치했으며, 교육·경력의 기간은 각 항목에 함께 표시했습니다. 엠로 경력은 현재까지 이어지고 있습니다.</p>
 </section>
 <section id="contact" class="contact">
 <div class="eyebrow">06 / CONTACT</div>
