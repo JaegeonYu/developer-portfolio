@@ -1,0 +1,50 @@
+/* Chronological milestones. Spacing represents reading order, not elapsed duration. */
+.introduction-grid{grid-template-columns:minmax(0,1fr)}
+.introduction-copy{max-width:900px}
+.journey-caption{font-size:12px;color:var(--muted);margin:0}
+.journey-legend{display:flex;gap:22px;font-size:11px;color:var(--muted);margin:-8px 0 27px 154px}
+.journey-legend span{display:inline-flex;align-items:center;gap:7px}
+.journey-legend span::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.journey-legend .career-key::before{background:var(--text);border-radius:2px}
+.journey-legend .certificate-key::before{background:transparent;border:2px solid var(--accent)}
+.journey-timeline{list-style:none;margin:0;padding:0;position:relative}
+.journey-timeline::before{content:'';position:absolute;top:24px;bottom:55px;left:133px;width:1px;background:var(--line)}
+.journey-event{display:grid;grid-template-columns:110px 46px minmax(0,1fr);position:relative;padding-bottom:20px;align-items:start}
+.journey-event:last-child{padding-bottom:0}
+.journey-date{padding-top:18px;font-size:13px;line-height:1.7;color:var(--text);font-weight:600;letter-spacing:0}
+.journey-date>span{display:block;font-size:10px;font-weight:400;color:var(--muted);margin-top:3px}
+.journey-node{position:relative;justify-self:center;width:11px;height:11px;border-radius:50%;margin-top:24px;background:var(--accent);border:2px solid var(--bg);box-shadow:0 0 0 1px var(--accent);z-index:1}
+.career-event>.journey-node{background:var(--text);border-radius:2px;box-shadow:0 0 0 1px var(--text)}
+.certificate-event>.journey-node{background:var(--bg)}
+.journey-card{border:1px solid var(--line);padding:17px 22px;border-radius:4px;min-width:0;background:var(--bg)}
+.journey-kind{display:block;font-size:10px;color:var(--accent);margin-bottom:6px}
+.journey-card h3{font-size:18px;line-height:1.6;margin:0 0 6px}
+.journey-card p{font-size:12px;color:var(--muted);line-height:1.9;margin:0;max-width:780px}
+.journey-card .journey-period{font-size:10px;margin:0 0 7px}
+.journey-pair{display:grid;grid-template-columns:1.5fr 1fr;gap:16px}
+.current-marker{display:inline-block;margin-left:10px;font-weight:400;font-size:9px;color:var(--text)}
+.sqlp-event>.journey-node{width:13px;height:13px;background:var(--accent);box-shadow:0 0 0 4px var(--panel),0 0 0 5px var(--accent)}
+.sqlp-event>.journey-card{border-color:var(--accent);background:var(--panel)}
+.sqlp-event>.journey-date{color:var(--accent)}
+.sqlp-tag{font-size:10px;font-weight:400;color:var(--accent);margin-left:10px;display:inline-block;vertical-align:middle}
+.journey-note{font-size:10px;color:var(--muted);margin:19px 0 0 156px}
+@media(max-width:760px){
+  .journey-caption{margin-top:12px}.journey-legend{margin:0 0 24px 26px;gap:19px}
+  .journey-event{grid-template-columns:26px minmax(0,1fr);padding-bottom:21px}
+  .journey-timeline::before{left:6px;top:10px;bottom:90px}
+  .journey-date{grid-column:2;grid-row:1;padding-top:0;font-size:12px;display:flex;flex-wrap:wrap;gap:3px 9px;align-items:baseline;margin-bottom:10px}
+  .journey-date>span{display:inline;margin-top:0;font-size:10px}.journey-node{grid-column:1;grid-row:1 / span 2;justify-self:start;margin-top:5px;width:11px;height:11px}
+  .journey-card,.journey-pair{grid-column:2;grid-row:2}.journey-pair{grid-template-columns:1fr;gap:10px}
+  .journey-card{padding:15px 17px}.journey-card h3{font-size:16px}.journey-card p{font-size:12px}.sqlp-tag{margin-left:5px;font-size:9px}
+  .journey-note{margin-left:26px}.sqlp-event>.journey-node{margin-left:-1px}
+}
+@media print{
+  .introduction-grid{display:block}.introduction-copy{max-width:none}
+  #journey{padding:6mm 0}.journey-caption{font-size:9pt}.journey-legend{font-size:8pt;margin:0 0 4mm 30mm}
+  .journey-event{grid-template-columns:24mm 7mm minmax(0,1fr);padding-bottom:3mm;break-inside:avoid}
+  .journey-timeline::before{left:27.5mm;top:5mm;bottom:14mm}
+  .journey-date{font-size:9pt;padding-top:3mm;display:block;grid-column:auto;grid-row:auto}.journey-date>span{font-size:7pt;display:block}
+  .journey-node{grid-column:auto;grid-row:auto;justify-self:center;margin-top:5mm;width:2.5mm;height:2.5mm}
+  .journey-card,.journey-pair{grid-column:auto;grid-row:auto}.journey-card{padding:3mm 4mm;break-inside:avoid}.journey-card h3{font-size:11pt}.journey-card p{font-size:9pt;line-height:1.6}.journey-kind{font-size:7pt}.journey-pair{display:grid;grid-template-columns:1.5fr 1fr;gap:3mm}
+  .journey-note{font-size:7pt;margin:3mm 0 0 31mm}.sqlp-tag{font-size:7pt}.sqlp-event>.journey-node{width:3mm;height:3mm}
+}
