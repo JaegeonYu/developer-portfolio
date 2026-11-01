@@ -166,3 +166,18 @@ body.dark .skill-icon img[src$="java.svg"]{filter:brightness(1.25)}
 .mini-flow li.improved{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,var(--bg));font-weight:600}
 .career-lines{font-size:.9rem!important;line-height:1.9!important;margin-top:12px!important}
 @media print{.mini-flow li{padding:7px!important}.mini-flow{gap:16px}.mini-flow li+li:before{top:-18px}}
+
+/* Detailed and light projects retain the evidence appropriate to each experience. */
+.detailed-project,.light-project{grid-column:1/-1;min-width:0;padding:28px!important}
+.detailed-project>.detail-content,.light-project>.detail-content{padding-top:8px}
+.detailed-project h3,.light-project h3{font-size:1.5rem;margin:12px 0}
+.detailed-project .case-comparison{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}
+.detailed-project .comparison-block{min-width:0}.detailed-project .comparison-block h5{margin-top:0;letter-spacing:.06em}
+.detailed-project .case-topic{margin-top:28px;padding-top:20px}.detailed-project .flowchart{padding:16px;margin-bottom:12px}
+.detailed-project .project-cover{height:auto;max-width:820px;margin:auto}.detailed-project .project-cover img{height:290px}
+.detailed-project>.explained-image{margin:0 0 22px}.detailed-project .diagram-button img{height:230px}
+.detailed-project .project-gallery{margin-top:20px}.detailed-project .detail-content p,.light-project .detail-content p{font-size:14px;line-height:1.9}
+.detailed-project .case-art,.light-project .case-art{height:130px;min-height:0}.light-project .case-art strong{font-size:28px}
+.intro-profile{margin:0;max-width:230px;justify-self:center;align-self:start}.intro-profile img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+@media(max-width:760px){.detailed-project,.light-project{padding:18px!important}.detailed-project .case-comparison{grid-template-columns:1fr}.detailed-project .diagram-button img{height:180px}.detailed-project .project-cover img{height:210px}.intro-profile{max-width:150px;justify-self:start}.introduction-grid{gap:24px}}
+@media print{.detailed-project,.light-project{padding:4mm!important;break-inside:auto}.detailed-project .case-comparison{display:grid;grid-template-columns:1fr 1fr;gap:5mm}.intro-profile{max-width:38mm}.detailed-project .project-cover img{height:55mm}.detailed-project .diagram-button img{height:45mm}}
