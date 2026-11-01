@@ -1,5 +1,5 @@
 <article class="project compact-case" id="case-data"><div class="project-meta"><span>2025.07 — 2025.10 · Oracle · ROWID</span></div><h3>대규모 운영 데이터 정리</h3><p class="muted">emroCloud · 로그 / 메일 발송 이력</p><section class="problem-unit">
 <h4>삭제 작업의 처리 단위 조정</h4><p class="problem-statement"><strong>문제 상황</strong> 약 2억 건 규모의 정리 대상을 분석하던 중, 대량 DELETE에 따른 Archive Log 용량 급증을 확인했습니다.</p>
-<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>보존기간 조건만으로 삭제하여 한 번의 작업 건수와 트랜잭션 크기를 제한하지 못했습니다.</p></div>
-<div class="change-after"><h5>TO-BE</h5><p>대상 ROWID를 커서로 조회하고 건수를 제한해 FETCH → DELETE → COMMIT을 반복했습니다. 로그 증가를 확인하며 배치 분량을 줄였습니다.</p></div></div>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>보존기간 조건만으로 삭제하여 한 번의 작업 건수와 트랜잭션 크기를 제한하지 못했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">보존기간으로 대상 선정</li><li class="">건수 제한 없는 DELETE</li><li class="risk">큰 처리 단위 · 로그 급증</li></ol></div>
+<div class="change-after"><h5>TO-BE</h5><p>대상 ROWID를 커서로 조회하고 건수를 제한해 FETCH → DELETE → COMMIT을 반복했습니다. 로그 증가를 확인하며 배치 분량을 줄였습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">대상 ROWID 조회</li><li class="">건수 제한 FETCH → DELETE</li><li class="improved">묶음 COMMIT · 반복</li></ol></div></div>
 <p class="decision"><strong>판단과 해결</strong> 삭제도 로그 공간을 사용한다는 점을 고려해 작업 단위를 제어했습니다. 분할 처리가 전체 Redo·Archive Log 양 자체를 줄이는 것은 아닙니다.</p></section></article>

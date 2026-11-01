@@ -12,3 +12,6 @@
 소개는 `content/sections/about.html`, 회사 로고와 경력 단계는 `content/sections/journey.html`에서 관리합니다. 별도 EXPERIENCE 장은 사용하지 않습니다. CSS는 `dist/`에서 수정하고 생성된 `dist/index.html`은 직접 편집하지 않습니다.
 
 모르는 날짜·수치·구현은 만들지 않습니다. 결재 시작 전 완료 상태로 바꿨다는 설명과 삭제한 오류 로그 설명을 복원하지 않습니다. 새 소개의 인덱스 설계 제안은 사용자가 제공한 최신 설명을 반영합니다. PDF는 자동 생성하지 않고 브라우저 인쇄를 유지합니다.
+
+## 비교 다이어그램
+AS-IS와 TO-BE 안에 `.mini-flow` 목록으로 각 2~3개의 핵심 단계를 표시합니다. 문제 지점은 `.risk`, 변경 결과는 `.improved`로 강조합니다. 텍스트를 줄여도 그림은 유지하고, 변경 전후의 차이를 같은 위치에서 비교할 수 있게 합니다. SQLP 개인 프로젝트는 `content/projects/sqlp.html`입니다.

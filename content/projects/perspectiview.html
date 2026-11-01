@@ -15,6 +15,6 @@
 </div>
 <section class="problem-unit">
 <h4>수동 배포와 서비스 진입 경로</h4><p class="problem-statement"><strong>문제 상황</strong> 담당자의 수작업에 의존하던 배포와 서비스별 외부 접근 경로를 정리해야 했습니다.</p>
-<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>직접 빌드·서버 반영을 수행하고 프론트엔드·백엔드 접근 경로를 개별 관리했습니다.</p></div>
-<div class="change-after"><h5>TO-BE</h5><p>브랜치 머지 기반 Jenkins 배포 파이프라인을 구성하고 리버스 프록시로 외부 요청과 SSL 처리를 모았습니다.</p></div></div>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>직접 빌드·서버 반영을 수행하고 프론트엔드·백엔드 접근 경로를 개별 관리했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">담당자 수동 빌드</li><li class="">서버에 직접 반영</li><li class="risk">개별 외부 접근 경로</li></ol></div>
+<div class="change-after"><h5>TO-BE</h5><p>브랜치 머지 기반 Jenkins 배포 파이프라인을 구성하고 리버스 프록시로 외부 요청과 SSL 처리를 모았습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">브랜치 머지 → Jenkins</li><li class="">빌드·배포 자동화</li><li class="improved">프록시로 진입점 통합</li></ol></div></div>
 <p class="decision"><strong>판단과 해결</strong> 반복 배포를 자동화하고 진입점을 정리했습니다. CORS 오류는 Origin과 OPTIONS 사전 요청 처리를 나누어 점검했습니다.</p></section><div class="compact-links"><button type="button" class="image-open compact-reference" data-full-image="assets/projects/perspectiview-architecture.webp" data-caption="서비스 아키텍처">서비스 아키텍처 확대 ↗</button><a class="repository-link" href="https://github.com/JaegeonYu/PerspectiView" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a></div></article>

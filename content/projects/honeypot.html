@@ -15,10 +15,10 @@
 </div>
 <section class="problem-unit">
 <h4>컬렉션 조회의 메모리 페이징</h4><p class="problem-statement"><strong>문제 상황</strong> 뉴스와 키워드의 1:N 조회에서 메모리 페이징 경고가 발생했습니다.</p>
-<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>컬렉션 Fetch Join과 페이지 제한을 한 번에 적용했습니다.</p></div>
-<div class="change-after"><h5>TO-BE</h5><p>페이지 조건에 맞는 뉴스 ID를 먼저 조회하고 해당 ID의 뉴스·키워드를 Fetch Join했습니다.</p></div></div>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>컬렉션 Fetch Join과 페이지 제한을 한 번에 적용했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">컬렉션 Fetch Join + 페이징</li><li class="risk">메모리 페이징 경고</li></ol></div>
+<div class="change-after"><h5>TO-BE</h5><p>페이지 조건에 맞는 뉴스 ID를 먼저 조회하고 해당 ID의 뉴스·키워드를 Fetch Join했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">페이지 대상 ID 조회</li><li class="improved">해당 ID의 연관 데이터 조회</li></ol></div></div>
 <p class="decision"><strong>판단과 해결</strong> 페이지 대상 선정과 연관 데이터 조회의 책임을 나눴습니다.</p></section><section class="problem-unit">
 <h4>컨테이너 공개 포트 접근 제어</h4><p class="problem-statement"><strong>문제 상황</strong> UFW 설정만으로 의도한 컨테이너 접근 제한이 적용되지 않았습니다.</p>
-<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>Docker 공개 포트로 향하는 트래픽에 방화벽 정책이 기대대로 적용되지 않았습니다.</p></div>
-<div class="change-after"><h5>TO-BE</h5><p>Docker와 UFW의 필터 적용 순서를 확인하고 컨테이너 진입 경로에도 정책을 적용했습니다.</p></div></div>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>Docker 공개 포트로 향하는 트래픽에 방화벽 정책이 기대대로 적용되지 않았습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">UFW 접근 제한 설정</li><li class="">컨테이너 공개 포트 접근</li><li class="risk">기대한 제한 미적용</li></ol></div>
+<div class="change-after"><h5>TO-BE</h5><p>Docker와 UFW의 필터 적용 순서를 확인하고 컨테이너 진입 경로에도 정책을 적용했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">트래픽·필터 순서 확인</li><li class="improved">컨테이너 진입 경로에 정책 적용</li></ol></div></div>
 <p class="decision"><strong>판단과 해결</strong> 설정값에 그치지 않고 실제 트래픽 경로를 기준으로 점검했습니다.</p></section><div class="compact-links"><button type="button" class="image-open compact-reference" data-full-image="assets/projects/honeypot-architecture.webp" data-caption="서비스 아키텍처">서비스 아키텍처 확대 ↗</button><a class="repository-link" href="https://github.com/JaegeonYu/HoneyPot" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a></div></article>

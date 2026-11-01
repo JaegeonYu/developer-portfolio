@@ -1,5 +1,5 @@
 <article class="project compact-case" id="case-jira"><div class="project-meta"><span>데이터 모델 개선 · REST API · S3</span></div><h3>고객문의 구조 개선과 Jira 연동</h3><p class="muted">emroCloud · 대화형 문의 이력</p><section class="problem-unit">
 <h4>문의 이력과 외부 연동</h4><p class="problem-statement"><strong>문제 상황</strong> 1문의 1답변 구조로는 대화형 진행 이력을 담기 어려웠고, Jira 콘텐츠·첨부파일 제약도 있었습니다.</p>
-<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>문의와 답변이 고정된 구조였으며, Base64 이미지로 콘텐츠 제한 문제가 발생했습니다.</p></div>
-<div class="change-after"><h5>TO-BE</h5><p>요청과 진행 이력을 분리하고 상태별 이관 기준을 설계했습니다. Issue·Comment 연동 API를 개발하고 이미지는 S3 기반으로 변경했습니다.</p></div></div>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>문의와 답변이 고정된 구조였으며, Base64 이미지로 콘텐츠 제한 문제가 발생했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">문의 1건</li><li class="">답변 1건에 고정</li><li class="risk">대화 이력 표현 어려움</li></ol></div>
+<div class="change-after"><h5>TO-BE</h5><p>요청과 진행 이력을 분리하고 상태별 이관 기준을 설계했습니다. Issue·Comment 연동 API를 개발하고 이미지는 S3 기반으로 변경했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">요청과 진행 이력 분리</li><li class="">Issue ↔ Comment 연동</li><li class="improved">이미지 S3 분리</li></ol></div></div>
 <p class="decision"><strong>판단과 해결</strong> 실제 대화 흐름에 맞춰 데이터 구조를 나누고, 외부 API의 전송 제약까지 함께 해결했습니다.</p></section></article>

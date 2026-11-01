@@ -29,6 +29,7 @@
     "side-projects": {
       "header": "headers/side-projects.html",
       "items": [
+        "projects/sqlp.html",
         "projects/trip.html",
         "projects/honeypot.html",
         "projects/perspectiview.html"

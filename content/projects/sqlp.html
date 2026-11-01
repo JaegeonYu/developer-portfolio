@@ -1,0 +1,18 @@
+<article class="project compact-case" id="project-sqlp">
+<div class="project-meta"><span>개인 프로젝트 · 설계·개발·운영 · 스터디 멘토</span><span>2026.10 — 현재</span></div>
+<h3>SQLP 스터디 운영 시스템</h3><p class="muted">브라우저로 참여하는 SQL 튜닝 실습 · 자동 채점 · 학습 기록 공개</p>
+<div class="chips"><span>Python</span><span>GitHub Actions</span><span>Oracle Autonomous DB</span><span>MkDocs</span></div>
+<p>SQLP 취득 후 스터디원 두 명과 진행하는 튜닝 스터디를 위해, 문제 공개부터 채점·진행률·포스팅 반영까지 자동화했습니다.</p>
+<section class="problem-unit"><h4>반복 운영과 공개 범위 분리</h4>
+<p class="problem-statement"><strong>문제 상황</strong> 매주 문제 공개와 풀이 확인이 필요했고, 제출 SQL·정답을 보호하면서 진행률과 글은 공유해야 했습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>멘토가 문제 공개·채점·진행 기록을 직접 챙겨야 했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">문제·풀이 개별 확인</li><li class="risk">진행 기록 수동 정리</li></ol></div>
+<div class="change-after"><h5>TO-BE</h5><p>Issue Forms 제출을 Actions가 DB에서 채점하고, 공개 가능한 데이터와 리뷰된 포스팅만 공개 사이트에 반영합니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">Issue 제출 → Actions 채점</li><li class="">허용 데이터만 공개 저장소로 전달</li><li class="improved">MkDocs → GitHub Pages</li></ol></div></div>
+<p class="decision"><strong>판단과 해결</strong> 브라우저 참여와 별도 운영 서버 없는 구성을 선택했습니다. 비공개 채점 저장소와 공개 아카이브를 나누고 공개 금지 항목이 섞이면 배포를 중단합니다.</p></section><section class="problem-unit"><h4>채점 기준의 일관성</h4>
+<p class="problem-statement"><strong>문제 상황</strong> 같은 SQL도 캐시·DB 부하에 따라 시간이 달랐고, 로컬과 클라우드에서 읽는 블록 수도 달랐습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>실행 시간 기준을 검토하고 로컬 Oracle에서 목표값을 정했습니다. 같은 SQL의 블록 수가 로컬 10, 클라우드 19로 달랐습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">시간·로컬 기준으로 평가</li><li class="risk">환경에 따라 판정 흔들림</li></ol></div>
+<div class="change-after"><h5>TO-BE</h5><p>결과 일치와 Buffers 기준으로 채점하고 목표값은 실제 클라우드 DB에서 다시 측정했습니다. 시간은 실행 제한으로 사용합니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">클라우드에서 목표 Buffers 측정</li><li class="improved">결과 일치 + 블록 수로 평가</li></ol></div></div>
+<p class="decision"><strong>판단과 해결</strong> 학습 목표인 데이터 접근량을 평가 기준으로 삼고, 실제 채점 환경에서 기준값과 동작을 확인했습니다.</p></section><section class="problem-unit"><h4>무시된 힌트의 잘못된 통과</h4>
+<p class="problem-statement"><strong>문제 상황</strong> 잘못 작성한 FULL 힌트가 무시됐는데도 옵티마이저가 선택한 계획이 기준을 만족해 통과했습니다.</p>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>실행 결과와 블록 수만으로는 의도한 힌트가 적용됐는지 알 수 없었습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">힌트 오류 → 무시</li><li class="">다른 계획으로 기준 충족</li><li class="risk">의도와 다르게 통과</li></ol></div>
+<div class="change-after"><h5>TO-BE</h5><p>Hint Report를 채점에 반영해 무시된 힌트를 댓글로 안내하고 해당 제출을 반려하도록 개선했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">실행계획 Hint Report 확인</li><li class="improved">무시된 힌트 안내·반려</li></ol></div></div>
+<p class="decision"><strong>판단과 해결</strong> 실습 의도와 실제 실행계획이 맞는지도 확인하도록, 오류 없이 지나가는 힌트 문제를 드러냈습니다.</p></section><div class="compact-links"><a class="repository-link" href="https://sqlp-study-2026.github.io/sqlp-archive/" target="_blank" rel="noopener noreferrer">스터디 사이트 ↗</a><a class="repository-link" href="https://github.com/sqlp-study-2026/sqlp-archive" target="_blank" rel="noopener noreferrer">공개 저장소 ↗</a><a href="https://jaegeonyu.github.io/portfolio/sqlp-study.html" target="_blank" rel="noopener noreferrer">프로젝트 상세 · 구조도 ↗</a></div></article>

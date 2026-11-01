@@ -1,9 +1,9 @@
 <article class="project compact-case" id="case-approval"><div class="project-meta"><span>Java · Spring · Oracle · MyBatis</span></div><h3>중복 요청의 경합 지점 제어</h3><p class="muted">일괄결재 · 입찰 제출</p><section class="problem-unit">
 <h4>일괄결재 재요청</h4><p class="problem-statement"><strong>문제 상황</strong> 선행 트랜잭션이 끝나기 전에 같은 결재가 재요청되어 업무 데이터의 정합성이 어긋났습니다.</p>
-<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>처리 중인 결재를 구분하지 못해 동일 건의 업무 모듈이 중복 실행됐습니다.</p></div>
-<div class="change-after"><h5>TO-BE</h5><p>시작 시 처리중·완료 건을 제외하고 처리중 상태를 기록했습니다. 건별 신규 트랜잭션에서 전처리 후, 처리중인 건만 완료로 갱신했습니다.</p></div></div>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>처리 중인 결재를 구분하지 못해 동일 건의 업무 모듈이 중복 실행됐습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">선행 결재 처리 중</li><li class="">동일 건 재요청</li><li class="risk">업무 모듈 중복 실행</li></ol></div>
+<div class="change-after"><h5>TO-BE</h5><p>시작 시 처리중·완료 건을 제외하고 처리중 상태를 기록했습니다. 건별 신규 트랜잭션에서 전처리 후, 처리중인 건만 완료로 갱신했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">처리중·완료 건 제외</li><li class="">대상 상태 기록 → 건별 처리</li><li class="improved">처리중인 건만 완료 갱신</li></ol></div></div>
 <p class="decision"><strong>판단과 해결</strong> 요청 시점의 결재 상태를 제어 기준으로 삼고, 시작 상태 기록과 건별 처리의 트랜잭션을 분리했습니다.</p></section><section class="problem-unit" id="case-bid">
 <h4>입찰 중복 제출</h4><p class="problem-statement"><strong>문제 상황</strong> 제출 여부 검사 후에도 미커밋 상태의 재요청으로 중복 데이터가 생성돼 조회 오류가 발생했습니다.</p>
-<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>여러 서버에서 검사와 저장이 동시에 진행되어 선행 제출을 확인하지 못했습니다.</p></div>
-<div class="change-after"><h5>TO-BE</h5><p>입찰 ID 행을 SELECT … FOR UPDATE로 잠근 뒤 기존 제출 여부 검사와 저장을 수행했습니다.</p></div></div>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>여러 서버에서 검사와 저장이 동시에 진행되어 선행 제출을 확인하지 못했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">두 요청이 제출 여부 검사</li><li class="">선행 제출은 아직 미커밋</li><li class="risk">두 요청 모두 저장</li></ol></div>
+<div class="change-after"><h5>TO-BE</h5><p>입찰 ID 행을 SELECT … FOR UPDATE로 잠근 뒤 기존 제출 여부 검사와 저장을 수행했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">입찰 행 잠금 획득·대기</li><li class="">선행 종료 후 제출 여부 검사</li><li class="improved">이미 제출된 요청 차단</li></ol></div></div>
 <p class="decision"><strong>판단과 해결</strong> 여러 서버가 공유하는 DB를 제어 지점으로 선택했습니다. 같은 입찰의 제출은 잠금 뒤 순서대로 검증하도록 했습니다.</p></section></article>

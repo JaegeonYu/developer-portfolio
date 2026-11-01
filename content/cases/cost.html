@@ -1,5 +1,5 @@
 <article class="project compact-case" id="case-cost"><div class="project-meta"><span>2026.05 — 2026.09 · Java · DB2 · MyBatis</span></div><h3>원가 산정의 정합성 확보</h3><p class="muted">현대모비스 원가재료비 관리</p><section class="problem-unit">
 <h4>현업 계산과 시스템 결과의 차이</h4><p class="problem-statement"><strong>문제 상황</strong> Excel 원가 산정을 시스템으로 옮기는 과정에서 최종 단가에 0.07% 차이가 발생했습니다.</p>
-<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>개발 단계·품목·원가요소와 계산 조건이 복잡해 결과 차이의 원인을 확인해야 했습니다.</p></div>
-<div class="change-after"><h5>TO-BE</h5><p>구매원가팀과 환율·관리비·LDC율·단가 요건을 대조해 환차액 누락을 확인하고 계산 로직에 반영했습니다.</p></div></div>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>개발 단계·품목·원가요소와 계산 조건이 복잡해 결과 차이의 원인을 확인해야 했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">Excel 계산 → 시스템 이관</li><li class="">최종 단가 0.07% 차이</li><li class="risk">계산 요소 누락 추적 필요</li></ol></div>
+<div class="change-after"><h5>TO-BE</h5><p>구매원가팀과 환율·관리비·LDC율·단가 요건을 대조해 환차액 누락을 확인하고 계산 로직에 반영했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">현업 계산식·요건 대조</li><li class="">환차액 누락 원인 확인</li><li class="improved">계산 로직 보완</li></ol></div></div>
 <p class="decision"><strong>판단과 해결</strong> 작은 차이도 업무 계산식과 원가요소를 기준으로 추적했습니다. 반복 계산을 시스템화하고 원인별 원가 차액을 제공했습니다.</p></section></article>

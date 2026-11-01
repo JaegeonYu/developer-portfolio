@@ -15,14 +15,14 @@
 </div>
 <section class="problem-unit">
 <h4>이메일 인증 응답 지연</h4><p class="problem-statement"><strong>문제 상황</strong> SMTP 통신을 기다리며 인증 요청 응답이 지연됐습니다.</p>
-<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>메일 전송이 요청 처리 흐름을 지연시켜 응답에 3초 이상이 걸렸습니다.</p></div>
-<div class="change-after"><h5>TO-BE</h5><p>멀티스레드 기반 비동기 처리로 변경해 당시 측정한 요청 응답을 0.5초 미만으로 줄였습니다.</p></div></div>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>메일 전송이 요청 처리 흐름을 지연시켜 응답에 3초 이상이 걸렸습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">인증 요청</li><li class="">SMTP 완료까지 대기</li><li class="risk">응답 3초 이상</li></ol></div>
+<div class="change-after"><h5>TO-BE</h5><p>멀티스레드 기반 비동기 처리로 변경해 당시 측정한 요청 응답을 0.5초 미만으로 줄였습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">인증 요청</li><li class="">메일 발송 비동기 분리</li><li class="improved">요청 응답 0.5초 미만</li></ol></div></div>
 <p class="decision"><strong>판단과 해결</strong> 메일 발송과 요청 응답을 분리했습니다. 수치는 이메일 도착 시간이 아닌 요청 응답 시간입니다.</p></section><section class="problem-unit">
 <h4>알림 전달과 SQL 호출</h4><p class="problem-statement"><strong>문제 상황</strong> 관심 지역의 새 콘텐츠를 전달하고, 팔로워별 알림을 효율적으로 저장해야 했습니다.</p>
-<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>팔로워 조회 후 건별 INSERT로 1+N회 SQL을 호출했습니다. 알림 전달에는 서버→클라이언트 단방향 통신이 필요했습니다.</p></div>
-<div class="change-after"><h5>TO-BE</h5><p>INSERT INTO … SELECT로 알림을 일괄 저장하고 SSE로 접속자에게 알림 ID를 전달했습니다. 미접속자의 알림은 DB에 남겨 재접속 시 전달했습니다.</p></div></div>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>팔로워 조회 후 건별 INSERT로 1+N회 SQL을 호출했습니다. 알림 전달에는 서버→클라이언트 단방향 통신이 필요했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">팔로워 조회</li><li class="">팔로워별 INSERT 반복</li><li class="risk">1+N회 SQL 호출</li></ol></div>
+<div class="change-after"><h5>TO-BE</h5><p>INSERT INTO … SELECT로 알림을 일괄 저장하고 SSE로 접속자에게 알림 ID를 전달했습니다. 미접속자의 알림은 DB에 남겨 재접속 시 전달했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">INSERT … SELECT 일괄 저장</li><li class="">접속자에게 SSE 전달</li><li class="improved">미접속 알림은 DB 보관</li></ol></div></div>
 <p class="decision"><strong>판단과 해결</strong> 단방향 알림에 SSE를 선택하고, 저장과 전달을 구분했습니다. 연결은 단일 서버 메모리에서 관리했습니다.</p></section><section class="problem-unit">
 <h4>협업 시 요청 순서 공유</h4><p class="problem-statement"><strong>문제 상황</strong> API 명세만으로 인증·알림 처리 순서를 맞추기 어려웠습니다.</p>
-<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>클라이언트·서버·DB가 처리할 시점과 응답 순서를 추가로 조율해야 했습니다.</p></div>
-<div class="change-after"><h5>TO-BE</h5><p>팔로우·회원가입·로그인 시퀀스를 작성해 GitHub에 공유했습니다.</p></div></div>
+<div class="change-grid"><div class="change-before"><h5>AS-IS</h5><p>클라이언트·서버·DB가 처리할 시점과 응답 순서를 추가로 조율해야 했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">API 명세로 협의</li><li class="risk">요청·응답 시점 해석 차이</li></ol></div>
+<div class="change-after"><h5>TO-BE</h5><p>팔로우·회원가입·로그인 시퀀스를 작성해 GitHub에 공유했습니다.</p><ol class="mini-flow" aria-label="처리 흐름"><li class="">시퀀스 작성·공유</li><li class="improved">클라이언트·서버·DB 순서 합의</li></ol></div></div>
 <p class="decision"><strong>판단과 해결</strong> 역할과 요청 순서를 그림으로 맞추고 구현 피드백의 기준으로 사용했습니다.</p></section><div class="compact-links"><button type="button" class="image-open compact-reference" data-full-image="assets/projects/trip-architecture.webp" data-caption="서비스 아키텍처">서비스 아키텍처 확대 ↗</button><a class="repository-link" href="https://github.com/JaegeonYu/yesterday-s-Trip" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a></div></article>
