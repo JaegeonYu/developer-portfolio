@@ -9,7 +9,7 @@
 - `content/sections/`: 소개, 전체 이력, 경력, 기술, 연락처.
 - `content/cases/`: 실무 사례를 경험별로 분리한 HTML.
 - `content/projects/`: Yesterday’s Trip, 여의도꿀통, 시작의 개별 HTML.
-- `content/site.json`: 화면 구성과 경험 파일 목록. 실무는 본문이 긴 순서, 프로젝트는 목록 순서로 표시합니다.
+- `content/site.json`: 화면 구성과 경험 파일 목록. 실무와 프로젝트 모두 목록 순서로 표시합니다.
 - `content/templates/`: 새 경험 작성용 틀. 목록에 등록하기 전에는 페이지에 나오지 않습니다.
 - `build.py`: Python 표준 라이브러리만 사용하는 정적 페이지 조립기.
 
@@ -33,3 +33,11 @@
 로고는 Devicon(https://github.com/devicons/devicon)과 MyBatis 공식 저장소(https://github.com/mybatis/logo)를 사용하며 권리는 각 소유자에게 있습니다. PDF에서 추출한 기존 PNG는 보존용입니다. 외부 글꼴을 가져오지 못하면 시스템 글꼴을 사용합니다.
 
 변경 이력은 [WORK_LOG.md](WORK_LOG.md), 채용 관점 검토는 [REVIEW.md](REVIEW.md)에 남겼습니다. 기존 일회성 치환 스크립트는 재실행하지 않고 현재 content 파일을 수정합니다. 기존 Sites 프로젝트와 비공개 접근을 유지합니다.
+
+## GitHub Pages
+
+Source: https://github.com/JaegeonYu/developer-portfolio
+
+Website: https://jaegeonyu.github.io/developer-portfolio/
+
+The main branch deploys automatically via .github/workflows/pages.yml. GitHub Actions runs build.py and build.py --check, then publishes only dist/. Existing Sites hosting remains configured separately.
