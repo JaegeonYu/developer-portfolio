@@ -57,6 +57,7 @@ h1{font-size:clamp(32px,4.3vw,56px);line-height:1.4;word-break:keep-all}
 .concurrency-example{margin:25px 0 33px;padding-top:22px;border-top:1px solid var(--line)}
 .example-heading{margin:0 0 18px}.example-heading>span{font-size:10px;color:var(--accent);letter-spacing:.6px}.detail-content .example-heading h4{font-size:20px;line-height:1.6;margin:5px 0}.example-heading>p{font-size:11px!important;margin:0!important}
 .detail-content h5{font-size:13px;margin:20px 0 7px;line-height:1.8;color:var(--text)}
+.project-findings{font-size:13px;color:var(--muted);line-height:1.95;padding-left:20px}.project-findings li{margin:9px 0}
 .request-race{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;margin:20px 0}
 .request-race>span{position:relative;border-top:2px solid var(--line);padding-top:10px;font-size:12px}.request-race>span:not(:last-child)::after{content:'→';position:absolute;right:-20px;top:14px;color:var(--accent)}.request-race small{display:block;font-size:10px;color:var(--muted);margin-top:4px}
 .concurrency-comparison{border-top:1px solid var(--line);padding-top:8px;margin-top:25px}
@@ -125,4 +126,5 @@ body.dark .skill-icon img[src$="java.svg"]{filter:brightness(1.25)}
   .technical-references a{display:block;font-size:8pt;overflow-wrap:anywhere}.technical-references a::after{content:' (' attr(href) ')'}
   .flowchart{padding:4mm;margin:3mm 0 5mm;break-inside:avoid}.flowchart-title{font-size:8pt!important;margin-bottom:3mm!important}.flow-node{padding:2mm 3mm}.flow-node strong{font-size:9pt}.flow-node>span{font-size:8pt;line-height:1.5}.flow-arrow{font-size:12pt;padding:1mm 0}.flow-branches{grid-template-columns:1fr 1fr;gap:4mm}.flow-path-label{font-size:8pt;margin-bottom:2mm}.flow-path{padding-top:2mm}
   .request-race{gap:5mm}.request-race>span{font-size:9pt}.request-race small{font-size:8pt}.detail-content h5{font-size:10pt;break-after:avoid}.example-heading{break-after:avoid}.detail-content .example-heading h4{font-size:13pt}.concurrency-comparison table{font-size:9pt}.concurrency-example{margin:4mm 0;padding-top:4mm}.concurrency-comparison tr{break-inside:avoid}
+  .project-findings{font-size:10pt}
 }

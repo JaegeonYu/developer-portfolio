@@ -1,0 +1,70 @@
+<article class="project" id="project-honeypot">
+<figure class="explained-image">
+<button class="image-open project-cover" type="button" data-full-image="assets/projects/honeypot-architecture.webp" data-caption="여의도꿀통 서비스 아키텍처" aria-label="여의도꿀통 서비스 아키텍처 크게 보기">
+<img src="assets/projects/honeypot-architecture.webp" alt="여의도꿀통 서비스 아키텍처" width="951" height="690" loading="eager">
+<span>아키텍처 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>Nginx에서 Next.js·Spring으로 이어지는 사용자 요청 경로와 Spring·FastAPI·MySQL, 외부 API·S3의 연결을 보여줍니다. 하단은 GitLab 머지에서 Jenkins를 거쳐 배포되는 경로입니다.</figcaption>
+</figure>
+<div class="project-meta">
+<span>팀장 · 백엔드 · 인프라</span>
+<span>2024.03 — 2024.04 · 6주 / 6인</span>
+</div>
+<h3>여의도꿀통</h3>
+<p class="muted">국회의원 활동현황 · 정치뉴스 서비스</p>
+<div class="chips">
+<span>Spring Boot</span>
+<span>Querydsl</span>
+<span>EC2</span>
+<span>Docker</span>
+<span>Jenkins</span>
+</div>
+<div class="case-study">
+<h4 class="case-study-title">문제 해결 과정</h4>
+<div class="detail-content">
+<h4>담당 범위</h4>
+<p>팀장으로 뉴스 API, EC2·Docker 운영 환경과 Jenkins CI/CD를 담당했습니다.</p>
+<h4>핵심 개선</h4>
+<p>뉴스와 키워드의 1:N 조회에서 발생한 메모리 페이징 경고는 페이지 대상 ID 조회와 연관 데이터 Fetch Join을 분리해 다뤘습니다. 운영 환경에서는 Docker와 UFW의 필터 적용 순서를 점검했습니다. 아래에 각 변경 전후를 정리했습니다.</p>
+<div class="project-gallery">
+<h4>설계와 개선 과정</h4>
+<div class="diagram-grid">
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-query-before.webp" data-caption="페이지네이션 문제 상황" aria-label="페이지네이션 문제 상황 크게 보기">
+<img src="assets/projects/honeypot-query-before.webp" alt="페이지네이션 문제 상황" width="448" height="431" loading="eager">
+<span>페이지네이션 문제 상황 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>뉴스 한 건에 여러 키워드가 연결되는 조인 구조입니다. 컬렉션 Fetch Join과 페이지 제한을 동시에 적용할 때 메모리 페이징 경고가 발생했습니다.</figcaption>
+</figure>
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-query-after.webp" data-caption="ID 조회와 연관 데이터 조회 분리" aria-label="ID 조회와 연관 데이터 조회 분리 크게 보기">
+<img src="assets/projects/honeypot-query-after.webp" alt="ID 조회와 연관 데이터 조회 분리" width="840" height="576" loading="eager">
+<span>ID 조회와 연관 데이터 조회 분리 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>① 정렬·페이지 조건에 맞는 뉴스 ID 조회 → ② 해당 ID의 뉴스와 키워드 Fetch Join. 두 조회가 담당하는 범위를 나눴습니다.</figcaption>
+</figure>
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-firewall-before.webp" data-caption="방화벽 필터 변경 전" aria-label="방화벽 필터 변경 전 크게 보기">
+<img src="assets/projects/honeypot-firewall-before.webp" alt="방화벽 필터 변경 전" width="776" height="492" loading="eager">
+<span>방화벽 필터 변경 전 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>컨테이너 공개 포트로 향하는 트래픽 경로를 점검한 변경 전 구성입니다. UFW 설정만으로 의도한 접근 제한이 적용되지 않았습니다.</figcaption>
+</figure>
+<figure class="explained-image">
+<button class="image-open diagram-button" type="button" data-full-image="assets/projects/honeypot-firewall-after.webp" data-caption="방화벽 필터 변경 후" aria-label="방화벽 필터 변경 후 크게 보기">
+<img src="assets/projects/honeypot-firewall-after.webp" alt="방화벽 필터 변경 후" width="794" height="504" loading="eager">
+<span>방화벽 필터 변경 후 <b>확대 ↗</b>
+</span>
+</button>
+<figcaption>Docker와 UFW의 필터 적용 순서를 확인하고 컨테이너 진입 경로에도 방화벽 정책이 적용되도록 변경한 구성입니다.</figcaption>
+</figure>
+</div>
+</div>
+<a class="repository-link" href="https://github.com/JaegeonYu/HoneyPot" target="_blank" rel="noopener noreferrer">GitHub 저장소 ↗</a>
+</div>
+</div>
+</article>

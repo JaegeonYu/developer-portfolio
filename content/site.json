@@ -1,0 +1,41 @@
+{
+  "layout": [
+    "about",
+    "print-controls",
+    "journey",
+    "experience",
+    "professional",
+    "skills",
+    "side-projects",
+    "contact"
+  ],
+  "sections": {
+    "about": "sections/about.html",
+    "print-controls": "sections/print-controls.html",
+    "journey": "sections/journey.html",
+    "experience": "sections/experience.html",
+    "skills": "sections/skills.html",
+    "contact": "sections/contact.html"
+  },
+  "collections": {
+    "professional": {
+      "header": "headers/professional.html",
+      "items": [
+        "cases/approval.html",
+        "cases/data.html",
+        "cases/jira.html",
+        "cases/cost.html"
+      ],
+      "sort": "body-length-desc"
+    },
+    "side-projects": {
+      "header": "headers/side-projects.html",
+      "items": [
+        "projects/trip.html",
+        "projects/honeypot.html",
+        "projects/perspectiview.html"
+      ],
+      "sort": "manual"
+    }
+  }
+}
