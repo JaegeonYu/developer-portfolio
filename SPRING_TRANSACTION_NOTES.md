@@ -114,3 +114,8 @@ public void processOne(Long approvalId) throws Exception {
 - [REQUIRED·REQUIRES_NEW·NESTED와 자원 사용](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/tx-propagation.html)
 - [프록시와 자기 호출](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html)
 - [TransactionTemplate과 setRollbackOnly](https://docs.spring.io/spring-framework/reference/data-access/transaction/programmatic.html)
+
+
+## 2026-11-01: 컨트롤러 예외 처리 흐름 반영
+
+사용자가 컨트롤러의 try 안에서 결재 서비스를 호출했던 것으로 기억한다고 설명하고 제안 문구 반영을 요청했습니다. 공개 본문을 ‘컨트롤러에서 결재 서비스 예외 처리 → 업무 롤백 이후 별도 트랜잭션으로 오류 로그 저장’으로 변경했습니다. 로그 서비스에 REQUIRES_NEW 또는 REQUIRED 중 어느 설정을 사용했는지는 단정하지 않습니다.
