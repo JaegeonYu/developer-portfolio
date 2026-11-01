@@ -45,3 +45,19 @@ viewer.addEventListener('click', event => {
       event.clientY < bounds.top || event.clientY > bounds.bottom) viewer.close();
 });
 viewer.addEventListener('close', () => document.body.classList.remove('image-viewer-open'));
+
+const printButton = document.querySelector('#print-portfolio');
+printButton.addEventListener('click', async () => {
+  printButton.disabled = true;
+  const status = document.querySelector('#print-status');
+  status.textContent = '이미지를 준비하고 있습니다…';
+  try {
+    if (viewer.open) viewer.close();
+    await Promise.all([...document.querySelectorAll('main img')].map(img => img.decode().catch(() => {})));
+    if (document.fonts) await document.fonts.ready;
+    status.textContent = '인쇄 창에서 PDF로 저장을 선택하세요.';
+    window.print();
+  } finally {
+    printButton.disabled = false;
+  }
+});
