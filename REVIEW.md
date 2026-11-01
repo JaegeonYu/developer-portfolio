@@ -77,3 +77,7 @@ Chrome에서 데스크톱, 390px 모바일, 밝은·어두운 테마의 첫 화�
 - Spring 트랜잭션 전파 의미 참고: https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/tx-propagation.html
 
 우선 확인하면 좋은 후속 근거는 경합 상황 테스트, 실제 배치 크기·소요 시간·로그 증가량, 원가 검증 절차이다. 이번 확인으로 기존의 ‘시작 상태 제외 조건’과 ‘완료 UPDATE 0건 시 롤백 여부’에 대한 질문은 해소했다.
+
+## Spring 오류 로그 참고 분석
+
+사용자 요청으로 공개 본문의 ‘적용 범위와 남은 검증 과제’는 삭제했다. 기존 확인 답변은 작업 기록으로 남아 있지만 현재 본문에는 표시하지 않는다. 오류 로그 보존의 구체적인 Spring 구현은 기억을 복원 중이므로 [SPRING_TRANSACTION_NOTES.md](SPRING_TRANSACTION_NOTES.md)에 공식 근거와 참고 구조를 별도로 기록했다. 해당 예시를 과거에 실제 적용한 코드로 단정하지 않는다.
