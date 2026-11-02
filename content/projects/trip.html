@@ -19,7 +19,7 @@
 <span>아키텍처 <b>확대 ↗</b>
 </span>
 </button>
-<figcaption>EC2의 Docker 환경에서 Spring·MySQL·Redis와 외부 서비스를 연결한 구성입니다. 원본 그림의 ReactJs 표기는 개요 자료의 Vue.js와 차이가 있어 원본을 유지했습니다.</figcaption>
+<figcaption>EC2의 Docker 환경에서 Spring·MySQL·Redis와 외부 서비스를 연결한 구성입니다.</figcaption>
 </figure>
 <div class="case-study">
 <h4 class="case-study-title">문제 해결 과정</h4>
@@ -28,7 +28,7 @@
 <p>Open API 데이터 적재, 관광지·유저·리뷰·지역 API, JWT 인증·인가, SSE 알림과 배포 환경을 담당했습니다.</p>
 <div class="case-topic">
 <h4>이메일 인증 응답 개선</h4>
-<p>SMTP 통신으로 지연되던 이메일 인증 요청을 멀티스레드 기반 비동기 처리로 변경했습니다. 당시 프로젝트 측정에서 요청 응답이 3초 이상에서 0.5초 미만으로 줄었습니다. 이메일 도착 시간을 측정한 수치는 아닙니다.</p>
+<p>SMTP 통신으로 지연되던 이메일 인증 요청을 멀티스레드 기반 비동기 처리로 변경했습니다. 인증 요청의 응답 시간이 3초 이상에서 0.5초 미만으로 줄었습니다.</p>
 </div>
 <div class="case-topic">
 <h4>요청 순서를 시각화해 협업</h4>
@@ -43,7 +43,7 @@
 <li>접속자에게는 SSE로 알림 ID를 보내고 클라이언트가 상세 내용을 조회합니다.</li>
 <li>미접속자의 알림은 로그인 후 SSE 연결 시 미읽음 알림으로 전달합니다.</li>
 </ol>
-<p>사용자별 연결은 ConcurrentHashMap에 보관하고 종료·시간 초과 콜백에서 정리했습니다. 연결 저장소가 단일 서버 메모리에 있으므로 다중 서버 확장 시에는 별도 메시지 전달 계층이 필요합니다. Redis Pub/Sub·Kafka 연계는 당시 구현에 포함되지 않은 확장 과제입니다.</p>
+<p>사용자별 연결은 ConcurrentHashMap에 보관하고 종료·시간 초과 콜백에서 정리했습니다. 연결 저장소가 단일 서버 메모리에 있으므로 다중 서버로 확장하려면 Redis Pub/Sub 같은 메시지 전달 계층이 필요하다는 한계도 확인했습니다.</p>
 </div>
 <div class="case-topic">
 <h4>SQL 호출과 조회 범위 개선</h4>

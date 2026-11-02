@@ -8,7 +8,7 @@
 
 - `content/sections/`: 소개, 전체 이력, 경력, 기술, 연락처.
 - `content/cases/`: 실무 사례를 경험별로 분리한 HTML.
-- `content/projects/`: Yesterday’s Trip, 여의도꿀통, 시작의 개별 HTML.
+- `content/projects/`: SQLP 스터디 운영 시스템, Yesterday’s Trip의 개별 HTML.
 - `content/site.json`: 화면 구성과 경험 파일 목록. 실무와 프로젝트 모두 목록 순서로 표시합니다.
 - `content/templates/`: 새 경험 작성용 틀. 목록에 등록하기 전에는 페이지에 나오지 않습니다.
 - `build.py`: Python 표준 라이브러리만 사용하는 정적 페이지 조립기.

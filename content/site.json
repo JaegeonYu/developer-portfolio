@@ -22,9 +22,10 @@
       "header": "headers/professional.html",
       "items": [
         "cases/approval.html",
+        "cases/pr-copy.html",
         "cases/data.html",
-        "cases/jira.html",
-        "cases/cost.html"
+        "cases/cost.html",
+        "cases/jira.html"
       ],
       "sort": "manual"
     },
@@ -32,9 +33,7 @@
       "header": "headers/side-projects.html",
       "items": [
         "projects/sqlp.html",
-        "projects/trip.html",
-        "projects/honeypot.html",
-        "projects/perspectiview.html"
+        "projects/trip.html"
       ],
       "sort": "manual"
     }
