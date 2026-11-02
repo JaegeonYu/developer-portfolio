@@ -63,6 +63,8 @@
 @media screen and (max-width:760px){.introduction .hero-summary{font-size:15px}.introduction h1{font-size:29px;letter-spacing:-1.3px}.introduction .introduction-grid{grid-template-columns:minmax(0,1fr);gap:22px}.intro-profile{grid-row:auto;max-width:130px;justify-self:start}.hero-credentials{font-size:10px}.featured-grid{gap:12px}.sqlp-evidence .project-cover img{height:auto}}
 
 
+.journey-card p.journey-link{margin-top:12px}.journey-link a{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid var(--accent);border-radius:999px;font-size:12px;font-weight:600;color:var(--accent);text-decoration:none;background:var(--panel);transition:background .2s,color .2s}.journey-link a:hover,.journey-link a:focus-visible{background:var(--accent);color:var(--bg)}
+
 /* Print: keep the 1280px desktop screen layout and scale it onto A4 (794px wide at 96dpi). */
 @page{size:A4;margin:0}
 @media print{
