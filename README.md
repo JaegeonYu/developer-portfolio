@@ -18,8 +18,8 @@
 ## 화면과 이미지
 
 - `dist/style.css`: 기본 색상, 레이아웃, 이미지 확대와 인쇄.
-- `dist/refinement.css`: 사례·흐름도·모바일·인쇄 조정.
-- `dist/journey.css`: 전체 이력 타임라인.
+- `dist/refinement.css`: 사례·흐름도·모바일 조정.
+- `dist/journey.css`: 전체 이력 타임라인. 파일 끝의 인쇄 규칙은 1280px 화면 레이아웃을 그대로 A4에 축소해 출력합니다.
 - `dist/script.js`: 테마 전환, 현재 섹션, 이미지 확대와 인쇄 버튼.
 - `dist/assets/projects/`: 아키텍처와 설명 이미지.
 - `dist/assets/skills/`: 배경이 투명한 기술 SVG 로고.

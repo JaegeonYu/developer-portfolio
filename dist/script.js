@@ -56,6 +56,7 @@ printButton.addEventListener('click', async () => {
   status.textContent = '이미지를 준비하고 있습니다…';
   try {
     if (viewer.open) viewer.close();
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => { img.loading = 'eager'; });
     await Promise.all([...document.querySelectorAll('main img')].map(img => img.decode().catch(() => {})));
     if (document.fonts) await document.fonts.ready;
     status.textContent = '인쇄 창에서 PDF로 저장을 선택하세요.';
