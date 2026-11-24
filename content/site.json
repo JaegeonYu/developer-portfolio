@@ -21,11 +21,11 @@
     "professional": {
       "header": "headers/professional.html",
       "items": [
-        "cases/approval.html",
-        "cases/pr-copy.html",
-        "cases/data.html",
         "cases/cost.html",
-        "cases/jira.html"
+        "cases/jira.html",
+        "cases/data.html",
+        "cases/approval.html",
+        "cases/pr-copy.html"
       ],
       "sort": "manual"
     },
